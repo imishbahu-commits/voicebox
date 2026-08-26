@@ -1,6 +1,6 @@
 {
   "user_id": "voicebox_user",
-  "updated_at": "2026-08-26T20:53:45.330402",
+  "updated_at": "2026-08-26T20:56:43.699319",
   "memories": [
     {
       "id": "mem_1787777625329_0",
@@ -37,9 +37,22 @@
         "project": "finance-australia-40plus-part2"
       },
       "messages": []
+    },
+    {
+      "id": "mem_1787777803699_3",
+      "content": "User confirmed visuals that resonate (house, couple, piggy bank) work better than text-only. Real visuals increase engagement for 40+ Aussies.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T20:56:43.699307",
+      "metadata": {
+        "type": "feedback",
+        "project": "finance-australia",
+        "batch": "visual"
+      },
+      "messages": []
     }
   ],
   "version": "2.0-stardust",
-  "count": 3,
+  "count": 4,
   "source": "MemTensor/MemOS integration for voicebox"
 }
