@@ -1,0 +1,45 @@
+{
+  "user_id": "voicebox_user",
+  "updated_at": "2026-08-26T20:53:45.330402",
+  "memories": [
+    {
+      "id": "mem_1787777625329_0",
+      "content": "User wants winning finance topic for tier1 Australia 40yo, genuine no fake claims, educational like reference videos. Subniche: Super Catch-Up $152k behind, niche bending super+tax+TTR+property",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T20:53:45.329608",
+      "metadata": {
+        "topic": "finance-australia",
+        "type": "winning_topic"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787777625329_1",
+      "content": "Editing style: smart router different edit per beat not same every time, only when needed. Visuals clean PURE WHITE bg thick black outline flat colors MS-Paint style no messy, visuals that resonate house couple piggy bank not just text. Voice clean 12-16 words 2-6s voice-05 perfect sync 0.2s before keyword. No cheap arrow circle marking.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T20:53:45.329873",
+      "metadata": {
+        "type": "editing_style",
+        "project": "paint-explainer"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787777625330_2",
+      "content": "Project progress: Part 2 Batch 1 visual 11-20 DONE 50s 1.41MB with real visuals that resonate. 30 beats total before wipe = 2.64 min. Target 90 beats = 8.2 min for 8-10 min video. Need 80 beats remaining. Preview Studio Port 3001, Upload Studio Port 3000.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T20:53:45.330395",
+      "metadata": {
+        "type": "project_progress",
+        "project": "finance-australia-40plus-part2"
+      },
+      "messages": []
+    }
+  ],
+  "version": "2.0-stardust",
+  "count": 3,
+  "source": "MemTensor/MemOS integration for voicebox"
+}

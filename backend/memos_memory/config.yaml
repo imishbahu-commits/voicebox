@@ -1,0 +1,48 @@
+# MemOS Config for Voicebox - Persistent Memory Across Chats
+# Based on https://github.com/MemTensor/MemOS
+
+version: "2.0-stardust"
+user_id: "voicebox_user"
+session_id: "voicebox_paint_explainer"
+
+# Storage - survives wipes via git
+storage:
+  backend: "json"  # Simple JSON for this environment, can upgrade to sqlite
+  path: "./memory_store.json"
+  backup_path: "/home/user/voicebox/data/memos/memory_store_backup.json"
+  git_committed: true  # Committed to survive sandbox wipes
+
+# Memory settings
+memory:
+  max_turns_window: 20
+  top_k: 5
+  enable_textual_memory: true
+  enable_activation_memory: false
+  enable_parametric_memory: false
+
+# For future upgrade to full MemOS with embeddings
+# Requires: pip install MemoryOS, ollama, etc.
+full_memos:
+  enabled: false  # Set true when dependencies available
+  llm:
+    backend: "ollama"
+    model: "qwen3:0.6b"
+  embedder:
+    backend: "ollama"
+    model: "nomic-embed-text:latest"
+  vector_db:
+    backend: "qdrant"
+  graph_db:
+    backend: "neo4j"
+
+# Voicebox specific
+voicebox:
+  projects:
+    - "finance-australia-40plus-part2"
+    - "paint-explainer"
+  editing_style:
+    visual: "Clean PURE WHITE bg thick black outline flat colors MS-Paint style no messy visuals that resonate house couple piggy bank"
+    voice: "12-16 words 2-6s voice-05 perfect sync 0.2s before keyword"
+    router: "smart router different edit per beat not same every time only when needed"
+  winning_topics:
+    - "Super Catch-Up $152k behind for 40+ Aussies"
