@@ -1,6 +1,6 @@
 {
   "user_id": "voicebox_user",
-  "updated_at": "2026-08-26T20:56:43.699319",
+  "updated_at": "2026-08-26T21:06:20.840670",
   "memories": [
     {
       "id": "mem_1787777625329_0",
@@ -50,9 +50,77 @@
         "batch": "visual"
       },
       "messages": []
+    },
+    {
+      "id": "mem_1787778221048_4",
+      "content": "Premium motion for downsizer_300k: Premium joy+trust for 40+ Aussies achieving comfort 350ms cubic-bezier(0.4,0,0.2,1) primary=House SOLD scales 0.6\u21921.1\u21921.0 350ms ease-out-cubic, path slight curve 10px X",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:03:41.048258",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "downsizer_300k",
+        "personality": "Premium"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778331403_5",
+      "content": "Premium motion for downsizer_300k: Premium joy+trust for 40+ Aussies achieving comfort 350ms cubic-bezier(0.4,0,0.2,1) primary=House SOLD scales 0.6\u21921.1\u21921.0 350ms ease-out-cubic, path slight curve 10px X",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:05:31.403627",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "downsizer_300k",
+        "personality": "Premium"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778331405_6",
+      "content": "Premium motion for 10_years_house: Corporate trust+clarity 300ms cubic-bezier(0.2,0,0,1) primary=House + calendar enters -300\u2192center 0.38s ease-out",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:05:31.405867",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "10_years_house",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778331406_7",
+      "content": "Premium motion for 90_days: Corporate urgency+clarity 300ms cubic-bezier(0.2,0,0,1) primary=Calendar 90 days enters 1580\u2192center 0.38s ease-out",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:05:31.406814",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "90_days",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778380840_8",
+      "content": "Connected LottieFiles motion-design-skill (1.4k stars, MIT) + Hyperframes (HTML-to-video, 50+ blocks, 12 projects) for premium motion graphics beyond sliding images. LottieFiles provides 8-step checklist, motion personality archetypes (Playful 150-300ms, Premium 350-600ms cubic-bezier 0.4,0,0.2,1, Corporate 200-400ms, Energetic 100-250ms), Three Pillars, Three Layers (primary+secondary+ambient), Disney 12 principles. Hyperframes provides HTML-native video pipeline with GSAP/Lottie/Three.js, paused timeline window.__timelines, CLI preview/lint/render, templates downsizer_house_reveal.html Premium motion with anticipation 0.97 50ms follow-through 1.02->1.0. Premium demo 3 beats 12.8s 0.34MB DONE.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:06:20.840653",
+      "metadata": {
+        "type": "premium_motion",
+        "repos": [
+          "LottieFiles/motion-design-skill",
+          "heygen-com/hyperframes",
+          "MemTensor/MemOS"
+        ]
+      },
+      "messages": []
     }
   ],
   "version": "2.0-stardust",
-  "count": 4,
+  "count": 9,
   "source": "MemTensor/MemOS integration for voicebox"
 }
