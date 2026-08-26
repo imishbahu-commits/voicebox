@@ -32,17 +32,30 @@ For Hyperframes HTML pipeline:
 
 from .premium_renderer import PremiumMotionRenderer, premium_renderer, MOTION_PERSONALITIES, DURATION_TABLE, EASING_RULES
 
+try:
+    from .lottie_android.lottie_renderer import LottieRenderer, lottie_renderer
+    LOTTIE_AVAILABLE = True
+except:
+    LOTTIE_AVAILABLE = False
+    LottieRenderer = None
+    lottie_renderer = None
+
 __all__ = [
     "PremiumMotionRenderer",
     "premium_renderer", 
     "MOTION_PERSONALITIES",
     "DURATION_TABLE",
-    "EASING_RULES"
+    "EASING_RULES",
+    "LottieRenderer",
+    "lottie_renderer",
+    "LOTTIE_AVAILABLE"
 ]
 
-__version__ = "1.0-premium"
+__version__ = "2.0-premium-lottie"
 __sources__ = [
-    "https://github.com/LottieFiles/motion-design-skill",
-    "https://github.com/heygen-com/hyperframes",
-    "https://github.com/MemTensor/MemOS"
+    "https://github.com/LottieFiles/motion-design-skill",  # 1.4k stars, MIT - motion principles
+    "https://github.com/heygen-com/hyperframes",  # HTML-to-video, 50+ blocks
+    "https://github.com/aaronpie/hyperframes-kit",  # 12 finished projects
+    "https://github.com/airbnb/lottie-android",  # 35.7k stars - After Effects JSON natively
+    "https://github.com/MemTensor/MemOS"  # Persistent memory
 ]
