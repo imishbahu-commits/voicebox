@@ -302,7 +302,7 @@ def render_scene(scene_path, out_path, fps=30, width=1920, height=1080):
             print(f"Frame {f}/{frames} t={t:.2f}s")
     
     # Encode with ffmpeg
-    ffmpeg = "/usr/local/bin/ffmpeg"
+    ffmpeg = "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2"
     # Use libx264 high quality for 40+ clean
     cmd = [
         ffmpeg, "-y",
