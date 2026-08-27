@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-27T13:30:00Z",
+  "source": "11 reference videos 199MB 640x360 30fps + 9 prior refs 139MB, frame-by-frame analysis STYLE_SPEC_ANALYSIS.md",
+  "description": "Quantified style spec for code-driven keyframe recreation, survives wipes via git",
+  "art_visual": {
+    "linework": {"thickness_percent": 0.6, "thickness_px_640": 4, "thickness_px_1920": 11, "color": "#000000", "wobble": 0, "roughness": 0, "consistency": 100},
+    "color": {
+      "bg": {"dominant": "#FFFFFF", "white_dist": 0.0, "percent": 85, "pastel": ["#558876", "#89A9B1", "#8AD0CE"], "pastel_percent": 15},
+      "subject": {"palette": "flat MS-Paint", "colors_per_frame": "4-6", "saturation": "75-85%", "contrast_black_white": "21:1", "contrast_fill_white": "4.5:1", "gradients": 0, "shadows": 0, "textures": 0, "dark_percent": "1.02-9.87%", "unique_32x32": "68 flat to 580 detailed median 100", "bg_std": "0.0-2.1"}
+    },
+    "backgrounds": {"type": "flat single color 90% minimal line art 10%", "brightness": "light L 90-100%", "detail": "0-1 props max", "depth_layers": 0, "parallax": 0},
+    "character": {"head_body_ratio": "1:1.5", "head_percent": 40, "body_percent": 60, "outline": "thick black 0.6% frame", "eyes": "dot 2% head width black #000 no whites", "mouth": "simple line U-shape static disembodied", "limbs": "shaped rounded rectangles 8% body width", "hands_feet": "mitten hands no fingers oval feet", "shading": 0},
+    "props": {"style": "same thick outline flat", "detail": "low money bag sack + $ piggy pig + slot calendar grid + numbers", "reuse": "high house for downsizer money bag for SG piggy for super"},
+    "composition": {"position": "center 60% thirds 30% alternating left/right for connected", "size_percent": "40-60% frame height", "margins": "20% all sides white space 40-50%", "layering": "single layer 1 icon + text max"}
+  },
+  "editing_pacing": {
+    "cut_cadence": {"min": 1.5, "median": 3.5, "mean": 3.8, "max": 5.2, "distribution": "<2s 12% 2-4s 68% >=4s 20%", "total_cuts_11_videos": "~2500", "total_duration": "9000s 2.5 hours"},
+    "cut_types": {"hard": 98, "fade_30ms": 2, "wipe_dissolve": 0, "black_frame": 0},
+    "cut_timing_vs_narration": {"anticipation": "visual 0.2s BEFORE keyword", "examples": [{"cut": "00:03.2", "keyword": "one-sixty-one at 00:03.4", "delta": -0.2, "type": "anticipation"}]},
+    "section_structure": {"separator": "0.5s pause + 30ms fade to white + title card pop 0.35s ease-out-back + music subtle change", "black_frame": 0, "wipe": 0},
+    "complex_vs_simple": {"complex_numbers_lists": "longer 4-5s", "simple_jokes": "shorter 2-3s", "emotional": "medium 3.5s slow zoom"}
+  },
+  "camera_language": {
+    "move_types": {"static_hold": 92, "slow_zoom_in": 5, "slow_zoom_out": 2, "punch_in": 8, "pan_right": 3, "tilt_drift_parallax_orbit_whip": 0, "handheld_wobble": 0},
+    "zoom_details": [
+      {"move": "slow_zoom_in", "start": "1.0x", "end": "1.05x 5% over", "duration": "3.0s", "easing": "ease-in-out cubic(0.4,0,0.2,1)", "speed_percent_per_s": 1.67},
+      {"move": "slow_zoom_out", "start": "1.0x", "end": "0.92x 8% under", "duration": "2.0s", "easing": "ease-in-out", "speed": "4%/s"},
+      {"move": "punch_in", "start": "1.0x", "end": "1.12x 12% over", "duration": "0.35s", "easing": "ease-out-back 10% overshoot", "speed": "34.3%/s"},
+      {"move": "pan_right", "start": "0px", "end": "+60px", "duration": "0.6s", "easing": "ease-in-out", "speed": "100px/s", "when": "connected side-by-side ONLY when truly needed"}
+    ],
+    "motion_budget": {"static_vs_motion": "8% motion 92% static", "within_moving": "0% frozen 100% camera-only OR 30% camera+character", "overall": "55% frozen 25% camera-only 20% character pop/slide"},
+    "punch_ins": {"speed": "34.3%/s", "distance": "12%", "easing": "ease-out-back 10%", "when": "reveals yes house SOLD, emphasis yes numbers $313k, numbers yes big number spoken, jokes no"},
+    "tracking": {"does_track": false, "description": "No tracking 0%, camera static or slow zoom, character enters via slide"}
+  },
+  "character_animation_rigging": {
+    "idle": {"breathe_bob_sway": false, "cycles_per_s": 0, "amplitude_percent": 0, "parts": "none"},
+    "entrances": [
+      {"type": "slide_from_edge", "direction": "left/right alternating left odd right even", "duration": "0.38s", "easing": "ease-out-expo", "overshoot": "10%", "blur": "no"},
+      {"type": "scale_pop", "direction": "center for numbers", "duration": "0.35s", "easing": "ease-out-back 10%", "blur": "no"}
+    ],
+    "exits": {"type": "slide_out", "duration": "0.25s", "easing": "ease-in"},
+    "part_animation": {"which_parts": "arms wave, head tilt 5°, legs none static, tail fin none, mouth none static, eyes none no blink", "motion_type": "puppet-pin warp 70% rotation separate part 30%", "moving_parts_per_char_per_shot": "1-2 typical max 2"},
+    "walk_gait": {"walk_cycles": false, "frames_per_step": 0, "leg_articulation": "none", "body_bounce": 0},
+    "faces": {"blink": false, "blink_freq": 0, "mouth_lip_flap": false, "narration": "disembodied", "eyebrow_expression": "new drawing replace PNG at cut not morph"},
+    "actions": {"staged": "simple 1 action per shot centered", "anticipation": "yes 50ms scale 0.97", "follow_through": "yes 100ms scale 1.02->1.0", "squash_stretch": "slight 5% squash 0.95 stretch 1.05 on pop", "keyframes_per_action": 3},
+    "secondary": {"hair_fins_tails_leaves_clothing": "none 0% no consequence"},
+    "effects": {"bubbles": 0, "splashes": 0, "particles_dust": 0, "speed_lines": 0, "impact_stars": "5% beats one-shot 0.2s on punch-in numbers", "sweat_drops": 0}
+  },
+  "text_graphics": {
+    "on_screen_text": {"any": true, "where_how_often": "every beat 1 line max 12-16 words centered bottom or top", "font": "handwritten marker uppercase numbers lowercase body bold", "size": "8% frame body 12% numbers", "animation": "pop-in 0.35s ease-out-back 0.6->1.1->1.0 or slide 0.38s ease-out-expo", "duration": "full shot 3.5s median no typewriter"}
+  },
+  "sound_design": {
+    "music": {"genre": "corporate ambient minimal light", "tempo_bpm": "80-90", "when": "starts 00:00 continuous ducks -18.5dB vs voice -37dB music no hard stops fades out outro 10:30", "change_per_section": "subtle +5 BPM solutions -5 BPM outro", "loudness_vs_voice": "-18.5dB"},
+    "sfx": [
+      {"type": "whoosh", "when": "slide entrances", "sync": "same frame 0ms", "how_often": "12% beats slide"},
+      {"type": "pop", "when": "pop-in", "sync": "0-5ms before visual anticipation", "how_often": "10% beats pop"},
+      {"type": "impact", "when": "punch-in", "sync": "same frame", "how_often": "8% beats punch"}
+    ],
+    "voice": {"wpm": "140-160", "energy_tone": "calm informative corporate not energetic", "pauses": "median 0.4s between beats dead air >0.8s removed", "delivery": "clean no filler 12-16 words per beat", "voice_id": "voice-05", "polish": "mean -18.5dB"}
+  },
+  "storytelling_structure": {
+    "hook_first_15s": {"pattern": "bold claim number + question + immediate visual house money bag", "example": "00:00-00:03.2 $161k median vs $313k needed + Turning sixty? + house money bag, 00:03.2-00:06.8 gap $152k, 00:06.8-00:15 SG 12% tease"},
+    "narration_visual_sync": {"exact_noun": "yes 90% house spoken house icon, $313k spoken number", "lead_lag": "lead visual 0.2s BEFORE keyword anticipation"},
+    "motifs": ["money bag coins dropping Lottie Android for SG", "house SOLD stamp confetti for downsizer", "tax calculator count-up for saving", "couple high-five for success", "success checkmark draw particle burst for combo"],
+    "new_sections": {"how": "title card pop 0.35s + 0.5s pause + 30ms fade to white + music subtle change"}
+  },
+  "deliverable": {
+    "final_table": "34 rules in STYLE_SPEC_ANALYSIS.md H1",
+    "recipe_cards": "10 most common moves in H2: pop-in number 0.35s, slide-in new idea 0.38s, punch-in emphasis 0.35s, slow zoom-in emotional 3s, slow zoom-out question 2s, pan right connected 0.6s only when needed, stamp stagger list 0.3s + 50-100ms, draw-on mechanism 0.8s, anticipation pop 0.5s total, static hold 3.5s median",
+    "do_dont": "DO 10: pure white bg, thick outline 0.6%, flat 4-6 colors no gradients, hard cuts 98% + 30ms fade, visual 0.2s before keyword, smart router different per beat, pop 0.35s ease-out-back, slide 0.38s ease-out-expo, 1 icon+text max 40-60% 20% margin, LottieFiles Premium 350-600ms 3 layers + Lottie Android | DON'T 10: cheap arrow circle every time, same edit every time, gradients shadows textures, wobble boil, idle bob breathe, walk cycles, blink mouth flap, wipes dissolves, tracking, >6 colors",
+    "top_5_qualities": ["pure white bg + thick outline 0.6% + flat 4-6 colors no gradients", "smart router different edit per beat only when needed not same every time", "visual 0.2s before keyword + pop 0.35s ease-out-back + anticipation 0.97 50ms + follow-through 1.02->1.0", "LottieFiles Premium 350-600ms cubic(0.4,0,0.2,1) 3 layers + Lottie Android money bag coins house SOLD confetti calculator count-up couple high-five checkmark", "cut median 3.5s hard 98% + voice 12-16 words 2-6s pause 0.4s -18.5dB + music 80-90 BPM -37dB"],
+    "gaps": "exact bezier control points need .aep or Lottie JSON, puppet-pin mesh triangulation pin positions need PNG alpha + pin layout, motion blur need 60fps or AE comp with blur enabled, audio mix exact dB need WAV stems, hand-drawn wobble subtle need 1080p PNG sequence or SVG, secondary motion subtle need 1080p + 0.25x slow-mo, parallax depth need multi-layer PSD or AE layers, exact font need .ttf, Lottie JSON need Bodymovin export, need project files + 1080p 60fps + 20+ videos for evolution"
+  },
+  "top_3_to_replicate_first": [
+    "PURE WHITE bg #FFFFFF + thick black outline 0.6% frame width + flat 4-6 colors no gradients/shadows/textures, 1 icon + text max 40-60% frame, 20% margin, static hold 92%",
+    "Smart router: pop-in 0.35s ease-out-back 10% overshoot for numbers ($161k/$313k/$152k) + slide-in 0.38s ease-out-expo alternating left/right for new ideas + pan right 60px 0.6s ONLY when connected gap + visual 0.2s BEFORE keyword + 3 keyframes anticipation 0.97 50ms -> 1.1 0.35s -> 1.0 0.1s",
+    "LottieFiles Premium 350-600ms cubic(0.4,0,0.2,1) + 3 layers primary+secondary+ambient + Lottie Android money bag coins dropping house SOLD stamp confetti tax calculator count-up couple high-five success checkmark draw particle burst + cut median 3.5s hard cuts 98% + voice 12-16 words 2-6s pause 0.4s -18.5dB"
+  ]
+}

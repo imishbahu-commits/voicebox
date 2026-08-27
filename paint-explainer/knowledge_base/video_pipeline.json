@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-27T13:30:00Z",
+  "description": "Video pipeline from PNG to MP4 with premium motion, survives wipes via git, uses ae_motion_enhanced.py",
+  "pipeline": {
+    "step1_choose_winning_topic": {
+      "input": "winning_topics.json",
+      "action": "Choose priority 1 super-catchup-152k-gap, why winning high pain $152k gap specific numbers genuine",
+      "output": "topic_id",
+      "code": "generate_winning_video.py choose_topic()"
+    },
+    "step2_generate_script": {
+      "input": "topic_id + script_templates.json",
+      "action": "Generate 90 beats 12-16 words 2-6s each, visuals that resonate house couple money bag piggy bank calendar, edit pop for number slide for new idea pan only when connected",
+      "output": "script_90_beats.json",
+      "code": "generate_winning_video.py generate_script(topic_id)"
+    },
+    "step3_generate_narration": {
+      "input": "script_90_beats.json + narration_config.json",
+      "action": "TTS voice-05 140-160 WPM 12-16 words 2-6s pause median 0.4s -18.5dB visual 0.2s before keyword, split at sentence boundaries parallel calls low latency",
+      "output": "audio/narration_*.mp3 90 files",
+      "code": "generate_winning_video.py generate_narration(script)",
+      "voice_id": "voice-05",
+      "language": "en-AU"
+    },
+    "step4_create_visuals": {
+      "input": "script_90_beats.json + style_spec.json",
+      "action": "Generate PNGs with hand-drawn-styles ms-paint-bad-doodle bean-doodle-infographic whiteboard-explainer, thick outline 0.6% frame black #000 flat 4-6 colors pure white bg #FFFFFF max_dim 600 1 icon+text max 40-60% frame 20% margin",
+      "output": "assets/*.png",
+      "code": "generate_winning_video.py create_visuals(script)",
+      "style": "hand-drawn-styles style 5 ms-paint-bad-doodle, style 4 bean-doodle, style 19 whiteboard-explainer"
+    },
+    "step5_animate_with_code": {
+      "input": "assets/*.png + script_90_beats.json + style_spec.json + editing_skills.json",
+      "action": "Animate with ae_motion_enhanced.py code-driven keyframes pos/scale/rot/opacity/puppet-pin ARAP, easing premium 350-600ms cubic(0.4,0,0.2,1) corporate 200-400ms cubic(0.2,0,0,1) energetic 100-250ms ease-out-expo playful 150-300ms ease-out-back, 3 layers primary+secondary+ambient, Lottie Android money bag coins house SOLD confetti calculator count-up couple high-five checkmark burst, cut median 3.5s hard 98% + 30ms fade",
+      "output": "output/scene_*.mp4 per beat + combined",
+      "code": "ae_motion_enhanced.py scene.json -o out.mp4",
+      "engine": "PIL + ffmpeg 1920x1080 30fps pure white bg crf 18, puppet-warp ARAP fallback simple",
+      "tracks": {
+        "pos": [{"t": 0, "v": [960,540], "e": "easeOutExpo"}, {"t": 0.38, "v": [960,540], "e": "hold"}],
+        "scale": [{"t": 0, "v": 0.6, "e": "easeOutBack"}, {"t": 0.35, "v": 1.1}, {"t": 0.45, "v": 1.0, "e": "easeOutCubic"}],
+        "rot": [{"t": 0, "v": 0}],
+        "opacity": [{"t": 0, "v": 0}, {"t": 0.1, "v": 1.0}],
+        "puppet": [{"t": 0, "v": {"pins": [{"idx": 10, "shift": [0,0]}, {"idx": 50, "shift": [20,-30]}]}, "e": "easeInOut"}]
+      }
+    },
+    "step6_add_audio": {
+      "input": "output/scene_*.mp4 + audio/narration_*.mp3 + music + sfx",
+      "action": "Add narration visual 0.2s before keyword, music corporate ambient 80-90 BPM -37dB ducks -18.5dB vs voice, SFX whoosh same frame 12% pop 0-5ms before 10% impact same frame 8%, voice polish remove dead air >0.8s median pause 0.4s mean -18.5dB",
+      "output": "output/final_*.mp4 with audio",
+      "code": "ffmpeg -i video.mp4 -i audio.mp3 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 -shortest final.mp4"
+    },
+    "step7_combine": {
+      "input": "output/final_*.mp4 90 beats",
+      "action": "Combine 90 beats into 8-10 min video, 0.5s pause + 30ms fade sections + title pop 0.35s, total 2.89MB 104.1s for 20 beats example",
+      "output": "output/finance_australia_combined_90beats_premium_8_10min.mp4",
+      "code": "ffmpeg concat demuxer or ae_motion_enhanced.py combine"
+    },
+    "step8_preview": {
+      "input": "output/finance_australia_combined_90beats_premium_8_10min.mp4",
+      "action": "Preview Studio Port 3001 https://3001-{sandboxId}.e2b.app, Upload Studio Port 3000 fast 29.4 MB/s, MemOS remember, git commit push survives wipes",
+      "output": "Preview Studio 12 videos + new combined",
+      "code": "preview-studio/server.py port 3001, reference-studio/upload_only.py port 3000"
+    }
+  },
+  "tools": {
+    "puppet_warp": "pip install puppet-warp --break-system-packages needs libGL.so.1 apt install libgl1 or fallback simple",
+    "lottie_files": "npx skills add LottieFiles/motion-design-skill",
+    "lottie_android": "Gradle implementation com.airbnb.android:lottie:$lottieVersion",
+    "hyperframes": "npx hyperframes lint check preview render",
+    "hand_drawn_styles": "git clone https://github.com/threerocks/hand-drawn-styles.git",
+    "ffmpeg": "/usr/local/bin/ffmpeg 7.0.2-static",
+    "pil": "Pillow 12.3.0"
+  },
+  "survives_wipes": {
+    "how": "All knowledge_base JSONs git-tracked not in data/ ignored, committed to arena/01a03907-voicebox branch pushed to GitHub, plus backend/memos_memory/memory_store.json git-tracked MemOS 32 memories, plus STYLE_SPEC_ANALYSIS.md GITHUB_TOOLS_INVENTORY.md EXTENDED_EDITING_TYPES.md BEST_OF_BEST_SKILLS.md git-tracked",
+    "restore": "git clone https://github.com/imishbahu-commits/voicebox.git -b arena/01a03907-voicebox, all heavy info in paint-explainer/knowledge_base/ + root *.md + backend/memos_memory/memory_store.json, run generate_winning_video.py choose_topic -> script -> narration -> video",
+    "heavy_info_saved": ["winning_topics.json 5 topics", "style_spec.json 34 rules quantified", "editing_skills.json 15 repos tier1-4", "script_templates.json 13 beats example + 90 beats template", "narration_config.json voice-05 140-160 WPM", "video_pipeline.json 8 steps", "STYLE_SPEC_ANALYSIS.md 524 lines", "GITHUB_TOOLS_INVENTORY.md 300 lines", "EXTENDED_EDITING_TYPES.md 64 rules", "BEST_OF_BEST_SKILLS.md 15 repos comparison"]
+  },
+  "next_action": "Run paint-explainer/generate_winning_video.py --topic super-catchup-152k-gap --beats 90 --voice voice-05 --output finance_australia_combined_90beats_premium_8_10min.mp4"
+}

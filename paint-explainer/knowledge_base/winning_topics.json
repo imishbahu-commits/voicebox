@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-27T13:30:00Z",
+  "description": "Winning topics for finance-australia 40+ tier1, genuine no fake claims, educational like reference videos. Survives wipes via git.",
+  "niche": "finance-australia-40plus",
+  "subniche": "Super Catch-Up $152k behind",
+  "audience": "40+ Aussies, $161k median super vs $313k needed ASFA comfortable, $152k gap, SG 12%, salary sacrifice, carry-forward, TTR, downsizer",
+  "winning_topics": [
+    {
+      "id": "super-catchup-152k-gap",
+      "title": "The $152k Super Gap at 40: How to Catch Up Before 60",
+      "hook": "At 40, median super is $161k but ASFA says you need $313k for comfortable retirement — that's $152k behind. Here's how to catch up.",
+      "why_winning": "High pain point $152k gap, specific numbers, 40+ urgency, genuine ATO ASFA data, educational, no fake claims",
+      "beats": 90,
+      "duration_target": "8-10 min",
+      "sources": ["ATO caps $30k/$120k/$360k", "ASFA $313.5k single $595k couple", "SG 12%", "downsizer $300k pp no age limit 10yr 90 days", "CPA TTR 4-10% tax-free 60+"],
+      "visuals_resonate": ["house", "couple", "money bag", "piggy bank", "calendar", "salary slip", "calculator", "Ann example"],
+      "chapters": [
+        {"name": "Hook", "duration": "0:00-0:15", "beats": 3, "content": "Bold claim $161k vs $313k + question Turning sixty? + immediate visual house money bag"},
+        {"name": "Problem $152k gap", "duration": "0:15-2:30", "beats": 15, "content": "Median $161k, needed $313k, gap $152k, SG 12% not enough, 5-year carry-forward"},
+        {"name": "Solution 1 Salary Sacrifice $30k", "duration": "2:30-5:00", "beats": 20, "content": "Concessional cap $30k, $120k non-concessional, $360k bring-forward, carry-forward 5-year unused, salary sacrifice example Ann"},
+        {"name": "Solution 2 TTR 4-10% tax-free 60+", "duration": "5:00-7:30", "beats": 20, "content": "Transition to retirement, 4-10% pension, tax-free after 60, work test, combo with salary sacrifice"},
+        {"name": "Solution 3 Downsizer $300k", "duration": "7:30-9:00", "beats": 20, "content": "House SOLD stamp confetti, $300k pp $600k couple, no age limit, 10yr ownership, 90 days form, no work test"},
+        {"name": "Recap + CTA", "duration": "9:00-10:00", "beats": 12, "content": "Combo strategy, tax saving, couple high-five success checkmark draw particle burst"}
+      ],
+      "status": "winning",
+      "priority": 1
+    },
+    {
+      "id": "downsizer-300k-no-age-limit",
+      "title": "Downsizer $300k at Any Age: House to Super Loophole After 10 Years",
+      "hook": "Sold your house after 10 years? You can put $300k each into super — no age limit, no work test, 90 days to act.",
+      "why_winning": "Surprising no age limit, $300k pp $600k couple large, 10yr 90 days specific, house SOLD visual resonates, genuine ATO",
+      "beats": 60,
+      "duration_target": "6-8 min",
+      "sources": ["ATO downsizer $300k pp $600k couple no age limit 10yr ownership 90 days form, no work test, no cap"],
+      "visuals_resonate": ["house SOLD stamp confetti", "calendar 10 years", "calendar 90 days", "couple", "money bag"],
+      "status": "winning",
+      "priority": 2
+    },
+    {
+      "id": "salary-sacrifice-30k-carry-forward",
+      "title": "Salary Sacrifice $30k + $20k Carry-Forward: The $50k Super Boost at 40",
+      "hook": "At 40, you can salary sacrifice $30k + use $20k unused from last 5 years = $50k into super, save $8k tax.",
+      "why_winning": "Specific $30k + $20k = $50k, tax saving $8k tangible, carry-forward 5-year little-known, Ann example resonates, genuine",
+      "beats": 60,
+      "duration_target": "6-8 min",
+      "sources": ["ATO concessional $30k, carry-forward 5-year, $120k non-concessional $360k bring-forward, tax saving"],
+      "visuals_resonate": ["salary slip", "calendar 5-year", "calculator count-up", "money bag coins dropping", "piggy bank"],
+      "status": "winning",
+      "priority": 3
+    },
+    {
+      "id": "ttr-4-10-tax-free-60",
+      "title": "TTR 4-10% Tax-Free After 60: Work Less, Same Pay, More Super",
+      "hook": "Turning 60? Start a TTR pension 4-10%, work 3 days, get same pay, super grows tax-free.",
+      "why_winning": "Turning sixty question resonates, 4-10% specific, tax-free 60+ benefit, work less same pay appealing, genuine",
+      "beats": 60,
+      "duration_target": "6-8 min",
+      "sources": ["CPA TTR 4-10% tax-free 60+, work test, combo salary sacrifice"],
+      "visuals_resonate": ["calendar", "couple", "money bag", "piggy bank"],
+      "status": "winning",
+      "priority": 4
+    },
+    {
+      "id": "super-vs-mortgage-40",
+      "title": "Super vs Mortgage at 40: The $100k Decision That Changes Retirement",
+      "hook": "At 40, extra $10k to super vs mortgage? Super wins by $100k at 60 due to 12% SG + tax saving.",
+      "why_winning": "Common dilemma, $100k difference tangible, 40+ urgency, genuine comparison",
+      "beats": 60,
+      "duration_target": "6-8 min",
+      "sources": ["SG 12%, tax saving, compound"],
+      "visuals_resonate": ["house vs piggy bank", "calculator", "money bag"],
+      "status": "potential",
+      "priority": 5
+    }
+  ],
+  "choosing_criteria": {
+    "genuine": "ATO caps $30k/$120k/$360k ASFA $313.5k SG 12% downsizer $300k pp no age limit 10yr 90 days CPA TTR 4-10% tax-free 60+ — all verifiable, no fake claims",
+    "educational": "Like reference videos: problem → solution → example → recap, 12-16 words per beat 2-6s, visuals that resonate house/people/money bag not just text",
+    "winning_signals": "High pain $152k gap, surprising no age limit $300k, specific numbers $30k+$20k=$50k, tax saving $8k, question Turning sixty?, immediate visual",
+    "tier1": "Australia 40yo, ASFA comfortable $313.5k single $595k couple, ATO genuine"
+  },
+  "next_action": "Choose topic id super-catchup-152k-gap (priority 1) → generate script 90 beats → narration voice-05 → create video with premium motion"
+}
