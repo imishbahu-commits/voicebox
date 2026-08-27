@@ -1,0 +1,109 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-27T13:30:00Z",
+  "description": "Best-of-best editing skills for all editing types, survives wipes via git, from GITHUB_TOOLS_INVENTORY.md + BEST_OF_BEST_SKILLS.md + EXTENDED_EDITING_TYPES.md",
+  "tiers": {
+    "tier1_essential": [
+      {
+        "name": "puppet-warp",
+        "url": "https://github.com/mikecokina/puppet-warp",
+        "stars": "~150",
+        "why_best": "Only Python ARAP Photoshop Puppet Warp, plug-and-play triangular mesh + graph warp + graph-defined warp, demo interactive, pip install",
+        "features": ["triangular_mesh(width,height,delta,method) -> vertices,faces", "arap_precompute(vertices,faces) -> pre", "graph_warp(vertices,faces,control_indices,shift,pre) -> new_vertices", "graph_defined_warp(image,src_vertices,src_faces,dst_vertices,dst_faces) -> deformed"],
+        "for_style": "Arm wave 20px right 30px up 0.35s head tilt 5° 0.2s 1-2 pins typical up to 32 per-pin pos/radius/pull/rot/expansion anticipation 0.97 50ms + action 1.1 0.35s + settle 1.0 0.1s starch/overlap via root lock weight mask",
+        "install": "pip install puppet-warp --break-system-packages # needs libGL.so.1 apt install libgl1 or fallback simple",
+        "code": "puppet_deform_arap() in ae_motion_enhanced.py",
+        "editing_types": ["puppet-pin deformation", "part animation", "morph", "IK FK"]
+      },
+      {
+        "name": "LottieFiles motion-design-skill",
+        "url": "https://github.com/LottieFiles/motion-design-skill",
+        "stars": "1.4k",
+        "why_best": "Only universal motion design principles for AI agents, philosophy-first implementation-agnostic, 8-step checklist 4 archetypes duration/easing tables 3 pillars Disney 12 principles emotion mapping choreography narrative patterns reference quality checklist",
+        "archetypes": {
+          "Playful": "150-300ms ease-out-back 10-20% fun whimsical bouncy cute -> couple high-five",
+          "Premium": "350-600ms cubic-bezier(0.4,0,0.2,1) 0% elegant minimal luxury sophisticated -> house SOLD stamp confetti",
+          "Corporate": "200-400ms cubic-bezier(0.2,0,0,1) 0-3% clean professional business dashboard -> SG 12% salary sacrifice $30k",
+          "Energetic": "100-250ms ease-out-expo 15-30% dynamic energetic bold exciting -> numbers $313k punch-in"
+        },
+        "duration_table": "hover <100ms press <150ms release 200-300ms error shake 300-400ms 2-3 oscillations",
+        "quality_rules": "Never linear for spatial, never opacity-only, never exceed 1/3 screen without keyframe, always 3 layers primary+secondary+ambient",
+        "for_style": "Pop-in 0.35s ease-out-back 10% overshoot slide 0.38s ease-out-expo punch 12% 0.35s slow zoom 5% 3s 1.67%/s ease-in-out pan 60px 0.6s only when connected",
+        "install": "npx skills add LottieFiles/motion-design-skill --skill motion-design --agent claude-code",
+        "editing_types": ["motion principles", "easing", "choreography", "entrance exit", "3 layers"]
+      },
+      {
+        "name": "lottie-android",
+        "url": "https://github.com/airbnb/lottie-android",
+        "stars": "35.7k",
+        "why_best": "Most stars for animation renders AE JSON natively Android/iOS/Web/React Native small file size vector scalable manipulate duration forward/backward shapes layers alpha paths used by Uber Netflix Google Airbnb Shopify Duolingo 13000 words docs",
+        "features": ["LottieAnimationView XML app:lottie_rawRes app:lottie_autoPlay app:lottie_loop", "Java addAnimatorUpdateListener playAnimation", "Compose rememberLottieComposition", "web lottie-web 5.12.2 lottie.loadAnimation", "Gradle implementation com.airbnb.android:lottie:$lottieVersion"],
+        "for_finance": ["welcome screen progress", "success/failed animation", "user input response", "money bag coins dropping bounce", "house SOLD stamp confetti", "tax calculator count-up saving badge pop", "couple high-five", "success checkmark draw particle burst"],
+        "benefits": "Lightweight small file size vs PNG sequence vector scalable duration control solid support",
+        "editing_types": ["premium motion beyond sliding", "particles", "confetti", "coins", "count-up"]
+      },
+      {
+        "name": "hyperframes",
+        "url": "https://github.com/heygen-com/hyperframes",
+        "stars": "42.6k",
+        "why_best": "Only agent-native HTML-to-video Write HTML Render video composition contract data-* timing class=clip tracks sub-compositions determinism atomic motion rules scene blueprints transitions runtime adapters GSAP Lottie Three.js Anime.js CSS WAAPI TypeGPU keyframes seek-safe CLI npx hyperframes lint check preview render transcribe tts registry 50+ components 12 finished projects hyperframes-kit",
+        "features": ["motion-graphics short design-led <10s motion-is-message kinetic type stat count-up chart logo sting lower-third overlay animated tweet headline MP4 or transparent overlay", "hyperframes-core", "hyperframes-animation", "hyperframes-keyframes"],
+        "for_style": "Kinetic type for $161k stat count-up for $152k gap chart for $161k vs $313k logo sting for house SOLD lower-third animated tweet transparent overlay confetti",
+        "editing_types": ["HTML-to-video", "kinetic type", "data viz", "chart", "logo sting", "50+ blocks"]
+      }
+    ],
+    "tier2_critical": [
+      {
+        "name": "hand-drawn-styles",
+        "url": "https://github.com/threerocks/hand-drawn-styles",
+        "license": "MIT",
+        "why_best": "Only tool-agnostic hand-drawn style prompt recipes 19 styles PROTOCOL.md STYLES.md SKILL.md render_prompt.py works with any image model",
+        "styles_for_finance": {
+          "ms-paint-bad-doodle style 5": "mouse hard draw virus-level intentionally bad absurd proportions rough pure color blocks for $161k median funny",
+          "bean-doodle-infographic style 4": "black round bean white dot eye single orange emphasis for steps",
+          "minimal-line-explainer style 2": "米白 paper thin black single line stickman + few props for flow",
+          "whiteboard-explainer style 19": "white bg black line few red/blue marks steps clear for tutorial"
+        },
+        "install": "git clone https://github.com/threerocks/hand-drawn-styles.git, python3 scripts/render_prompt.py --style 5 --subject 'money bag $313k' --text 'no text' --aspect 16:9 --format json",
+        "editing_types": ["MS-Paint thick outline flat", "PNG generation"]
+      },
+      {
+        "name": "handanim",
+        "url": "https://github.com/subroy13/handanim",
+        "why_best": "Only Python package for programmatic animation with hand-drawn feel draw and animate shapes lines ellipses polygons with hand-drawn feel fill with sketch-style strokes hatching scribbles animate handwritten text custom fonts export SVG or MP4 intuitive API",
+        "editing_types": ["hand-drawn animation", "handwritten marker text"]
+      },
+      {
+        "name": "story-to-handdrawn-video",
+        "url": "https://github.com/gnipbao/story-to-handdrawn-video",
+        "why_best": "Agent skill convert story to hand-drawn video 20 built-in styles detailed table",
+        "styles": ["colored-pencil-diary", "minimal-line-explainer", "kid-crayon", "rawkid-crayon", "bean-doodle-infographic", "ms-paint-bad-doodle", "ballpoint-scribble", "real-crayon-paper", "ink-wash", "emotional-watercolor-sketch", "retro-gouache-concept", "sunlit-storybook", "nordic-gouache-storybook", "inked-storybook", "warm-flat-storybook", "naive-marker-notes", "zine-riso-collage", "organic-contour-doodle", "whiteboard-explainer", "linocut-editorial"],
+        "editing_types": ["story to hand-drawn", "20 styles"]
+      },
+      {
+        "name": "srt-whiteboard-animation",
+        "url": "https://github.com/geeklee/srt-whiteboard-animation",
+        "why_best": "Only SRT subtitle -> whiteboard hand-drawn video Skill partition mask orchestration streaming pen stroke each element follows subtitle sequentially pen tip continuous in region then color fill export MP4 warm beige but adaptable to pure white independent venv",
+        "features": ["parse_srt.py <srt> --target-sec 30 --min-sec 25 --max-sec 35 -> storyboard", "render_annotation_preview.py -> check", "render_stream_whiteboard.py <image> <annotation> <output.mp4> assets/drawing-hand.png --ink-path grid --color-fill contour-wipe -> single scene", "merge_scenes.py -> merge", "preview.html local editing"],
+        "editing_types": ["SRT to whiteboard", "auto-caption Whisper", "mask orchestration"]
+      },
+      {
+        "name": "automated-whiteboard",
+        "url": "https://github.com/maksimKorzh/automated-whiteboard",
+        "why_best": "Fully automated whiteboard animation using Python OpenCV PyAutoGUI simple demo",
+        "editing_types": ["fully automated whiteboard", "draw-on 0.8s"]
+      }
+    ],
+    "tier3_specialized": [
+      {"name": "FusionRigFX", "url": "https://github.com/mhermiz/FusionRigFX", "stars": "24 commits", "why_best": "Only Puppet Pin-style for DaVinci Resolve Fusion automatic mesh + animatable pins up to 32 per-pin pos/radius/pull/rot/expansion Setup/Animate workflow influence blending falloff root lock weight mask follower/wave deformers", "editing_types": ["DaVinci puppet 32 pins reference"]},
+      {"name": "jspaint", "url": "https://github.com/1j01/jspaint", "stars": "7.5k", "why_best": "Most stars MS Paint classic revived + extras JavaScript HTML5 canvas online", "editing_types": ["MS Paint revived reference"]},
+      {"name": "animism/pycairo/motionpicture", "url": "https://github.com/jhol/animism", "stars": "25", "why_best": "Simple frameworks procedurally generating animations cairo+ffmpeg Pycairo+ffmpeg generic frame->video pip install needs ffmpeg", "editing_types": ["frame to video"]},
+      {"name": "MemOS", "url": "https://github.com/MemTensor/MemOS", "stars": "11k", "why_best": "Self-evolving memory OS ultra-persistent hybrid-retrieval cross-task skill reuse 35.24% token savings 4 modes Cloud API Self-Host Local Plugin SQLite FTS5+vector 100% local", "editing_types": ["persistent memory"]},
+      {"name": "Ultimate Video Editing (local)", "why_best": "Entrance 4 types pop/slide/stamp/draw-on exit 65-75% stagger 50-100ms 3-act 25/50/25 traps 90% hard cuts", "editing_types": ["cut patterns"]},
+      {"name": "content-router (local)", "why_best": "Stage map 0-8 one skill at a time trigger-driven decides WHICH skill WHEN based on narration function not same every time", "editing_types": ["smart router"]}
+    ]
+  },
+  "comparison_table": "15 repos in BEST_OF_BEST_SKILLS.md",
+  "installation": "All Tier1-2 in BEST_OF_BEST_SKILLS.md install section",
+  "integration": "All Tier1-2 integrated in ae_motion_enhanced.py with fallback for missing libGL"
+}

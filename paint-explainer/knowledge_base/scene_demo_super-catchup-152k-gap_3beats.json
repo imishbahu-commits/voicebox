@@ -1,0 +1,179 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration": 10.5,
+  "bg_color": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "layers": [
+    {
+      "src": "assets/house_+_money_bag_+_$161k_vs_$313k.png",
+      "max_dim": 600,
+      "tracks": {
+        "pos": [
+          {
+            "t": 0,
+            "v": [
+              960,
+              540
+            ],
+            "e": "easeOutExpo"
+          },
+          {
+            "t": 0.38,
+            "v": [
+              960,
+              540
+            ],
+            "e": "hold"
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 0.6,
+            "e": "easeOutBack"
+          },
+          {
+            "t": 0.35,
+            "v": 1.1
+          },
+          {
+            "t": 0.45,
+            "v": 1.0,
+            "e": "easeOutCubic"
+          }
+        ],
+        "rot": [
+          {
+            "t": 0,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 0.1,
+            "v": 1.0
+          }
+        ],
+        "puppet": [
+          {
+            "t": 0,
+            "v": {
+              "pins": [
+                {
+                  "idx": 10,
+                  "shift": [
+                    0,
+                    0
+                  ]
+                },
+                {
+                  "idx": 50,
+                  "shift": [
+                    20,
+                    -30
+                  ]
+                }
+              ]
+            },
+            "e": "easeInOut"
+          }
+        ]
+      }
+    },
+    {
+      "src": "assets/gap_visualization_$161k_vs_$313k_side-by-side.png",
+      "max_dim": 600,
+      "tracks": {
+        "pos": [
+          {
+            "t": 0,
+            "v": [
+              960,
+              540
+            ]
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ],
+        "rot": [
+          {
+            "t": 0,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 0.1,
+            "v": 1.0
+          }
+        ],
+        "puppet": []
+      }
+    },
+    {
+      "src": "assets/calendar_+_3_icons.png",
+      "max_dim": 600,
+      "tracks": {
+        "pos": [
+          {
+            "t": 0,
+            "v": [
+              960,
+              540
+            ],
+            "e": "easeOutExpo"
+          },
+          {
+            "t": 0.38,
+            "v": [
+              960,
+              540
+            ],
+            "e": "hold"
+          }
+        ],
+        "scale": [
+          {
+            "t": 0,
+            "v": 1.0
+          }
+        ],
+        "rot": [
+          {
+            "t": 0,
+            "v": 0
+          }
+        ],
+        "opacity": [
+          {
+            "t": 0,
+            "v": 0
+          },
+          {
+            "t": 0.1,
+            "v": 1.0
+          }
+        ],
+        "puppet": []
+      }
+    }
+  ]
+}

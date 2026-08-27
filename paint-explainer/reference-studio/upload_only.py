@@ -16,6 +16,7 @@ UPLOAD.mkdir(parents=True, exist_ok=True)
 DATA_REF = Path("/home/user/voicebox/data/reference_videos")
 DATA_REF.mkdir(parents=True, exist_ok=True)
 
+
 # Persistent git-tracked backup that survives wipes via git commit
 PERSISTENT_REF = Path("/home/user/voicebox/paint-explainer/reference_videos")
 PERSISTENT_REF.mkdir(parents=True, exist_ok=True)
@@ -23,6 +24,8 @@ PERSISTENT_REF.mkdir(parents=True, exist_ok=True)
 # Also backup to knowledge_base reference_videos for extra persistence
 KB_REF = Path("/home/user/voicebox/paint-explainer/knowledge_base/reference_videos")
 KB_REF.mkdir(parents=True, exist_ok=True)
+
+
 
 # Fast upload config - 4 MB/s target
 app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024  # 500MB max
@@ -101,11 +104,16 @@ def upload():
     
     size_mb = save_path.stat().st_size / 1024 / 1024
     
+
     # Backup to data/reference_videos + persistent git-tracked locations
+
+    # Backup to data/reference_videos
+
     try:
         backup_path = DATA_REF / filename
         shutil.copy(str(save_path), str(backup_path))
     except Exception as e:
+
         print(f"Backup failed data: {e}")
     try:
         persistent_path = PERSISTENT_REF / filename
@@ -118,6 +126,9 @@ def upload():
         shutil.copy(str(save_path), str(kb_path))
     except Exception as e:
         print(f"KB backup failed: {e}")
+
+        print(f"Backup failed: {e}")
+
     
     # Remember via MemOS
     if MEMOS_AVAILABLE:
@@ -170,8 +181,11 @@ def upload_multiple():
         # Ensure dir exists for fast 4 MB/s upload
         UPLOAD.mkdir(parents=True, exist_ok=True)
         DATA_REF.mkdir(parents=True, exist_ok=True)
+
         PERSISTENT_REF.mkdir(parents=True, exist_ok=True)
         KB_REF.mkdir(parents=True, exist_ok=True)
+
+
         file.save(str(save_path))
         size_mb = save_path.stat().st_size / 1024 / 1024
         

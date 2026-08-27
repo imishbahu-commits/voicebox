@@ -1,0 +1,136 @@
+{
+  "voice": {
+    "voice_id": "voice-05",
+    "why": "Clean corporate calm for 40+ Aussies, 140-160 WPM, 12-16 words per beat 2-6s, pause median 0.4s mean -18.5dB dead air >0.8s removed, perfect sync 0.2s before keyword",
+    "alternatives": [
+      "voice-00",
+      "voice-01",
+      "voice-02",
+      "voice-03",
+      "voice-04"
+    ],
+    "audition_text": "At forty, median super is one-sixty-one thousand, but you need three-thirteen for comfortable retirement. That's a one-fifty-two thousand dollar gap.",
+    "language": "en-AU",
+    "accent": "Australian"
+  },
+  "narration": [
+    {
+      "beat": 1,
+      "text": "At forty, median super is one-sixty-one thousand, but you need three-thirteen for comfortable retirement.",
+      "duration": "3.2s",
+      "words": 14,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_001.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 2,
+      "text": "That's a one-fifty-two thousand dollar gap. And SG twelve percent alone won't close it.",
+      "duration": "3.6s",
+      "words": 14,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_002.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 3,
+      "text": "But you have three powerful catch-up tools that most forty-year-olds miss.",
+      "duration": "3.7s",
+      "words": 11,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_003.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 4,
+      "text": "First, salary sacrifice. Concessional cap is thirty thousand per year.",
+      "duration": "3.3s",
+      "words": 10,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_004.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 5,
+      "text": "Plus you can use unused cap from last five years. That's carry-forward.",
+      "duration": "3.8s",
+      "words": 12,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_005.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 6,
+      "text": "Example: Ann earns one hundred thousand, sacrifices thirty thousand, uses twenty thousand carry-forward.",
+      "duration": "4.2s",
+      "words": 13,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_006.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 7,
+      "text": "She puts fifty thousand into super, saves eight thousand tax, super grows tax-free.",
+      "duration": "4.5s",
+      "words": 13,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_007.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 8,
+      "text": "Second, transition to retirement. At sixty, start a pension four to ten percent, tax-free.",
+      "duration": "3.8s",
+      "words": 14,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_008.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 9,
+      "text": "Work three days, get same pay, super keeps growing. No work test after sixty-five.",
+      "duration": "3.6s",
+      "words": 14,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_009.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 10,
+      "text": "Third, downsizer. Sold your house after ten years? Put three hundred thousand each into super.",
+      "duration": "4.0s",
+      "words": 15,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_010.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 11,
+      "text": "No age limit, no work test, ten year ownership, ninety days to act after sale.",
+      "duration": "4.2s",
+      "words": 15,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_011.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 12,
+      "text": "Combine them: salary sacrifice plus TTR plus downsizer. That's how you close one-fifty-two thousand gap.",
+      "duration": "4.0s",
+      "words": 15,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_012.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    },
+    {
+      "beat": 13,
+      "text": "Turning sixty? You can still catch up. Start today, not tomorrow.",
+      "duration": "3.5s",
+      "words": 11,
+      "voice_id": "voice-05",
+      "file_path": "audio/narration_013.mp3",
+      "visual_sync": "0.2s BEFORE keyword"
+    }
+  ],
+  "total": 13
+}
