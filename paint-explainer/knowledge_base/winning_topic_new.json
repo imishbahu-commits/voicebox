@@ -1,0 +1,37 @@
+{
+  "version": "3.0",
+  "updated": "2026-08-27T18:15:00Z",
+  "finance_dropped": true,
+  "previous_niche": "finance-australia-40plus DROPPED",
+  "current_niche": "self-improvement / psychology / science - educational whiteboard animation - YOUR reference niche style (pure white bg thick outline flat)",
+  "detection_method": "Analyzed 11 reference videos you uploaded before wipe: 199MB 640x360 30fps pure white bg thick black outline 0.6% frame flat 4-6 colors no gradients, hard cuts median 3.5s, style matches After Skool / RSA Animate / AsapSCIENCE / Oversimplified - educational explainer, not finance",
+  "winning_topic": {
+    "id": "why-you-procrastinate-science-5-steps",
+    "title": "Why You Procrastinate: The Science Behind Procrastination and How to Beat It in 5 Steps",
+    "hook": "You have a deadline tomorrow, but you're watching this video. Why? It's not laziness — it's your brain trying to protect you. Here's the science and 5 steps to beat it.",
+    "why_winning": "High search volume 'why do I procrastinate' 100K+ monthly, high pain point everyone experiences, self-improvement psychology niche evergreen, works perfectly with whiteboard animation style (brain, calendar, clock, checklist), 10 min ideal for YouTube retention, educational like After Skool RSA Animate viral 16M views 'Surprising Truth About What Motivates Us', can use real-life footage of person procrastinating + hand-drawn brain",
+    "search_volume": "100K+ monthly 'procrastination', 'why do I procrastinate' high",
+    "competition": "Medium, but whiteboard animation with science + 5 steps actionable beats talking head",
+    "retention": "High: hook immediate relatable (deadline tomorrow), story brain science, 5 steps actionable, payoff",
+    "beats": 90,
+    "duration_target": "10 minutes (8-12 min range, 90 beats x 3.5s median = 315s = 5.25 min, but with longer beats for complex science 4-5s = 10 min)",
+    "chapters": [
+      {"name": "Hook", "duration": "0:00-0:45", "beats": 8, "content": "Relatable deadline tomorrow but watching video, not laziness brain protection, question Why you procrastinate?"},
+      {"name": "What Procrastination Really Is", "duration": "0:45-2:30", "beats": 15, "content": "Not laziness, not time management, it's emotional regulation, amygdala vs prefrontal cortex, limbic system vs executive, short-term mood repair"},
+      {"name": "The Science: Brain", "duration": "2:30-5:00", "beats": 22, "content": "Amygdala alarm, prefrontal cortex planner, dopamine, present self vs future self, temporal discounting, brain scans, research"},
+      {"name": "5 Steps to Beat It", "duration": "5:00-8:30", "beats": 35, "content": "Step1 5-minute rule, Step2 2-minute rule, Step3 environment design, Step4 self-compassion, Step5 implementation intention if-then, each with example and visual"},
+      {"name": "Recap + CTA", "duration": "8:30-10:00", "beats": 10, "content": "Recap brain not lazy 5 steps, checklist, couple high-five success checkmark draw particle burst, start with 5-minute rule today"}
+    ],
+    "visuals_resonate": ["brain with amygdala and prefrontal cortex", "calendar with deadline", "clock", "person at desk procrastinating (real-life footage)", "checklist 5 steps", "dopamine molecule", "present self vs future self split", "brain scan", "5-minute timer", "environment desk clean vs messy", "self-compassion heart", "if-then flowchart", "couple high-five", "success checkmark"],
+    "real_life_footage_needed": ["person at desk procrastinating looking at phone deadline tomorrow", "brain scan MRI", "clock ticking", "clean desk vs messy desk", "person starting 5-minute timer"],
+    "hand_drawn_needed": ["brain with labels amygdala prefrontal cortex", "calendar deadline", "dopamine", "present self vs future self", "checklist 5 steps", "timer 5-minute", "if-then flowchart", "heart self-compassion", "success checkmark"],
+    "sources": ["Research: Pychyl, Sirois emotional regulation, amygdala vs prefrontal cortex, temporal discounting, Steel meta-analysis, self-compassion Neff", "Genuine no fake claims, educational like After Skool"],
+    "style": {
+      "bg": "pure white #FFFFFF 85% thick black outline 0.6% frame flat 4-6 colors no gradients, 1 icon + text max 40-60% frame 20% margin",
+      "edit": "hard cuts 98% median 3.5s visual 0.2s before keyword pop 0.35s ease-out-back numbers slide 0.38s ease-out-expo pan 60px only when connected gap, no cheap arrow circle",
+      "voice": "140-160 WPM 12-16 words 2-6s pause median 0.4s -18.5dB voice-05 calm informative",
+      "premium": "LottieFiles Premium 350-600ms cubic(0.4,0,0.2,1) Corporate 200-400ms cubic(0.2,0,0,1) Energetic 100-250ms ease-out-expo Playful 150-300ms ease-out-back 3 layers primary+secondary+ambient + Lottie Android brain pulse, checklist pop, timer count-up, success checkmark draw particle burst"
+    }
+  },
+  "next_action": "Generate 10-min script 90 beats, then narration voice-05, then storyboard for assets generation editing, then generate assets via generate_image for hand-drawn + image_search for real-life licensed footage, then collect all and generate video with ae_motion_enhanced.py After Effects-like editing"
+}
