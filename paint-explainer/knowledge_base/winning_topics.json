@@ -1,0 +1,37 @@
+{
+  "version": "2.0",
+  "updated": "2026-08-27T18:05:00Z",
+  "description": "Generic winning topics template — DROPS FINANCE NICHE, uses YOUR reference video niche you chose",
+  "finance_dropped": true,
+  "previous_niche": "finance-australia-40plus super $161k vs $313k gap $152k — DROPPED per user request",
+  "current_niche": "user_reference_niche — detected from reference videos you upload via Port 3000",
+  "instruction": "Drop finance niche completely. Analyze reference videos you uploaded (11 videos 199MB 640x360 pure white bg thick outline) to detect YOUR niche, then generate winning topics in SAME niche as reference videos",
+  "niche_detection": {
+    "how": "Upload reference videos via Port 3000 https://3000-{sandbox}.e2b.app, they now save to paint-explainer/reference_videos/ git-tracked (not data/ ignored) so survive wipes via git commit push",
+    "analyze": "Extract frames, transcribe audio, detect topic (history, science, self-improvement, education, etc.), then generate winning topics in same niche",
+    "style_preserved": "pure white bg #FFFFFF 85% thick black outline 0.6% frame flat 4-6 colors no gradients, hard cuts median 3.5s visual 0.2s before keyword, pop 0.35s ease-out-back slide 0.38s ease-out-expo, voice 140-160 WPM voice-05 pause 0.4s -18.5dB, premium LottieFiles Premium 350-600ms 3 layers + Lottie Android"
+  },
+  "winning_topics_template": {
+    "how_to_choose": "1. Watch reference videos with sound, note topic, hook, story structure. 2. Watch muted frame-by-frame, note visuals that resonate. 3. Find high pain point or surprising fact or question in reference niche. 4. Create winning topic with bold claim + question + immediate visual, genuine no fake claims, educational like reference videos",
+    "criteria": {
+      "genuine": "Verifiable data from reference niche, no fake claims",
+      "educational": "Problem -> solution -> example -> recap, 12-16 words per beat 2-6s, visuals that resonate not just text",
+      "winning_signals": "High pain point, surprising fact, specific numbers, question, immediate visual, 40+ or tier1 if applicable",
+      "style": "Pure white bg thick outline flat MS-Paint, smart router different edit per beat only when needed, no cheap arrow circle every time"
+    }
+  },
+  "example_winning_topics_generic": [
+    {
+      "id": "reference-niche-topic-1",
+      "title": "Winning Topic in YOUR Reference Niche (Upload videos to detect)",
+      "hook": "Bold claim + question + immediate visual from YOUR niche",
+      "why_winning": "High pain point in YOUR niche, specific numbers, genuine data, educational",
+      "beats": 90,
+      "duration_target": "8-10 min",
+      "visuals_resonate": ["from reference videos: house/people/money bag or history characters/science icons/etc"],
+      "status": "template - replace with YOUR niche after uploading reference videos",
+      "priority": 1
+    }
+  ],
+  "next_action": "Upload reference videos via Port 3000 (fast 29.4 MB/s), run niche_detector.py, then generate_winning_video.py will auto-detect YOUR niche and generate winning topics in YOUR niche, not finance"
+}
