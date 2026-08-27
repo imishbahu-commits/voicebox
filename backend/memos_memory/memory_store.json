@@ -1,6 +1,6 @@
 {
   "user_id": "voicebox_user",
-  "updated_at": "2026-08-26T21:28:56.362556",
+  "updated_at": "2026-08-27T12:39:00.380162",
   "memories": [
     {
       "id": "mem_1787777625329_0",
@@ -261,9 +261,177 @@
         "duration": "54.1s"
       },
       "messages": []
+    },
+    {
+      "id": "mem_1787833710598_20",
+      "content": "Reference video uploaded: test_4mb.mp4 4.00MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:28:30.598945",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "test_4mb.mp4",
+        "size_mb": 4.0,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787833793000_21",
+      "content": "Reference video uploaded: 15699.mp4 19.59MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:29:53.000800",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15699.mp4",
+        "size_mb": 19.58950424194336,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787833859716_22",
+      "content": "Reference video uploaded: 15695.mp4 14.22MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:30:59.716705",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15695.mp4",
+        "size_mb": 14.218559265136719,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787833946370_23",
+      "content": "Reference video uploaded: 15691.mp4 27.29MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:32:26.370586",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15691.mp4",
+        "size_mb": 27.294962882995605,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834004939_24",
+      "content": "Reference video uploaded: 15683.mp4 27.92MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:33:24.939543",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15683.mp4",
+        "size_mb": 27.923852920532227,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834060873_25",
+      "content": "Reference video uploaded: 15679.mp4 18.78MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:34:20.873935",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15679.mp4",
+        "size_mb": 18.777695655822754,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834115913_26",
+      "content": "Reference video uploaded: 15675.mp4 14.79MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:35:15.913017",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15675.mp4",
+        "size_mb": 14.791173934936523,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834147032_27",
+      "content": "Reference video uploaded: 15671.mp4 9.83MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:35:47.032818",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15671.mp4",
+        "size_mb": 9.829658508300781,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834185679_28",
+      "content": "Reference video uploaded: 15666.mp4 17.06MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:36:25.679579",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15666.mp4",
+        "size_mb": 17.06190776824951,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834246048_29",
+      "content": "Reference video uploaded: 15663.mp4 18.72MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:37:26.048324",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15663.mp4",
+        "size_mb": 18.72066593170166,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834276299_30",
+      "content": "Reference video uploaded: 15659.mp4 11.32MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:37:56.299393",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15659.mp4",
+        "size_mb": 11.31953239440918,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834340380_31",
+      "content": "Reference video uploaded: 15655.mp4 19.25MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:39:00.380147",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15655.mp4",
+        "size_mb": 19.25062656402588,
+        "source": "upload_studio"
+      },
+      "messages": []
     }
   ],
   "version": "2.0-stardust",
-  "count": 20,
+  "count": 32,
   "source": "MemTensor/MemOS integration for voicebox"
 }

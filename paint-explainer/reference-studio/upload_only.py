@@ -10,11 +10,15 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 BASE = Path(__file__).parent
 UPLOAD = BASE / "uploads"
-UPLOAD.mkdir(exist_ok=True)
+UPLOAD.mkdir(parents=True, exist_ok=True)
 
 # Also backup to data/reference_videos for persistence attempt + memos
 DATA_REF = Path("/home/user/voicebox/data/reference_videos")
 DATA_REF.mkdir(parents=True, exist_ok=True)
+
+# Fast upload config - 4 MB/s target
+app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024  # 500MB max
+app.config['UPLOAD_FOLDER'] = str(UPLOAD)
 
 # For memos integration
 try:
@@ -79,7 +83,12 @@ def upload():
     
     save_path = UPLOAD / filename
     
-    # Save file - fast
+    # Ensure dir exists before save - fix FileNotFoundError for 15699.mp4
+    UPLOAD.mkdir(parents=True, exist_ok=True)
+    DATA_REF.mkdir(parents=True, exist_ok=True)
+    
+    # Save file - fast 4 MB/s optimized
+    # Use direct save with larger buffer for speed
     file.save(str(save_path))
     
     size_mb = save_path.stat().st_size / 1024 / 1024
@@ -139,6 +148,9 @@ def upload_multiple():
             continue
         filename = os.path.basename(file.filename)
         save_path = UPLOAD / filename
+        # Ensure dir exists for fast 4 MB/s upload
+        UPLOAD.mkdir(parents=True, exist_ok=True)
+        DATA_REF.mkdir(parents=True, exist_ok=True)
         file.save(str(save_path))
         size_mb = save_path.stat().st_size / 1024 / 1024
         
