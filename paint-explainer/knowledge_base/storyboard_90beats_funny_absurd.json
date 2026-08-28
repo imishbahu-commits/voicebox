@@ -1,0 +1,239 @@
+{
+  "version": "4.0-funny-absurd",
+  "title": "Why You Procrastinate: Your Brain Is A Drama Queen - Funny Absurd Storyboard",
+  "reference": "11 videos 199MB 640x360 30fps pure white bg thick black outline 0.6% flat MS-Paint 4-6 colors hard cuts median 3.5s visual 0.2s BEFORE keyword",
+  "style": "Highly engaging easy to watch, funny absurd assets, resonant visuals not only text, house/people/money bag/brain/calendar per YOUR niche self-improvement psychology science, clean pure white bg thick black outline 0.6% flat MS-Paint illustrated doodles, part-by-part batches max 10 assets, visuals perfectly synced 0.2s anticipation, no cheap arrow/circle only when needed, pop timing anticipation, camera ae-like keyframing",
+  "editing_plan": {
+    "overall": "After Effects-like code-driven keyframes pos/scale/rot/opacity/puppet-pin ARAP 3 keyframes anticipation 0.97 50ms->1.1 0.35s->1.0 0.1s, LottieFiles Premium 350-600ms 3 layers primary+secondary+ambient, 1/3 rule",
+    "cut_cadence": "median 3.5s min1.5 max5.2, hard cuts 98% + 30ms fade sections 0.5s pause + title pop 0.35s",
+    "camera": "static hold 92%, slow zoom-in 5% 3s 1.67%/s emotional, punch-in 12% 0.35s 34.3%/s emphasis, pan right 60px 0.6s only when connected, no tracking",
+    "character_animation": "slide-in 0.38s ease-out-expo alternating left/right for new ideas, pop-in 0.35s ease-out-back 10% overshoot 0.6->1.1->1.0 for numbers/brain/checklist, puppet-pin 1-2 parts ARAP, anticipation 0.97 50ms + follow-through 1.02->1.0 100ms, squash 5% 0.95 stretch 1.05",
+    "easing": "Premium 350-600ms cubic-bezier(0.4,0,0.2,1) Corporate 200-400ms cubic(0.2,0,0,1) Energetic 100-250ms ease-out-expo Playful 150-300ms ease-out-back",
+    "sfx": "whoosh slide 12%, pop 10% pop-in, impact 8% punch-in, sync 0-5ms before visual anticipation, music corporate ambient minimal 80-90 BPM -37dB vs voice -18.5dB",
+    "text": "1 line max 12-16 words centered bottom/top handwritten marker uppercase numbers lowercase body bold 8% body 12% numbers, pop-in 0.35s or slide 0.38s full shot 3.5s median",
+    "voice": "140-160 WPM calm informative corporate not energetic, pause median 0.4s dead air >0.8s removed, 12-16 words per beat 2-6s, voice-06 educational masculine",
+    "lottie_premium": "brain pulse checklist pop timer count-up checkmark burst money bag coins house SOLD confetti calculator count-up couple high-five"
+  },
+  "beats": [
+    {
+      "beat": 1,
+      "narration": "You have a deadline tomorrow, but you're watching this video. Classic.",
+      "visual_description": "Hand-drawn calendar with deadline TOMORROW in red bold + stick figure on couch watching phone with popcorn absurd funny, pure white bg thick black outline 0.6% flat MS-Paint",
+      "assets_needed": ["calendar_deadline_tomorrow_absurd.png", "person_couch_popcorn_phone.png"],
+      "assets_generation": {"hand_drawn": ["calendar_deadline_tomorrow_absurd.png: hand-drawn doodle calendar grid with TOMORROW red marker thick black outline 0.6% flat colors pure white bg MS-Paint simple 1 icon funny absurd"], "real_life_licensed": ["person-procrastinating-at-desk-deadline"]},
+      "edit": "slide-in 0.38s ease-out-expo calendar from left, pop-in deadline text 0.35s ease-out-back 0.6->1.1->1.0",
+      "camera": "static hold 92%",
+      "duration": "4.0s",
+      "sfx": "whoosh slide + pop"
+    },
+    {
+      "beat": 2,
+      "narration": "Why? It's not because you're lazy. Your brain is protecting you. Badly.",
+      "visual_description": "Brain wearing security guard uniform + shield that says NOT LAZY + dot eyes + mitten hands funny absurd, pure white bg thick outline",
+      "assets_needed": ["brain_security_guard_shield_not_lazy.png"],
+      "assets_generation": {"hand_drawn": ["brain_security_guard_shield_not_lazy.png: hand-drawn doodle brain with security guard hat and uniform holding shield NOT LAZY thick black outline flat colors pure white bg MS-Paint funny absurd"]},
+      "edit": "pop-in brain 0.35s ease-out-back 10% overshoot, anticipation 0.97 50ms -> 1.1 0.35s -> 1.0 0.1s",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "pop 0-5ms before visual"
+    },
+    {
+      "beat": 3,
+      "narration": "Today: why your brain is a drama queen and five ridiculous hacks to beat it.",
+      "visual_description": "Checklist 5 steps with brain wearing crown + drama mask + clock melting Dali absurd funny",
+      "assets_needed": ["checklist_5_steps_drama_queen.png", "brain_drama_queen_crown.png"],
+      "assets_generation": {"hand_drawn": ["checklist_5_steps_drama_queen.png: hand-drawn checklist 5 steps with funny icons timer tiny mouse desk flowchart heart thick outline flat pure white bg", "brain_drama_queen_crown.png: brain with queen crown and drama masks tragedy comedy absurd funny"]},
+      "edit": "stamp + stagger 50-100ms checklist items, pop-in brain drama queen 0.35s",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "pop stagger"
+    },
+    {
+      "beat": 4,
+      "narration": "First, what procrastination really is. Spoiler: not laziness. It's emotional.",
+      "visual_description": "Cross-out LAZY label with red X + heart + brain arguing speech bubbles funny absurd",
+      "assets_needed": ["cross_out_lazy_heart_brain_argue.png"],
+      "assets_generation": {"hand_drawn": ["cross_out_lazy_heart_brain_argue.png: hand-drawn LAZY word crossed out red X heart and brain arguing with speech bubbles thick outline flat pure white bg funny"]},
+      "edit": "cross-out negate draw-on 0.8s + punch-in 12% 0.35s ease-out-back emphasis",
+      "camera": "punch-in 12% 0.35s 34.3%/s",
+      "duration": "4.0s",
+      "sfx": "impact punch-in same frame"
+    },
+    {
+      "beat": 5,
+      "narration": "You avoid a task because it makes you feel bad right now. Stress, boredom, self-doubt.",
+      "visual_description": "Heart with stress cloud + task list with scary monster faces + person sweating absurd",
+      "assets_needed": ["heart_stress_cloud_task_monsters.png"],
+      "assets_generation": {"hand_drawn": ["heart_stress_cloud_task_monsters.png: hand-drawn heart with stress cloud rain and task list papers with scary monster faces funny absurd thick outline"]},
+      "edit": "slow zoom-in 5% 3s emotional 1.67%/s ease-in-out cubic(0.4,0,0.2,1)",
+      "camera": "slow zoom-in 5% 3s",
+      "duration": "4.5s",
+      "sfx": "none emotional"
+    },
+    {
+      "beat": 6,
+      "narration": "Your brain wants short-term mood repair. Like eating ice cream before broccoli.",
+      "visual_description": "Brain eating ice cream cone happy + broccoli crying with tears absurd funny",
+      "assets_needed": ["brain_ice_cream_broccoli_crying.png"],
+      "assets_generation": {"hand_drawn": ["brain_ice_cream_broccoli_crying.png: hand-drawn brain eating ice cream happy and broccoli crying tears funny absurd thick outline flat"]},
+      "edit": "slide-in 0.38s ease-out-expo brain ice cream from left",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "whoosh"
+    },
+    {
+      "beat": 7,
+      "narration": "Researchers found procrastination is about managing emotions, not time. Mood, not clock.",
+      "visual_description": "Dopamine molecule as party disco ball + clock as sad face with tears absurd",
+      "assets_needed": ["dopamine_party_clock_sad.png"],
+      "assets_generation": {"hand_drawn": ["dopamine_party_clock_sad.png: hand-drawn dopamine molecule as disco ball party and clock with sad face tears thick outline flat funny"]},
+      "edit": "pop-in dopamine 0.35s ease-out-back 0.6->1.1->1.0",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "pop"
+    },
+    {
+      "beat": 8,
+      "narration": "You choose a good feeling now over a good outcome later. Present you vs future you.",
+      "visual_description": "Present self on couch potato + future self superhero cape split screen absurd funny",
+      "assets_needed": ["present_future_self_split_absurd.png"],
+      "assets_generation": {"hand_drawn": ["present_future_self_split_absurd.png: hand-drawn split screen present self couch potato chips and future self superhero cape flying funny absurd thick outline"]},
+      "edit": "pan right 60px 0.6s split screen connected, only when truly needed",
+      "camera": "pan right 60px 0.6s ease-in-out 100px/s",
+      "duration": "4.5s",
+      "sfx": "whoosh pan"
+    },
+    {
+      "beat": 9,
+      "narration": "Present you wins every time. Because future you feels like a stranger. Literally.",
+      "visual_description": "Present self high-five + future self as stranger with question mark hat funny",
+      "assets_needed": ["future_self_stranger_question.png"],
+      "assets_generation": {"hand_drawn": ["future_self_stranger_question.png: hand-drawn future self as stranger with hat question mark and present self waving funny absurd"]},
+      "edit": "slide-in 0.38s future stranger from right",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "whoosh"
+    },
+    {
+      "beat": 10,
+      "narration": "Inside your brain: two players. Amygdala, your drama queen alarm, and prefrontal cortex.",
+      "visual_description": "Brain map amygdala as fire alarm screaming with mouth open + prefrontal cortex as CEO with glasses and tie absurd",
+      "assets_needed": ["brain_amygdala_drama_alarm_prefrontal_ceo.png"],
+      "assets_generation": {"hand_drawn": ["brain_amygdala_drama_alarm_prefrontal_ceo.png: hand-drawn brain map amygdala as fire alarm screaming BEAR and prefrontal cortex as CEO with glasses tie funny absurd thick outline"]},
+      "edit": "pop-in brain 0.35s + stamp alarm 50ms stagger",
+      "camera": "static hold",
+      "duration": "4.5s",
+      "sfx": "pop"
+    },
+    {
+      "beat": 11,
+      "narration": "Amygdala detects threat. Difficult email? It screams: BEAR! Run away! It's not a bear.",
+      "visual_description": "Amygdala tiny guard shouting BEAR at laptop with email icon + bear shadow absurd funny",
+      "assets_needed": ["amygdala_shouting_bear_email.png"],
+      "assets_generation": {"hand_drawn": ["amygdala_shouting_bear_email.png: hand-drawn tiny guard amygdala shouting BEAR at laptop email and bear shadow behind funny absurd"]},
+      "edit": "punch-in 12% 0.35s amygdala 34.3%/s ease-out-back 10% overshoot",
+      "camera": "punch-in 12% 0.35s",
+      "duration": "4.5s",
+      "sfx": "impact same frame"
+    },
+    {
+      "beat": 12,
+      "narration": "Prefrontal cortex is your wise CEO. It says: let's plan. But CEO is tired, slow, easily distracted.",
+      "visual_description": "Prefrontal cortex as CEO sleeping at desk with coffee spill and Zzz absurd",
+      "assets_needed": ["prefrontal_ceo_sleeping_coffee.png"],
+      "assets_generation": {"hand_drawn": ["prefrontal_ceo_sleeping_coffee.png: hand-drawn CEO sleeping at desk coffee spilled Zzz tired funny absurd thick outline"]},
+      "edit": "slow zoom-in 5% 3s emotional tired CEO",
+      "camera": "slow zoom-in 5% 3s",
+      "duration": "4.5s",
+      "sfx": "none"
+    },
+    {
+      "beat": 13,
+      "narration": "When you're stressed, tired, or bored, alarm wins. CEO goes offline. You scroll phone.",
+      "visual_description": "Alarm bell ringing loud + CEO offline screen + person scrolling phone infinite loop absurd",
+      "assets_needed": ["alarm_wins_ceo_offline_scroll.png"],
+      "assets_generation": {"hand_drawn": ["alarm_wins_ceo_offline_scroll.png: hand-drawn alarm bell ringing CEO computer offline and person scrolling phone infinite absurd funny"]},
+      "edit": "slide-in alarm 0.38s from left",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "whoosh"
+    },
+    {
+      "beat": 14,
+      "narration": "Dopamine loves easy wins. Phone gives dopamine now. Hard task gives dopamine later. Brain chooses now.",
+      "visual_description": "Dopamine as slot machine jackpot + phone as gold coins + hard task as tiny coin absurd funny",
+      "assets_needed": ["dopamine_slot_machine_phone_jackpot.png"],
+      "assets_generation": {"hand_drawn": ["dopamine_slot_machine_phone_jackpot.png: hand-drawn dopamine as slot machine phone jackpot coins and hard task tiny coin funny absurd"]},
+      "edit": "pop-in dopamine slot machine 0.35s ease-out-back",
+      "camera": "static hold",
+      "duration": "4.5s",
+      "sfx": "pop"
+    },
+    {
+      "beat": 15,
+      "narration": "So procrastination is not character flaw. It's your brain's buggy threat system. Fixable.",
+      "visual_description": "Brain with bug crawling + bug spray + checkmark success absurd",
+      "assets_needed": ["brain_bug_spray_checkmark.png"],
+      "assets_generation": {"hand_drawn": ["brain_bug_spray_checkmark.png: hand-drawn brain with bug and bug spray can and checkmark success funny absurd"]},
+      "edit": "pop-in checkmark 0.35s 0.6->1.1->1.0",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "pop"
+    },
+    {
+      "beat": 16,
+      "narration": "Hack one: the five-minute rule. Tell your brain: just five minutes. Trick the drama queen.",
+      "visual_description": "Timer 5 minute + brain with drama queen crown being tricked with magic wand absurd",
+      "assets_needed": ["timer_5_minute_drama_queen_trick.png"],
+      "assets_generation": {"hand_drawn": ["timer_5_minute_drama_queen_trick.png: hand-drawn timer 5 minute and brain drama queen crown being tricked magic wand funny absurd"]},
+      "edit": "pop-in timer 0.35s ease-out-back",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "pop"
+    },
+    {
+      "beat": 17,
+      "narration": "Start for five minutes. That's it. Your brain says: five minutes? Fine, I can suffer that long.",
+      "visual_description": "Brain with stopwatch + tiny suffering face but okay thumbs up absurd",
+      "assets_needed": ["brain_stopwatch_suffering_ok.png"],
+      "assets_generation": {"hand_drawn": ["brain_stopwatch_suffering_ok.png: hand-drawn brain holding stopwatch with tiny suffering face but okay thumbs up funny"]},
+      "edit": "slide-in timer 0.38s ease-out-expo from right",
+      "camera": "static hold",
+      "duration": "4.0s",
+      "sfx": "whoosh"
+    },
+    {
+      "beat": 18,
+      "narration": "Once you start, momentum kicks in. It's like pushing a boulder. Hard start, easy roll.",
+      "visual_description": "Person pushing giant boulder uphill hard + boulder rolling easy downhill absurd",
+      "assets_needed": ["person_pushing_boulder_momentum.png"],
+      "assets_generation": {"hand_drawn": ["person_pushing_boulder_momentum.png: hand-drawn stick figure pushing giant boulder uphill hard then boulder rolling easy funny absurd"]},
+      "edit": "pan right 60px 0.6s boulder rolling connected",
+      "camera": "pan right 60px only when connected",
+      "duration": "4.0s",
+      "sfx": "whoosh"
+    },
+    {
+      "beat": 19,
+      "narration": "Science: eighty percent who start for five minutes continue. Your brain was lying about pain.",
+      "visual_description": "Graph 80% continue + brain with Pinocchio long nose lying absurd funny",
+      "assets_needed": ["graph_80_percent_brain_pinocchio.png"],
+      "assets_generation": {"hand_drawn": ["graph_80_percent_brain_pinocchio.png: hand-drawn graph 80% continue bar and brain with Pinocchio nose lying funny absurd"]},
+      "edit": "draw-on graph 0.8s + pop 80% number 0.35s ease-out-back",
+      "camera": "static hold",
+      "duration": "4.5s",
+      "sfx": "pop"
+    },
+    {
+      "beat": 20,
+      "narration": "Hack two: make it ridiculously tiny. Don't write essay. Open document. That's win.",
+      "visual_description": "Giant essay monster scary + tiny open document button as sword hero absurd",
+      "assets_needed": ["essay_monster_tiny_button_sword.png"],
+      "assets_generation": {"hand_drawn": ["essay_monster_tiny_button_sword.png: hand-drawn giant essay monster scary and tiny open document button as sword hero fighting funny absurd"]},
+      "edit": "punch-in 12% monster vs tiny button emphasis 34.3%/s",
+      "camera": "punch-in 12% 0.35s",
+      "duration": "4.0s",
+      "sfx": "impact"
+    }
+  ]
+}
