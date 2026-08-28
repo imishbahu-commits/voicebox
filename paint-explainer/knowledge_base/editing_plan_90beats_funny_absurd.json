@@ -1,0 +1,83 @@
+{
+  "version": "4.0-funny-absurd",
+  "title": "Editing Plan - Why You Procrastinate Drama Queen - Premium Motion",
+  "reference_style": "11 reference videos 199MB 640x360 30fps pure white bg thick black outline 0.6% flat MS-Paint 4-6 colors hard cuts median 3.5s visual 0.2s BEFORE keyword",
+  "premium_motion_principles": {
+    "lottie_files": "https://lottiefiles.com/ - motion-design-skill: timing easing choreography Disney 8-step checklist 4 archetypes Playful/Premium/Corporate/Energetic duration/easing 3 layers primary+secondary+ambient 1/3 rule",
+    "hyperframes": "HTML-native GSAP/Lottie/Three.js 50+ blocks, vector scalable manipulate duration forward/backward shapes layers alpha paths",
+    "lottie_android": "https://github.com/airbnb/lottie-android - premium motion beyond sliding images vector scalable",
+    "disney_12_principles": "anticipation, follow-through, squash-stretch, timing, easing"
+  },
+  "after_effects_like_engine": {
+    "engine": "ae_motion_enhanced.py PIL+ffmpeg 1920x1080 30fps pure white bg crf 18 high quality",
+    "tracks": "code-driven keyframes pos/scale/rot/opacity/puppet-pin ARAP same as AE, example pos easeOutExpo scale easeOutBack rot opacity puppet pins idx shift easeInOut",
+    "keyframes": "3 keyframes per action anticipation 0.97 50ms -> 1.1 0.35s -> 1.0 0.1s, follow-through 1.02->1.0 100ms, squash 0.95 stretch 1.05",
+    "easing": {
+      "Premium": "350-600ms cubic-bezier(0.4,0,0.2,1) for emotional important reveals",
+      "Corporate": "200-400ms cubic-bezier(0.2,0,0,1) for clean professional",
+      "Energetic": "100-250ms ease-out-expo for fast punchy",
+      "Playful": "150-300ms ease-out-back 10-20% overshoot for funny absurd pop"
+    }
+  },
+  "cut_pacing": {
+    "cadence": "median 3.5s min1.5 max5.2, distribution <2s 12% 2-4s 68% >=4s 20%, total ~2500 cuts 11 videos 9000s",
+    "types": "hard cuts 98% + 30ms fade sections 0.5s pause + title card pop 0.35s ease-out-back + music subtle change, no wipes dissolves black frames",
+    "timing_vs_narration": "visual 0.2s BEFORE keyword anticipation, exact noun 90% house spoken house icon $313k spoken number",
+    "complex_vs_simple": "complex numbers lists longer 4-5s, simple jokes shorter 2-3s, emotional medium 3.5s slow zoom"
+  },
+  "camera_language": {
+    "moves": "static hold 92%, slow zoom-in 5% 3s 1.67%/s Premium, slow zoom-out 2% 8% 2s, punch-in 8% 12% 0.35s 34.3%/s emphasis, pan right 3% 60px 0.6s 100px/s only when connected side-by-side",
+    "motion_budget": "8% motion 92% static, within moving 0% frozen 100% camera-only OR 30% camera+character, overall 55% frozen 25% camera-only 20% character pop/slide",
+    "punch_when": "reveals yes house SOLD, emphasis yes numbers $313k, numbers yes big number spoken, jokes no",
+    "tracking": "no tracking 0%, camera static or slow zoom, character enters via slide"
+  },
+  "character_animation": {
+    "entrances": "slide_from_edge left/right alternating left odd right even 0.38s ease-out-expo 10% overshoot no blur, scale_pop center for numbers 0.35s ease-out-back 10%",
+    "exits": "slide_out 0.25s ease-in",
+    "part_animation": "arms wave head tilt 5° legs none static mouth none static eyes none no blink, puppet-pin warp 70% rotation separate part 30% moving parts per char per shot 1-2 max 2",
+    "idle": "no breathe bob sway 0% amplitude 0 cycles",
+    "faces": "no blink 0 freq no mouth lip flap narration disembodied, eyebrow expression new drawing replace PNG at cut not morph",
+    "actions": "simple 1 action per shot centered, anticipation 50ms scale 0.97, follow-through 100ms scale 1.02->1.0, squash 5% 0.95 stretch 1.05 on pop, keyframes per action 3",
+    "secondary": "hair fins tails leaves clothing none 0% no consequence",
+    "effects": "bubbles 0 splashes 0 particles dust 0 speed lines 0 impact stars 5% beats one-shot 0.2s on punch-in numbers sweat drops 0"
+  },
+  "text_graphics": {
+    "on_screen_text": "every beat 1 line max 12-16 words centered bottom or top handwritten marker uppercase numbers lowercase body bold 8% body 12% numbers pop-in 0.35s ease-out-back 0.6->1.1->1.0 or slide 0.38s ease-out-expo full shot 3.5s median no typewriter"
+  },
+  "sound_design": {
+    "music": "corporate ambient minimal light 80-90 BPM starts 00:00 continuous ducks -18.5dB vs voice -37dB no hard stops fades out outro 10:30 subtle +5 BPM solutions -5 BPM outro",
+    "sfx": "whoosh slide 12% same frame 0ms, pop pop-in 10% 0-5ms before visual anticipation, impact punch-in 8% same frame",
+    "voice": "140-160 WPM calm informative corporate not energetic, pauses median 0.4s dead air >0.8s removed, clean no filler 12-16 words per beat 2-6s, voice-06 educational masculine polish mean -18.5dB"
+  },
+  "storytelling": {
+    "hook_first_15s": "bold claim number + question + immediate visual house money bag + humor absurd, example 00:00-00:03.2 $161k median vs $313k needed + Turning sixty? + house money bag",
+    "motifs": "brain pulse checklist pop timer count-up checkmark burst money bag coins dropping house SOLD stamp confetti tax calculator count-up couple high-five success checkmark draw particle burst",
+    "funny_absurd_motifs": "brain security guard, brain drama queen crown, brain ice cream vs broccoli crying, dopamine slot machine jackpot, present couch potato vs future superhero, amygdala shouting BEAR at email, CEO sleeping coffee spill, alarm bell vs CEO offline, brain Pinocchio lying, essay monster vs tiny button sword, toothbrush flossing one tooth, phone in jail crying, friction sandpaper oil, if-then robot programming, heart hugging brain guilt monster, brain scared puppy vs donkey"
+  },
+  "beats_editing": [
+    {"beat": 1, "edit": "slide-in 0.38s ease-out-expo calendar from left, pop-in deadline 0.35s ease-out-back", "camera": "static hold", "duration": "4.0s", "lottie": "calendar pop + deadline burst"},
+    {"beat": 2, "edit": "pop-in brain 0.35s ease-out-back 10% overshoot anticipation 0.97 50ms", "camera": "static hold", "duration": "4.0s", "lottie": "brain pulse + shield shine"},
+    {"beat": 3, "edit": "stamp + stagger 50-100ms checklist, pop-in brain drama queen", "camera": "static hold", "duration": "4.0s", "lottie": "checklist pop stagger + crown sparkle"},
+    {"beat": 4, "edit": "cross-out negate draw-on 0.8s + punch-in 12% 0.35s", "camera": "punch-in 12% 0.35s 34.3%/s", "duration": "4.0s", "lottie": "cross-out draw + punch impact stars 0.2s"},
+    {"beat": 5, "edit": "slow zoom-in 5% 3s emotional", "camera": "slow zoom-in 5% 3s 1.67%/s Premium cubic(0.4,0,0.2,1)", "duration": "4.5s", "lottie": "heart beat slow + stress cloud drift"},
+    {"beat": 6, "edit": "slide-in 0.38s ease-out-expo brain ice cream", "camera": "static hold", "duration": "4.0s", "lottie": "ice cream drip + broccoli tears"},
+    {"beat": 7, "edit": "pop-in dopamine 0.35s ease-out-back", "camera": "static hold", "duration": "4.0s", "lottie": "dopamine disco ball spin + clock sad wobble"},
+    {"beat": 8, "edit": "pan right 60px 0.6s split screen", "camera": "pan right 60px 0.6s ease-in-out only connected", "duration": "4.5s", "lottie": "couch potato vs superhero cape flutter"},
+    {"beat": 9, "edit": "slide-in 0.38s future stranger from right", "camera": "static hold", "duration": "4.0s", "lottie": "question mark pop"},
+    {"beat": 10, "edit": "pop-in brain 0.35s + stamp alarm 50ms stagger", "camera": "static hold", "duration": "4.5s", "lottie": "alarm ringing + CEO glasses shine"},
+    {"beat": 11, "edit": "punch-in 12% 0.35s amygdala", "camera": "punch-in 12% 0.35s 34.3%/s ease-out-back", "duration": "4.5s", "lottie": "BEAR text pop + laptop shake"},
+    {"beat": 12, "edit": "slow zoom-in 5% 3s tired CEO", "camera": "slow zoom-in 5% 3s Premium", "duration": "4.5s", "lottie": "Zzz floating + coffee spill drip"},
+    {"beat": 13, "edit": "slide-in alarm 0.38s from left", "camera": "static hold", "duration": "4.0s", "lottie": "alarm bell ring + offline static + phone infinite scroll"},
+    {"beat": 14, "edit": "pop-in dopamine slot machine 0.35s", "camera": "static hold", "duration": "4.5s", "lottie": "slot machine lever pull + coins dropping Lottie Android + jackpot burst"},
+    {"beat": 15, "edit": "pop-in checkmark 0.35s 0.6->1.1->1.0", "camera": "static hold", "duration": "4.0s", "lottie": "bug spray puff + checkmark draw particle burst"},
+    {"beat": 16, "edit": "pop-in timer 0.35s ease-out-back", "camera": "static hold", "duration": "4.0s", "lottie": "timer count-up 5-0 + crown sparkle + magic wand trail"},
+    {"beat": 17, "edit": "slide-in timer 0.38s ease-out-expo from right", "camera": "static hold", "duration": "4.0s", "lottie": "stopwatch tick + suffering face to thumbs up morph"},
+    {"beat": 18, "edit": "pan right 60px 0.6s boulder rolling connected", "camera": "pan right 60px only when connected", "duration": "4.0s", "lottie": "boulder roll + dust trail"},
+    {"beat": 19, "edit": "draw-on graph 0.8s + pop 80% number 0.35s", "camera": "static hold", "duration": "4.5s", "lottie": "graph draw-on + 80% pop + Pinocchio nose grow"},
+    {"beat": 20, "edit": "punch-in 12% monster vs tiny button emphasis", "camera": "punch-in 12% 0.35s", "duration": "4.0s", "lottie": "monster shake + sword shine + impact stars 0.2s"}
+  ],
+  "do_dont": {
+    "DO": ["pure white bg #FFFFFF thick outline 0.6% flat 4-6 colors no gradients shadows textures, 1 icon+text max 40-60% 20% margin white space 40-50% static hold 92%", "smart router different edit per beat only when needed not same every time: pop-in numbers/brain, slide-in new ideas, pan right only connected gap, punch-in emphasis numbers, slow zoom emotional, stamp stagger lists, draw-on mechanisms", "visual 0.2s BEFORE keyword anticipation + pop 0.35s ease-out-back + anticipation 0.97 50ms + follow-through 1.02->1.0 100ms + squash 0.95 stretch 1.05", "LottieFiles Premium 350-600ms cubic(0.4,0,0.2,1) 3 layers primary+secondary+ambient + Lottie Android brain pulse checklist pop timer count-up checkmark burst money bag coins house SOLD confetti", "cut median 3.5s hard 98% + voice 12-16 words 2-6s pause 0.4s -18.5dB + music 80-90 BPM -37dB + sfx whoosh 12% pop 10% impact 8% sync 0-5ms before", "funny absurd assets resonant visuals house/people/brain/calendar per niche self-improvement psychology science, not only text, very funny absurd: brain security guard, drama queen crown, ice cream vs broccoli, slot machine jackpot, couch potato vs superhero, BEAR at email, CEO sleeping coffee, Pinocchio lying, essay monster vs tiny button"],
+    "DON'T": ["cheap arrow circle every time only when needed", "same edit every time", "gradients shadows textures", "wobble boil", "idle bob breathe", "walk cycles", "blink mouth flap", "wipes dissolves black frames", "tracking", ">6 colors", "long audio after 10 assets"]
+  }
+}

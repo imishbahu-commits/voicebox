@@ -26,6 +26,18 @@ def register_routers(app: FastAPI) -> None:
     from .events import router as events_router
     from .cloud import router as cloud_router
 
+    # MemOS integration for persistent memory across chats
+    try:
+        from backend.memos_memory.api import router as memos_router
+        memos_available = True
+    except Exception:
+        try:
+            from memos_memory.api import router as memos_router
+            memos_available = True
+        except Exception:
+            memos_available = False
+            memos_router = None
+
     app.include_router(health_router)
     app.include_router(profiles_router)
     app.include_router(channels_router)
@@ -46,3 +58,8 @@ def register_routers(app: FastAPI) -> None:
     app.include_router(mcp_bindings_router)
     app.include_router(events_router)
     app.include_router(cloud_router)
+    
+    # MemOS persistent memory - survives sandbox wipes via git
+    if memos_available and memos_router:
+        app.include_router(memos_router)
+        print("✅ MemOS plugin connected: persistent memory across chats enabled")

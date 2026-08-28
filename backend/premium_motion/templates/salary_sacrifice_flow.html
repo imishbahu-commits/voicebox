@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Salary Sacrifice Flow - Premium Motion Graphics</title>
+<style>
+  body { margin:0; background:#fff; }
+  .stage { width:1280px; height:720px; position:relative; background:#fff; overflow:hidden; }
+  .hero { position:absolute; left:30%; top:50%; transform:translateY(-50%); }
+  .arrow { position:absolute; left:50%; top:50%; width:100px; height:4px; background:#000; transform:translateY(-50%); }
+  .target { position:absolute; left:70%; top:50%; transform:translateY(-50%); }
+  .ambient { position:absolute; inset:0; background:linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.02) 50%, transparent 100%); }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+<div class="stage">
+  <div class="ambient" id="ambient"></div>
+  <div class="hero" id="salary">
+    <div style="border:3px solid #000; padding:20px; border-radius:12px; background:#fff; text-align:center;">
+      <div style="font-size:24px; font-weight:bold;">Salary $90k</div>
+      <div style="font-size:18px; margin-top:10px;">Pre-tax</div>
+    </div>
+  </div>
+  <div class="arrow" id="arrow"></div>
+  <div class="target" id="super">
+    <div style="border:3px solid #000; padding:20px; border-radius:12px; background:#000; color:#fff; text-align:center;">
+      <div style="font-size:24px; font-weight:bold;">Super 15%</div>
+      <div style="font-size:18px; margin-top:10px;">vs 32.5%</div>
+    </div>
+  </div>
+</div>
+<script>
+const tl = gsap.timeline({paused: true});
+window.__timelines = [tl];
+
+// LottieFiles Corporate personality for finance - clean professional
+// Emotional: Trust + clarity for salary sacrifice
+// Personality: Corporate (200-400ms, cubic-bezier(0.2,0,0,1), 0-3% overshoot)
+// Property: Position for flow, secondary scale for emphasis
+
+// Primary: Salary card enters from left  -300→center with ease-out
+tl.set("#salary", {x: -300, opacity: 0});
+tl.to("#salary", {x: 0, opacity: 1, duration: 0.38, ease: "power3.out"}, 0);
+
+// Secondary: Arrow draws in after salary lands
+tl.set("#arrow", {scaleX: 0, transformOrigin: "left center", opacity: 0});
+tl.to("#arrow", {scaleX: 1, opacity: 1, duration: 0.30, ease: "power2.out"}, 0.20);
+
+// Tertiary: Super card enters from right with stagger 80ms
+tl.set("#super", {x: 300, opacity: 0, scale: 0.8});
+tl.to("#super", {x: 0, opacity: 1, scale: 1, duration: 0.38, ease: "back.out(1.2)"}, 0.30);
+
+// Ambient: Subtle gradient sweep
+tl.set("#ambient", {x: -1280});
+tl.to("#ambient", {x: 1280, duration: 1.5, ease: "sine.inOut"}, 0);
+
+tl.seek(0);
+</script>
+</body>
+</html>

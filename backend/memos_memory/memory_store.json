@@ -1,0 +1,437 @@
+{
+  "user_id": "voicebox_user",
+  "updated_at": "2026-08-27T12:39:00.380162",
+  "memories": [
+    {
+      "id": "mem_1787777625329_0",
+      "content": "User wants winning finance topic for tier1 Australia 40yo, genuine no fake claims, educational like reference videos. Subniche: Super Catch-Up $152k behind, niche bending super+tax+TTR+property",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T20:53:45.329608",
+      "metadata": {
+        "topic": "finance-australia",
+        "type": "winning_topic"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787777625329_1",
+      "content": "Editing style: smart router different edit per beat not same every time, only when needed. Visuals clean PURE WHITE bg thick black outline flat colors MS-Paint style no messy, visuals that resonate house couple piggy bank not just text. Voice clean 12-16 words 2-6s voice-05 perfect sync 0.2s before keyword. No cheap arrow circle marking.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T20:53:45.329873",
+      "metadata": {
+        "type": "editing_style",
+        "project": "paint-explainer"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787777625330_2",
+      "content": "Project progress: Part 2 Batch 1 visual 11-20 DONE 50s 1.41MB with real visuals that resonate. 30 beats total before wipe = 2.64 min. Target 90 beats = 8.2 min for 8-10 min video. Need 80 beats remaining. Preview Studio Port 3001, Upload Studio Port 3000.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T20:53:45.330395",
+      "metadata": {
+        "type": "project_progress",
+        "project": "finance-australia-40plus-part2"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787777803699_3",
+      "content": "User confirmed visuals that resonate (house, couple, piggy bank) work better than text-only. Real visuals increase engagement for 40+ Aussies.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T20:56:43.699307",
+      "metadata": {
+        "type": "feedback",
+        "project": "finance-australia",
+        "batch": "visual"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778221048_4",
+      "content": "Premium motion for downsizer_300k: Premium joy+trust for 40+ Aussies achieving comfort 350ms cubic-bezier(0.4,0,0.2,1) primary=House SOLD scales 0.6\u21921.1\u21921.0 350ms ease-out-cubic, path slight curve 10px X",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:03:41.048258",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "downsizer_300k",
+        "personality": "Premium"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778331403_5",
+      "content": "Premium motion for downsizer_300k: Premium joy+trust for 40+ Aussies achieving comfort 350ms cubic-bezier(0.4,0,0.2,1) primary=House SOLD scales 0.6\u21921.1\u21921.0 350ms ease-out-cubic, path slight curve 10px X",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:05:31.403627",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "downsizer_300k",
+        "personality": "Premium"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778331405_6",
+      "content": "Premium motion for 10_years_house: Corporate trust+clarity 300ms cubic-bezier(0.2,0,0,1) primary=House + calendar enters -300\u2192center 0.38s ease-out",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:05:31.405867",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "10_years_house",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778331406_7",
+      "content": "Premium motion for 90_days: Corporate urgency+clarity 300ms cubic-bezier(0.2,0,0,1) primary=Calendar 90 days enters 1580\u2192center 0.38s ease-out",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:05:31.406814",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "90_days",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787778380840_8",
+      "content": "Connected LottieFiles motion-design-skill (1.4k stars, MIT) + Hyperframes (HTML-to-video, 50+ blocks, 12 projects) for premium motion graphics beyond sliding images. LottieFiles provides 8-step checklist, motion personality archetypes (Playful 150-300ms, Premium 350-600ms cubic-bezier 0.4,0,0.2,1, Corporate 200-400ms, Energetic 100-250ms), Three Pillars, Three Layers (primary+secondary+ambient), Disney 12 principles. Hyperframes provides HTML-native video pipeline with GSAP/Lottie/Three.js, paused timeline window.__timelines, CLI preview/lint/render, templates downsizer_house_reveal.html Premium motion with anticipation 0.97 50ms follow-through 1.02->1.0. Premium demo 3 beats 12.8s 0.34MB DONE.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:06:20.840653",
+      "metadata": {
+        "type": "premium_motion",
+        "repos": [
+          "LottieFiles/motion-design-skill",
+          "heygen-com/hyperframes",
+          "MemTensor/MemOS"
+        ]
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544759_9",
+      "content": "Premium motion for 30k_plus_20k_carry_forward: Corporate trust+clarity Ann example 300ms cubic-bezier(0.2,0,0,1) primary=Ann salary slip $30k + $20k calendar enters -300\u2192center 0.38s",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.760688",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "30k_plus_20k_carry_forward",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544763_10",
+      "content": "Premium motion for taxable_40k_saves_12k: Corporate joy+success tax saving 350ms cubic-bezier(0.4,0,0.2,1) primary=Tax return $90k\u2192$40k drops with count-down, $12k saving badge pop 0.5\u21921.15\u21921.0 250ms back.out",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.763722",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "taxable_40k_saves_12k",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544764_11",
+      "content": "Premium motion for ttr_20k_taxfree: Premium calm+trust pension covers living 350ms cubic-bezier(0.4,0,0.2,1) primary=TTR pension card $20k tax-free scales 0.8\u21921.0 350ms cubic-bezier(0.4,0,0.2,1)",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.764510",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "ttr_20k_taxfree",
+        "personality": "Premium"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544765_12",
+      "content": "Premium motion for same_takehome_50k_extra: Energetic joy+excitement same take-home bigger super 250ms ease-out-expo primary=Balance scale same take-home vs +$50k super pop 0.5\u21921.15\u21921.0 250ms ease-out-expo 15-30% overshoot",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.765076",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "same_takehome_50k_extra",
+        "personality": "Energetic"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544765_13",
+      "content": "Premium motion for 15_vs_32_tax: Corporate trust+clarity tax comparison 300ms cubic-bezier(0.2,0,0,1) primary=15% vs 32.5% comparison enters, pan right 60px connected",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.765579",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "15_vs_32_tax",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544766_14",
+      "content": "Premium motion for 250k_5years: Energetic joy+excitement long-term growth 300ms ease-out-expo primary=$250k extra over 5 years count-up Lottie stat, calendar 5 years",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.766166",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "250k_5years",
+        "personality": "Energetic"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544766_15",
+      "content": "Premium motion for earnings_15_10: Corporate trust+clarity earnings tax 300ms cubic-bezier(0.2,0,0,1) primary=Earnings 15% vs 10% if 12 months enters 1580\u2192center 0.38s",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.766696",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "earnings_15_10",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544767_16",
+      "content": "Premium motion for 65_pension_taxfree: Premium joy+celebration at 65 pension tax-free 350ms cubic-bezier(0.4,0,0.2,1) primary=Age 65 TTR\u2192pension tax-free scales 0.9\u21921.0 with slow-zoom 3% focus",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.767266",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "65_pension_taxfree",
+        "personality": "Premium"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544767_17",
+      "content": "Premium motion for min_4_percent: Corporate calm+clarity minimum drawdown 300ms cubic-bezier(0.2,0,0,1) primary=Min 4% at 65-74 text pop",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.767801",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "min_4_percent",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779544768_18",
+      "content": "Premium motion for 80_7_90_11: Corporate calm+clarity age-based minimums 350ms cubic-bezier(0.4,0,0.2,1) primary=80:7% 90:11% text with slow-zoom-out 8% quiet ending",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:25:44.768449",
+      "metadata": {
+        "type": "premium_motion",
+        "subject": "80_7_90_11",
+        "personality": "Corporate"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787779736362_19",
+      "content": "Part 2 Batch 2 premium DONE 54.1s 1.56MB with premium motion graphics beyond sliding images: LottieFiles Corporate 200-400ms cubic-bezier(0.2,0,0,1) for clarity, Premium 350-600ms cubic-bezier(0.4,0,0.2,1) for trust+joy, Energetic 100-250ms ease-out-expo 15-30% for 50k excitement. Lottie Android animations: money_bag coins dropping into super piggy bank with bounce, tax_calculator count-up + saving badge pop, success_checkmark draw + particle burst, couple_celebration high-five. Visuals that resonate: Ann 0k 0k unused, taxable 0k saves 2k, TTR 0k tax-free, same take-home +$50k super, 15% vs 32.5% comparison, $250k extra 5 years, earnings 15% 10% 12 months, 65 pension tax-free, min 4% 65-74, 80:7% 90:11%. Combined 20 beats premium 104.1s = 1.74 min DONE. Target 90 beats = 8.2 min, remaining 70 beats = 6.5 min.",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-26T21:28:56.362538",
+      "metadata": {
+        "type": "project_progress",
+        "batch": "batch2_premium",
+        "duration": "54.1s"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787833710598_20",
+      "content": "Reference video uploaded: test_4mb.mp4 4.00MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:28:30.598945",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "test_4mb.mp4",
+        "size_mb": 4.0,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787833793000_21",
+      "content": "Reference video uploaded: 15699.mp4 19.59MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:29:53.000800",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15699.mp4",
+        "size_mb": 19.58950424194336,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787833859716_22",
+      "content": "Reference video uploaded: 15695.mp4 14.22MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:30:59.716705",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15695.mp4",
+        "size_mb": 14.218559265136719,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787833946370_23",
+      "content": "Reference video uploaded: 15691.mp4 27.29MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:32:26.370586",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15691.mp4",
+        "size_mb": 27.294962882995605,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834004939_24",
+      "content": "Reference video uploaded: 15683.mp4 27.92MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:33:24.939543",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15683.mp4",
+        "size_mb": 27.923852920532227,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834060873_25",
+      "content": "Reference video uploaded: 15679.mp4 18.78MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:34:20.873935",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15679.mp4",
+        "size_mb": 18.777695655822754,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834115913_26",
+      "content": "Reference video uploaded: 15675.mp4 14.79MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:35:15.913017",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15675.mp4",
+        "size_mb": 14.791173934936523,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834147032_27",
+      "content": "Reference video uploaded: 15671.mp4 9.83MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:35:47.032818",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15671.mp4",
+        "size_mb": 9.829658508300781,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834185679_28",
+      "content": "Reference video uploaded: 15666.mp4 17.06MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:36:25.679579",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15666.mp4",
+        "size_mb": 17.06190776824951,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834246048_29",
+      "content": "Reference video uploaded: 15663.mp4 18.72MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:37:26.048324",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15663.mp4",
+        "size_mb": 18.72066593170166,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834276299_30",
+      "content": "Reference video uploaded: 15659.mp4 11.32MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:37:56.299393",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15659.mp4",
+        "size_mb": 11.31953239440918,
+        "source": "upload_studio"
+      },
+      "messages": []
+    },
+    {
+      "id": "mem_1787834340380_31",
+      "content": "Reference video uploaded: 15655.mp4 19.25MB via Upload Studio Port 3000 fast upload",
+      "type": "text",
+      "user_id": "voicebox_user",
+      "created_at": "2026-08-27T12:39:00.380147",
+      "metadata": {
+        "type": "reference_video",
+        "filename": "15655.mp4",
+        "size_mb": 19.25062656402588,
+        "source": "upload_studio"
+      },
+      "messages": []
+    }
+  ],
+  "version": "2.0-stardust",
+  "count": 32,
+  "source": "MemTensor/MemOS integration for voicebox"
+}

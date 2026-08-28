@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "updated": "2026-08-27T13:30:00Z",
+  "description": "Script templates for winning topics, 12-16 words per beat 2-6s, 90 beats 8-10 min, survives wipes via git",
+  "template_structure": {
+    "beat": {"words": "12-16", "duration": "2-6s", "visual": "1 icon + text max 40-60% frame", "sync": "visual 0.2s BEFORE keyword", "edit": "pop for number slide for new idea pan only when connected"},
+    "total": {"beats": 90, "duration": "8-10 min", "chapters": 6}
+  },
+  "winning_topic_super_catchup_152k_gap": {
+    "title": "The $152k Super Gap at 40: How to Catch Up Before 60",
+    "beats": [
+      {"beat": 1, "narration": "At forty, median super is one-sixty-one thousand, but you need three-thirteen for comfortable retirement.", "visual": "house + money bag + $161k vs $313k", "edit": "pop-in 0.35s ease-out-back numbers, slide-in house", "keywords": ["$161k", "$313k"], "duration": "3.2s"},
+      {"beat": 2, "narration": "That's a one-fifty-two thousand dollar gap. And SG twelve percent alone won't close it.", "visual": "gap visualization $161k vs $313k side-by-side", "edit": "pan right 60px 0.6s only when connected gap", "keywords": ["$152k gap", "12%"], "duration": "3.6s"},
+      {"beat": 3, "narration": "But you have three powerful catch-up tools that most forty-year-olds miss.", "visual": "calendar + 3 icons", "edit": "slide-in 0.38s ease-out-expo", "keywords": ["three tools"], "duration": "3.7s"},
+      {"beat": 4, "narration": "First, salary sacrifice. Concessional cap is thirty thousand per year.", "visual": "salary slip + $30k", "edit": "pop-in $30k", "keywords": ["$30k"], "duration": "3.3s"},
+      {"beat": 5, "narration": "Plus you can use unused cap from last five years. That's carry-forward.", "visual": "calendar 5-year + $20k", "edit": "stamp + stagger 50-100ms", "keywords": ["5-year", "carry-forward"], "duration": "3.8s"},
+      {"beat": 6, "narration": "Example: Ann earns one hundred thousand, sacrifices thirty thousand, uses twenty thousand carry-forward.", "visual": "Ann character + salary slip + calculator", "edit": "slide-in Ann", "keywords": ["Ann", "$30k", "$20k"], "duration": "4.2s"},
+      {"beat": 7, "narration": "She puts fifty thousand into super, saves eight thousand tax, super grows tax-free.", "visual": "money bag coins dropping + calculator count-up $50k", "edit": "Lottie Android coins dropping bounce", "keywords": ["$50k", "$8k tax"], "duration": "4.5s"},
+      {"beat": 8, "narration": "Second, transition to retirement. At sixty, start a pension four to ten percent, tax-free.", "visual": "calendar + 4-10% + tax-free badge", "edit": "pop-in 4-10%", "keywords": ["TTR", "4-10%", "tax-free"], "duration": "3.8s"},
+      {"beat": 9, "narration": "Work three days, get same pay, super keeps growing. No work test after sixty-five.", "visual": "couple + calendar 3 days", "edit": "slow zoom-in 5% 3s emotional", "keywords": ["3 days", "same pay"], "duration": "3.6s"},
+      {"beat": 10, "narration": "Third, downsizer. Sold your house after ten years? Put three hundred thousand each into super.", "visual": "house SOLD stamp confetti + $300k", "edit": "Lottie Android house SOLD stamp confetti Premium 350ms", "keywords": ["house SOLD", "$300k"], "duration": "4.0s"},
+      {"beat": 11, "narration": "No age limit, no work test, ten year ownership, ninety days to act after sale.", "visual": "calendar 10 years + 90 days + no age limit badge", "edit": "stamp stagger", "keywords": ["no age limit", "10yr", "90 days"], "duration": "4.2s"},
+      {"beat": 12, "narration": "Combine them: salary sacrifice plus TTR plus downsizer. That's how you close one-fifty-two thousand gap.", "visual": "combo 3 icons + success checkmark draw particle burst", "edit": "Lottie Android checkmark draw + burst", "keywords": ["combine", "$152k gap"], "duration": "4.0s"},
+      {"beat": 13, "narration": "Turning sixty? You can still catch up. Start today, not tomorrow.", "visual": "couple high-five + calendar", "edit": "slow zoom-out 8% 2s question outro", "keywords": ["Turning sixty?", "catch up"], "duration": "3.5s"}
+    ],
+    "full_90_beats": "Extend this pattern to 90 beats following chapters: Hook 3 beats, Problem 15 beats, Solution1 Salary Sacrifice 20 beats, Solution2 TTR 20 beats, Solution3 Downsizer 20 beats, Recap CTA 12 beats",
+    "sources": ["ATO $30k/$120k/$360k", "ASFA $313.5k", "SG 12%", "downsizer $300k pp no age limit 10yr 90 days", "CPA TTR 4-10% tax-free 60+"],
+    "visuals_resonate": ["house", "couple", "money bag", "piggy bank", "calendar", "salary slip", "calculator", "Ann"]
+  },
+  "script_generation_rules": {
+    "words_per_beat": "12-16",
+    "duration_per_beat": "2-6s",
+    "visual_per_beat": "1 icon + text max 40-60% frame 20% margin pure white bg thick outline 0.6% flat 4-6 colors",
+    "sync": "visual 0.2s BEFORE keyword anticipation",
+    "edit_per_beat": "pop for number 0.35s ease-out-back 10% overshoot, slide for new idea 0.38s ease-out-expo alternating left/right, pan right 60px 0.6s ONLY when connected gap, no cheap arrow circle every time",
+    "voice": "140-160 WPM voice-05 clean 12-16 words 2-6s pause median 0.4s mean -18.5dB dead air >0.8s removed",
+    "premium_motion": "LottieFiles Premium 350-600ms cubic(0.4,0,0.2,1) Corporate 200-400ms cubic(0.2,0,0,1) Energetic 100-250ms ease-out-expo Playful 150-300ms ease-out-back + 3 layers primary+secondary+ambient + Lottie Android money bag coins house SOLD confetti calculator count-up couple high-five checkmark burst",
+    "cut": "median 3.5s min 1.5s max 5.2s 98% hard cuts 2% 30ms fade sections 0.5s pause + title pop",
+    "genuine": "ATO caps $30k/$120k/$360k ASFA $313.5k SG 12% downsizer $300k pp no age limit 10yr 90 days CPA TTR 4-10% tax-free 60+ verifiable no fake claims"
+  }
+}
