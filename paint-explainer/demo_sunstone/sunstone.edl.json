@@ -1,0 +1,27 @@
+{
+  "video": "paint-explainer/demo_sunstone/sunstone.mp4",
+  "total_seconds": 67.6,
+  "frames": 2026,
+  "chapters": [
+    {
+      "start_s": 0.35,
+      "label": "01 \u00b7 THE MYTH"
+    },
+    {
+      "start_s": 13.24,
+      "label": "02 \u00b7 THE RECEIPTS"
+    },
+    {
+      "start_s": 29.81,
+      "label": "03 \u00b7 THE DATE"
+    },
+    {
+      "start_s": 44.15,
+      "label": "04 \u00b7 HOW IT WORKS"
+    },
+    {
+      "start_s": 60.5,
+      "label": "05 \u00b7 THE PUNCHLINE"
+    }
+  ]
+}
