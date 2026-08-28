@@ -305,7 +305,7 @@ Currently, testing is primarily manual. When adding tests:
 
 - **Backend**: Use pytest for Python tests
 - **Frontend**: Use Vitest for React component tests
-- **E2E**: Use Playwright for end-to-end tests (future)
+- **E2E**: Use Playwright for end-to-end tests — see `PLAYWRIGHT_E2E.md`, `bun run e2e:setup && bun run e2e`
 
 ## Pull Request Process
 

@@ -5,6 +5,10 @@ import { defineConfig } from 'vite';
 import { changelogPlugin } from '../app/plugins/changelog';
 
 export default defineConfig({
+  server: {
+    // Allow access through reverse proxies / sandboxed preview hosts (e.g. *.e2b.app).
+    allowedHosts: [".e2b.app"],
+  },
   plugins: [react(), tailwindcss(), changelogPlugin(path.resolve(__dirname, '..'))],
   resolve: {
     alias: {
