@@ -41,12 +41,33 @@ python3 narration/beat_narrator.py synth projects/myvid/beats.json --backend are
 python3 narration/beat_narrator.py synth projects/myvid/beats.json \
     --backend voicebox --profile <profile-id> --base http://127.0.0.1:17493
 
+# 3b. retime any beat that fell outside 2-6 s (pitch preserved)
+python3 narration/beat_narrator.py fit projects/myvid/beats.json --dry-run
+python3 narration/beat_narrator.py fit projects/myvid/beats.json --target-wps 2.7
+
 # 4. measure the real audio and emit the cut list
 python3 narration/beat_narrator.py marks projects/myvid/beats.json
 ```
 
 `beats.txt` in the `NN|narration` form (used by the foodcode projects) is read
 directly by `split`.
+
+## Pace: the one real tension
+
+12–16 words inside a 2–6 s beat implies a delivery rate of **2.7–6.0 words/sec**.
+Most natural TTS reads land at ~2.3 wps, so a 14-word beat arrives at ~6 s and
+needs retiming. `fit` does this with ffmpeg's `atempo`, which changes tempo
+without touching pitch — the same move an editor makes when a read runs long.
+
+| `--target-wps` | 12 w | 14 w | 16 w | typical stretch |
+|---|---|---|---|---|
+| **2.7** (default-friendly) | 4.4 s | 5.2 s | 5.9 s | ~1.2× |
+| 3.89 (reference median) | 3.1 s | 3.6 s | 4.1 s | ~1.7× |
+
+2.7 is the slowest rate that still keeps a 16-word beat under 6 s, so it is the
+gentlest option. Use 3.89 when you want the measured 3.6 s median cadence and
+accept a faster, more urgent read. `fit --dry-run` shows the change before any
+audio is touched, and the untouched read is always kept in `audio/original/`.
 
 ## Output artefacts
 

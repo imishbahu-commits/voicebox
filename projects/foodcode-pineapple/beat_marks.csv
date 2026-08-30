@@ -1,0 +1,61 @@
+beat,start,end,duration,frames,words,wps,transition,label,visual,audio
+1,0.0,5.21,5.21,313,14,2.69,revealing,THE ENZYME,"A whole pineapple with a jagged enzyme shape floating above it, molecular dots drifting",audio/beat01.mp3
+2,5.21,10.03,4.82,289,13,2.7,switching,NOT ACID,"A chili and a lemon both crossed out beside a pineapple, red X marks",audio/beat02.mp3
+3,10.03,14.85,4.82,289,13,2.7,cut,YOU ARE PROTEIN,A mouth diagram with tongue and cheeks highlighted in bold protein dots,audio/beat03.mp3
+4,14.85,19.67,4.82,289,13,2.7,cut,BREAKING YOU DOWN,An enzyme shape snipping tiny links off a pink tongue surface,audio/beat04.mp3
+5,19.67,25.21,5.54,332,15,2.71,cut,NOT WHAT YOU THINK,A tongue with spark marks and a big X over a lemon acid bottle,audio/beat05.mp3
+6,25.21,30.39,5.18,311,14,2.7,cut,THE CANNED LIE,"A sad canned pineapple ring, its glowing core gone, empty middle",audio/beat06.mp3
+7,30.39,34.85,4.46,268,12,2.69,switching,NOT A SNACK,"A pineapple cocktail with umbrella crossed out, an enzyme shape beside it",audio/beat07.mp3
+8,34.85,40.03,5.18,311,14,2.7,cut,IN YOUR KITCHEN,A fruit bowl with a pineapple glowing menacingly at the front,audio/beat08.mp3
+9,40.03,44.83,4.8,288,13,2.71,cut,LAST TIME,"A hand holding a fresh pineapple slice outdoors, picnic blanket behind",audio/beat09.mp3
+10,44.83,49.27,4.44,266,12,2.7,cut,SWEET AND JUICY,A pineapple slice dripping juice with sun rays and a satisfied face,audio/beat10.mp3
+11,49.27,52.87,3.6,216,14,3.89,cut,ONE MINUTE IN,A clock at one minute beside an open mouth with question marks,audio/beat11.mp3
+12,52.87,55.96,3.09,185,12,3.88,cut,THE TINGLE,A tongue covered in tiny sparks with a rough sandpaper texture patch,audio/beat12.mp3
+13,55.96,59.3,3.34,200,13,3.89,cut,YOU BLAMED ACID,A lemon squeezing onto a tongue with an arrow labelled acid,audio/beat13.mp3
+14,59.3,62.39,3.09,185,12,3.88,cut,OR AN ALLERGY,A person scratching their arm with an allergy warning sign above,audio/beat14.mp3
+15,62.39,65.73,3.34,200,13,3.89,revealing,NOBODY TOLD YOU,A fruit stand with a hidden curtain and a secret glowing behind it,audio/beat15.mp3
+16,65.73,69.07,3.34,200,13,3.89,cut,BROMELAIN,A bromelain enzyme shape cutting into a tongue with tiny scissors,audio/beat16.mp3
+17,69.07,72.41,3.34,200,13,3.89,cut,EATING YOU BACK,A pineapple with a wide mouth chewing on a tiny running person,audio/beat17.mp3
+18,72.41,75.5,3.09,185,12,3.88,switching,PROTEASES,A row of little enzyme characters standing in a family photo line,audio/beat18.mp3
+19,75.5,78.84,3.34,200,13,3.89,cut,CUTTING PROTEIN,Scissor-shaped enzymes snipping a long chain of coloured protein beads,audio/beat19.mp3
+20,78.84,82.18,3.34,200,13,3.89,cut,THE CORE,A pineapple cross-section with the tough core glowing bright yellow,audio/beat20.mp3
+21,82.18,85.52,3.34,200,13,3.89,cut,THROWN AWAY,A hand dropping a pineapple core into a trash can,audio/beat21.mp3
+22,85.52,89.12,3.6,216,14,3.89,revealing,THE JELL-O PROBLEM,A kitchen counter with a wobbly bowl of unset jelly and a spoon,audio/beat22.mp3
+23,89.12,92.98,3.86,232,15,3.89,cut,IT NEVER SETS,"A bowl of liquid jelly with pineapple chunks, an hourglass beside it",audio/beat23.mp3
+24,92.98,96.32,3.34,200,13,3.89,cut,COLLAGEN,"A wobbling gelatin cube labelled collagen, an enzyme taking a bite",audio/beat24.mp3
+25,96.32,99.66,3.34,200,13,3.89,cut,CHEWED THROUGH,Enzymes chewing through a jelly cube that keeps collapsing into liquid,audio/beat25.mp3
+26,99.66,102.75,3.09,185,12,3.88,switching,CANNED WORKS,A can of pineapple rings beside a perfectly set firm jelly bowl,audio/beat26.mp3
+27,102.75,105.84,3.09,185,12,3.88,cut,HEAT DESTROYS IT,A pineapple can in a factory with heat waves and a thermometer at sixty,audio/beat27.mp3
+28,105.84,108.93,3.09,185,12,3.88,cut,HEAT KILLS IT,A grilled pineapple slice with a dead flat enzyme shape beside it,audio/beat28.mp3
+29,108.93,113.04,4.11,247,16,3.89,cut,GONE,Pineapple on a grill with the enzyme vanishing upward in steam,audio/beat29.mp3
+30,113.04,116.9,3.86,232,15,3.89,revealing,IT GOES DEEPER,An enzyme walking past a mouth signpost heading down a tunnel,audio/beat30.mp3
+31,116.9,120.5,3.6,216,14,3.89,cut,SURVIVES THE STOMACH,"An enzyme swimming through a bubbling acid pool, unharmed and smiling",audio/beat31.mp3
+32,120.5,123.84,3.34,200,13,3.89,cut,INTO THE BLOOD,An enzyme passing through an intestine wall into a red bloodstream river,audio/beat32.mp3
+33,123.84,126.93,3.09,185,12,3.88,cut,THREE THINGS,"A clipboard with three numbered boxes, the enzyme standing beside it",audio/beat33.mp3
+34,126.93,130.02,3.09,185,12,3.88,cut,FIBRIN,A net of fibrin around a wound being snipped apart by enzymes,audio/beat34.mp3
+35,130.02,133.11,3.09,185,12,3.88,cut,PAIN SIGNALS,Pain signal molecules blocked by stop signs held up by enzymes,audio/beat35.mp3
+36,133.11,136.45,3.34,200,13,3.89,cut,THINS MUCUS,Thick gloopy mucus turning thin and watery with a happy sinus diagram,audio/beat36.mp3
+37,136.45,139.54,3.09,185,12,3.88,cut,GERMAN SURGEONS,A surgeon in scrubs handing a bromelain capsule to a bandaged patient,audio/beat37.mp3
+38,139.54,142.63,3.09,185,12,3.88,cut,SINUS TREATMENT,A map of Europe with a calm sinus diagram glowing over it,audio/beat38.mp3
+39,142.63,145.72,3.09,185,12,3.88,cut,JOINT PAIN,A knee joint diagram with pain stars fading away one by one,audio/beat39.mp3
+40,145.72,148.81,3.09,185,12,3.88,switching,IN HUMANS,"A petri dish and a mouse both crossed out, a human figure highlighted",audio/beat40.mp3
+41,148.81,152.41,3.6,216,14,3.89,revealing,SHOCKED RESEARCHERS,"A researcher with wide eyes, clipboard shaking, magnifying glass on enzyme",audio/beat41.mp3
+42,152.41,155.5,3.09,185,12,3.88,cut,BLUNT TOOL,A giant hammer squashing a whole army of immune cells flat,audio/beat42.mp3
+43,155.5,158.84,3.34,200,13,3.89,switching,SMARTER,"An enzyme holding a fine laser scalpel, precision glowing at the tip",audio/beat43.mp3
+44,158.84,161.93,3.09,185,12,3.88,cut,SELECTIVE,Only the red swelling signal being snipped while green signals float past,audio/beat44.mp3
+45,161.93,165.02,3.09,185,12,3.88,cut,LEFT ALONE,"Healthy immune cells standing in formation, untouched and saluting",audio/beat45.mp3
+46,165.02,168.36,3.34,200,13,3.89,cut,NO DRUG DOES THIS,A medicine bottle shrugging beside a fresh pineapple with a trophy,audio/beat46.mp3
+47,168.36,171.45,3.09,185,12,3.88,revealing,THREE STEPS,A bold title card with three steps written in hand-drawn capitals,audio/beat47.mp3
+48,171.45,174.54,3.09,185,12,3.88,cut,STEP ONE: FRESH,A fresh pineapple with a tick beside a can with a cross,audio/beat48.mp3
+49,174.54,177.63,3.09,185,12,3.88,cut,STEP TWO: NEVER COOK,A thermometer at sixty degrees with a flame and a dead enzyme,audio/beat49.mp3
+50,177.63,181.23,3.6,216,14,3.89,cut,STEP THREE: EAT THE CORE,A pineapple core glowing with a concentration bar chart at maximum,audio/beat50.mp3
+51,181.23,184.57,3.34,200,13,3.89,cut,NOBODY SAYS IT,A tall stack of research papers with a tiny megaphone beside them,audio/beat51.mp3
+52,184.57,188.68,4.11,247,16,3.89,cut,THE MISSION,A bridge being built between a laboratory and a home kitchen counter,audio/beat52.mp3
+53,188.68,192.02,3.34,200,13,3.89,cut,YOU CHANGED,"A person transformed, glowing brain, looking thoughtfully at a pineapple",audio/beat53.mp3
+54,192.02,195.11,3.09,185,12,3.88,cut,YOU UNDERSTAND,A brain with a bromelain label connecting dots to a tingling tongue,audio/beat54.mp3
+55,195.11,198.45,3.34,200,13,3.89,cut,YOU KNOW WHY,"A dead flat enzyme in a can beside a flame, both labelled dead",audio/beat55.mp3
+56,198.45,201.54,3.09,185,12,3.88,cut,EVERY DECISION,A supermarket produce aisle with a glowing arrow to the fresh pineapples,audio/beat56.mp3
+57,201.54,205.14,3.6,216,14,3.89,revealing,TELL ME,A speech bubble comment box with a tingling tongue emoji inside,audio/beat57.mp3
+58,205.14,208.48,3.34,200,13,3.89,cut,I READ THEM,"A stack of comment cards, one with a reply badge, a pen ready",audio/beat58.mp3
+59,208.48,212.59,4.11,247,16,3.89,cut,NEXT: GINGER,"A ginger root with a spotlight, a stomach diagram waiting beside it",audio/beat59.mp3
+60,212.59,216.19,3.6,216,14,3.89,cut,YOUR STOMACH,"Immune system and cells crossed out, stomach circled with a warning star",audio/beat60.mp3

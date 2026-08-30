@@ -351,15 +351,46 @@ def _median(xs: list[float]) -> float:
 # --------------------------------------------------------------------------
 
 def _find_ffmpeg() -> str | None:
-    exe = shutil.which("ffprobe")
-    if exe:
-        return exe
+    """Locate ffprobe or ffmpeg.
+
+    Order: $VOICEBOX_FFMPEG / $FFMPEG, then PATH, then an importable
+    imageio-ffmpeg, then an imageio-ffmpeg binary sitting in a nearby venv
+    (the doodle-explainer-video checkout installs one). Exact durations need a
+    real decoder; the built-in MP3/WAV reader is the fallback.
+    """
+    for var in ("VOICEBOX_FFMPEG", "FFMPEG", "FFPROBE"):
+        exe = os.environ.get(var)
+        if exe and os.path.exists(exe):
+            return exe
+    for name in ("ffprobe", "ffmpeg"):
+        exe = shutil.which(name)
+        if exe:
+            return exe
     try:
         import imageio_ffmpeg  # noqa
         return imageio_ffmpeg.get_ffmpeg_exe()
     except Exception:
         pass
-    return shutil.which("ffmpeg")
+    # os.walk, not glob: the binary usually lives in a hidden .venv, and glob
+    # refuses to descend into dot-directories.
+    here = os.path.dirname(os.path.abspath(__file__))
+    skip = {".git", "node_modules", "__pycache__", "target", "dist", "build"}
+    for root in (os.path.dirname(here), os.path.dirname(os.path.dirname(here)),
+                 os.getcwd()):
+        if not os.path.isdir(root):
+            continue
+        for dirpath, dirnames, filenames in os.walk(root):
+            dirnames[:] = [d for d in dirnames if d not in skip]
+            if os.path.basename(dirpath) != "binaries":
+                continue
+            if os.path.basename(os.path.dirname(dirpath)) != "imageio_ffmpeg":
+                continue
+            for fn in sorted(filenames):
+                if fn.startswith("ffmpeg-"):
+                    hit = os.path.join(dirpath, fn)
+                    if os.path.isfile(hit) and os.access(hit, os.X_OK):
+                        return hit
+    return None
 
 
 def probe_duration(path: str) -> float | None:
@@ -421,9 +452,57 @@ def _wav_duration(f) -> float | None:
     return None
 
 
-_BITRATES_V1L3 = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 0]
-_BITRATES_V2L3 = [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160, 0]
-_RATES = {0b11: 44100, 0b10: 48000, 0b00: 32000}
+# bitrate tables keyed by the layer bits of the frame header:
+#   1 = Layer III, 2 = Layer II, 3 = Layer I   (0 is reserved)
+_BR_V1 = {
+    3: [0, 32, 64, 96, 128, 160, 192, 224, 256, 288, 320, 352, 384, 416, 448],
+    2: [0, 32, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 384],
+    1: [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320],
+}
+_BR_V2 = {
+    3: [0, 32, 48, 56, 64, 80, 96, 112, 128, 144, 160, 176, 192, 224, 256],
+    2: [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160],
+    1: [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160],
+}
+# version bits -> (sample rate table, is_mpeg1)
+_RATES = {
+    3: [44100, 48000, 32000],   # MPEG-1
+    2: [22050, 24000, 16000],   # MPEG-2
+    0: [11025, 12000, 8000],    # MPEG-2.5
+}
+
+
+def _mp3_header(data: bytes, i: int):
+    """Parse an MP3 frame header.
+
+    Returns (ver, layer, bitrate_kbps, rate, samples_per_frame, frame_len)
+    or None when the bytes at `i` are not a valid header.
+    """
+    if i + 4 > len(data):
+        return None
+    if data[i] != 0xFF or (data[i + 1] & 0xE0) != 0xE0:
+        return None
+    ver = (data[i + 1] >> 3) & 0x03
+    layer = (data[i + 1] >> 1) & 0x03
+    br_idx = (data[i + 2] >> 4) & 0x0F
+    sr_idx = (data[i + 2] >> 2) & 0x03
+    pad = (data[i + 2] >> 1) & 0x01           # padding lives in byte 2
+    if ver == 1 or layer == 0 or br_idx in (0, 15) or sr_idx == 3:
+        return None
+    table = (_BR_V1 if ver == 3 else _BR_V2).get(layer)
+    if not table:
+        return None
+    br = table[br_idx]
+    rate = _RATES[ver][sr_idx]
+    if layer == 3:                             # Layer I
+        spf = 384
+        flen = (12 * br * 1000 // rate + pad) * 4
+    else:
+        spf = 1152 if (layer == 2 or ver == 3) else 576
+        # MPEG-2/2.5 pack half as many bytes per frame as MPEG-1
+        coeff = 144 if ver == 3 else 72
+        flen = coeff * br * 1000 // rate + pad
+    return ver, layer, br, rate, spf, max(flen, 4)
 
 
 def _mp3_duration(f, skip_id3: bool) -> float | None:
@@ -433,46 +512,38 @@ def _mp3_duration(f, skip_id3: bool) -> float | None:
         size = ((data[6] & 0x7F) << 21) | ((data[7] & 0x7F) << 14) \
             | ((data[8] & 0x7F) << 7) | (data[9] & 0x7F)
         start = 10 + size
-    i = start
     n = len(data)
+
+    i = start
+    rate = spf = 0
+    while i + 4 <= n:                          # find the first valid frame
+        hdr = _mp3_header(data, i)
+        if hdr is None:
+            i += 1
+            continue
+        ver, _layer, _br, rate, spf, _flen = hdr
+        mono = ((data[i + 3] >> 6) & 0x03) == 3
+        # side-info size before the Xing/Info tag
+        off = i + 4 + ((17 if mono else 32) if ver == 3 else (9 if mono else 17))
+        if data[off:off + 4] in (b"Xing", b"Info"):
+            flags = int.from_bytes(data[off + 4:off + 8], "big")
+            if flags & 0x1:                    # frame count present -> exact
+                cnt = int.from_bytes(data[off + 8:off + 12], "big")
+                return round(cnt * spf / rate, 3)
+        break
+    if not rate:
+        return None
+
     frames = 0
-    first_rate = None
-    bitrate = None
-    while i + 4 <= n:
-        if data[i] == 0xFF and (data[i + 1] & 0xE0) == 0xE0:
-            ver = (data[i + 1] >> 3) & 0x03      # 3 = MPEG1
-            layer = (data[i + 1] >> 1) & 0x03    # 1 = Layer III
-            br_idx = (data[i + 2] >> 4) & 0x0F
-            sr_idx = (data[i + 2] >> 2) & 0x03
-            if ver == 3 and layer == 1 and br_idx not in (0, 15):
-                br = _BITRATES_V1L3[br_idx]
-                rate = _RATES.get(sr_idx, 44100)
-                if first_rate is None:
-                    first_rate = rate
-                    # Xing / Info (VBR) header -> exact frame count
-                    off = i + 4
-                    if data[i + 3] & 0x03 == 0:      # mono: side info 17 bytes
-                        off += 17
-                    else:
-                        off += 32
-                    tag = data[off:off + 4]
-                    if tag in (b"Xing", b"Info"):
-                        flags = int.from_bytes(data[off + 4:off + 8], "big")
-                        if flags & 0x1:
-                            cnt = int.from_bytes(data[off + 8:off + 12], "big")
-                            return round(cnt * 1152 / rate, 3)
-                    bitrate = br
-                if bitrate:
-                    frame_len = int(144 * br * 1000 / rate) + \
-                        ((data[i + 3] >> 7) & 0x01)
-                    frames += 1
-                    i += max(frame_len, 1)
-                    continue
-        i += 1
-    if frames and bitrate and first_rate:
-        return round(frames * 1152 / first_rate, 3)
-    if bitrate:  # CBR fallback from byte size
-        return round((n - start) * 8 / (bitrate * 1000), 3)
+    while i + 4 <= n:                          # walk the frames
+        hdr = _mp3_header(data, i)
+        if hdr is None:
+            i += 1
+            continue
+        frames += 1
+        i += hdr[5]
+    if frames:
+        return round(frames * spf / rate, 3)
     return None
 
 
@@ -592,6 +663,102 @@ def synth_arena(beats: list[Beat], outdir: str) -> str:
                   encoding="utf-8") as f:
             f.write(b.narration)
     return path
+
+
+# --------------------------------------------------------------------------
+# fit — time-stretch each beat into the 2-6 s window (pitch preserved)
+# --------------------------------------------------------------------------
+
+def _atempo_chain(ratio: float) -> str:
+    """atempo accepts 0.5-2.0 per filter, so chain them for bigger ratios."""
+    parts: list[str] = []
+    r = ratio
+    while r > 2.0:
+        parts.append("atempo=2.0")
+        r /= 2.0
+    while r < 0.5:
+        parts.append("atempo=0.5")
+        r /= 0.5
+    parts.append(f"atempo={r:.4f}")
+    return ",".join(parts)
+
+
+def fit_beats(beats: list[Beat], audiodir: str, target_wps: float = TARGET_WPS,
+              dry: bool = False) -> list[dict]:
+    """Retime each beat's audio so it lands inside SEC_MIN-SEC_MAX.
+
+    Uses ffmpeg's atempo so the pitch is untouched — this is the same move an
+    editor makes when a read runs long, just applied per beat.
+
+    `target_wps` is the delivery rate to aim for. The default (14 words / 3.6 s
+    ~= 3.9 wps) centres the median beat on the measured 3.6 s reference. A TTS
+    voice that reads at ~2.3 wps will be sped up ~1.7x at that setting; pass a
+    lower value (2.7 is the slowest that still keeps a 16-word beat under 6 s)
+    for a more natural read at the cost of a higher median.
+    """
+    exe = _find_ffmpeg()
+    if not exe:
+        raise SystemExit(
+            "fit needs ffmpeg (atempo filter). Install imageio-ffmpeg, put "
+            "ffmpeg on PATH, or set VOICEBOX_FFMPEG.")
+
+    report: list[dict] = []
+    for b in beats:
+        if not b.audio:
+            cand = os.path.join(audiodir, f"beat{b.id:02d}.mp3")
+            if os.path.exists(cand):
+                b.audio = cand
+        if not b.audio or not os.path.exists(b.audio):
+            continue
+        measured = probe_duration(b.audio)
+        if not measured:
+            continue
+
+        target = min(SEC_MAX, max(SEC_MIN, b.words / target_wps))
+        ratio = measured / target
+        row = {"id": b.id, "words": b.words, "before": round(measured, 2),
+               "target": round(target, 2), "ratio": round(ratio, 3),
+               "wps_before": round(b.words / measured, 2),
+               "wps_after": round(b.words / target, 2)}
+
+        if 0.98 <= ratio <= 1.02:
+            row["action"] = "ok"
+            row["after"] = round(measured, 2)
+            b.actual = measured
+            report.append(row)
+            continue
+
+        row["action"] = "speed-up" if ratio > 1 else "slow-down"
+        if dry:
+            row["after"] = round(measured / ratio, 2)
+        else:
+            # keep the untouched read so a beat can be re-fit at a different
+            # pace later without regenerating the TTS
+            orig_dir = os.path.join(audiodir, "original")
+            orig = os.path.join(orig_dir, f"beat{b.id:02d}.mp3")
+            if not os.path.exists(orig):
+                os.makedirs(orig_dir, exist_ok=True)
+                shutil.copy2(b.audio, orig)
+            tmp = f"{b.audio}.fit.mp3"
+            try:
+                subprocess.run(
+                    [exe, "-y", "-v", "error", "-i", b.audio,
+                     "-filter:a", _atempo_chain(ratio),
+                     "-c:a", "libmp3lame", "-q:a", "2", tmp],
+                    capture_output=True, timeout=300)
+            except Exception as exc:            # noqa: BLE001
+                row["action"] = f"failed: {exc}"
+                report.append(row)
+                continue
+            if os.path.exists(tmp) and os.path.getsize(tmp) > 0:
+                os.replace(tmp, b.audio)
+                b.actual = probe_duration(b.audio)
+                row["after"] = round(b.actual or 0, 2)
+            else:
+                row["action"] = "ffmpeg produced no output"
+                row["after"] = round(measured, 2)
+        report.append(row)
+    return report
 
 
 # --------------------------------------------------------------------------
@@ -740,6 +907,16 @@ def main(argv=None) -> int:
     p.add_argument("--out", help="audio directory (default: <project>/audio)")
     p.add_argument("--limit", type=int, default=0, help="only first N beats")
 
+    p = sub.add_parser("fit", help="retime each beat into the 2-6 s window")
+    p.add_argument("beats")
+    p.add_argument("--audio-dir", help="where beatNN.mp3 lives (default: audio)")
+    p.add_argument("--target-wps", type=float, default=TARGET_WPS,
+                   help=f"delivery rate to aim for (default {TARGET_WPS:.2f} "
+                        f"= 14 words / 3.6 s). 2.7 is the slowest that still "
+                        f"fits a 16-word beat inside 6 s.")
+    p.add_argument("--dry-run", action="store_true",
+                   help="report what would change without touching audio")
+
     p = sub.add_parser("marks", help="build the measured cut list")
     p.add_argument("beats")
     p.add_argument("--out", help="output directory (default: project dir)")
@@ -777,7 +954,7 @@ def main(argv=None) -> int:
         return 1 if issues else 0
 
     if args.cmd == "synth":
-        beats, _ = load_beats(args.beats)
+        beats, meta = load_beats(args.beats)
         outdir = args.out or os.path.join(os.path.dirname(
             os.path.abspath(args.beats)), "audio")
         if args.backend == "voicebox":
@@ -790,7 +967,29 @@ def main(argv=None) -> int:
             print(f"tts manifest -> {path}")
             print(f"{len(beats)} beats ready to synthesise "
                   f"(10 clips per turn; resume with --limit).")
-        save_beats(args.beats, beats, {})
+        save_beats(args.beats, beats, meta)
+        return 0
+
+    if args.cmd == "fit":
+        beats, meta = load_beats(args.beats)
+        pdir = os.path.dirname(os.path.abspath(args.beats))
+        adir = args.audio_dir or os.path.join(pdir, "audio")
+        rows = fit_beats(beats, adir, args.target_wps, args.dry_run)
+        if not rows:
+            print(f"no audio found in {adir} — run `synth` first.")
+            return 1
+        print(f"{'beat':>4} {'w':>3} {'before':>7} {'target':>7} {'after':>7} "
+              f"{'x':>6} {'wps':>5} -> {'wps':>5}  action")
+        for r in rows:
+            print(f"{r['id']:>4} {r['words']:>3} {r['before']:>7.2f} "
+                  f"{r['target']:>7.2f} {r.get('after', 0):>7.2f} "
+                  f"{r['ratio']:>6.2f} {r['wps_before']:>5.2f} -> "
+                  f"{r['wps_after']:>5.2f}  {r['action']}")
+        changed = sum(1 for r in rows if r["action"] not in ("ok",))
+        print(f"\n{len(rows)} beat(s) processed, {changed} retimed"
+              f"{' (dry run — nothing written)' if args.dry_run else ''}")
+        if not args.dry_run:
+            save_beats(args.beats, beats, meta)
         return 0
 
     if args.cmd == "marks":
