@@ -27,7 +27,7 @@
       "transition": "revealing",
       "part": 1,
       "duration": null,
-      "actual": 5.21,
+      "actual": 3.62,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat01.mp3",
       "source_hint": "ai"
     },
@@ -39,7 +39,7 @@
       "transition": "switching",
       "part": 1,
       "duration": null,
-      "actual": 4.82,
+      "actual": 3.38,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat02.mp3",
       "source_hint": "ai"
     },
@@ -51,7 +51,7 @@
       "transition": "cut",
       "part": 1,
       "duration": null,
-      "actual": 4.82,
+      "actual": 3.36,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat03.mp3",
       "source_hint": "ai"
     },
@@ -63,7 +63,7 @@
       "transition": "cut",
       "part": 1,
       "duration": null,
-      "actual": 4.82,
+      "actual": 3.38,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat04.mp3",
       "source_hint": "ai"
     },
@@ -75,7 +75,7 @@
       "transition": "cut",
       "part": 1,
       "duration": null,
-      "actual": 5.54,
+      "actual": 3.86,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat05.mp3",
       "source_hint": "ai"
     },
@@ -87,7 +87,7 @@
       "transition": "cut",
       "part": 1,
       "duration": null,
-      "actual": 5.18,
+      "actual": 3.62,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat06.mp3",
       "source_hint": "ai"
     },
@@ -99,7 +99,7 @@
       "transition": "switching",
       "part": 1,
       "duration": null,
-      "actual": 4.46,
+      "actual": 3.12,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat07.mp3",
       "source_hint": "ai"
     },
@@ -111,7 +111,7 @@
       "transition": "cut",
       "part": 1,
       "duration": null,
-      "actual": 5.18,
+      "actual": 3.62,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat08.mp3",
       "source_hint": "ai"
     },
@@ -123,7 +123,7 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": 4.8,
+      "actual": 3.34,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat09.mp3",
       "source_hint": "ai"
     },
@@ -135,7 +135,7 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": 4.44,
+      "actual": 3.1,
       "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat10.mp3",
       "source_hint": "ai"
     },
@@ -147,8 +147,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.62,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat11.mp3",
       "source_hint": "ai"
     },
     {
@@ -159,8 +159,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.12,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat12.mp3",
       "source_hint": "ai"
     },
     {
@@ -171,8 +171,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat13.mp3",
       "source_hint": "ai"
     },
     {
@@ -183,8 +183,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.1,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat14.mp3",
       "source_hint": "ai"
     },
     {
@@ -195,8 +195,8 @@
       "transition": "revealing",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.38,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat15.mp3",
       "source_hint": "ai"
     },
     {
@@ -207,8 +207,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat16.mp3",
       "source_hint": "ai"
     },
     {
@@ -219,8 +219,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.38,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat17.mp3",
       "source_hint": "ai"
     },
     {
@@ -231,8 +231,8 @@
       "transition": "switching",
       "part": 3,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.12,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat18.mp3",
       "source_hint": "ai"
     },
     {
@@ -243,8 +243,8 @@
       "transition": "cut",
       "part": 3,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat19.mp3",
       "source_hint": "ai"
     },
     {
@@ -255,8 +255,8 @@
       "transition": "cut",
       "part": 3,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.34,
+      "audio": "/home/user/voicebox/projects/foodcode-pineapple/audio/beat20.mp3",
       "source_hint": "ai"
     },
     {
