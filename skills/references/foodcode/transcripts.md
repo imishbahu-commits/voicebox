@@ -44,5 +44,23 @@ This is information that is available in the scientific literature, but it is al
 
 I want to ask you something specific. Think about how you usually cook mushrooms. Do you boil them, sauté them, eat them raw? Tell me in the comments. I read every single one. In the next video, I'm going to show you what a specific enzyme inside a tropical fruit does to the proteins in your mouth and your digestive system, not your immune system, not your cells. Something you will feel within minutes of eating.
 
-## Video 3 — "Dark Chocolate: What REALLY Happens In Your Brain"
+## Video 3 — "Onion Shock: This Is What Raw Onion REALLY Does To Your Blood"
+https://youtu.be/gSgL62le7H8
+
+Full transcript: `projects/foodcode-onion/transcript.txt`
+Beat script: `projects/foodcode-onion/beats.json` — 95 beats, 95/95 inside
+12–16 words, every beat carrying its own visual.
+
+Arc: cold-open mechanism (blood speed in 30 min) → relatable setup
+(onions are background noise) → the compound (quercetin → endothelium →
+nitric oxide) → the study (Journal of Nutrition) → silent-damage stakes →
+garden-hose analogy → second mechanism (sulfur compounds, 30% platelet
+aggregation) → four steps (raw / red-yellow / pair with fat / rest 10 min)
+→ mission line → transformation close → CTA + next-ingredient tease.
+
+Note: this video uses FOUR steps, not three — the "let it rest 10 minutes"
+step is the smallest and is flagged as such ("there's a fourth thing worth
+knowing, even if it's smaller").
+
+## Video 4 — "Dark Chocolate: What REALLY Happens In Your Brain"
 https://youtu.be/r1WwIvsi6ro — (title only; transcript not yet captured)

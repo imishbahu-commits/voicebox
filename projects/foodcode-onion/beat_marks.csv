@@ -1,0 +1,96 @@
+beat,start,end,duration,frames,words,wps,transition,label,visual,audio
+1,0.0,3.34,3.34,200,13,3.89,revealing,PAY ATTENTION,A hand building a sandwich with a big red arrow pointing at it,audio/beat01.mp3
+2,3.34,7.2,3.86,232,15,3.89,cut,UNDER 30 MINUTES,A knife slicing an onion beside a stopwatch reading thirty minutes,audio/beat02.mp3
+3,7.2,10.54,3.34,200,13,3.89,cut,IN MINUTES,"A calendar with weeks crossed out, a stopwatch with minutes circled",audio/beat03.mp3
+4,10.54,13.88,3.34,200,13,3.89,cut,EVERY SINGLE DAY,"A crowd of people of different ages all eating onions, none aware",audio/beat04.mp3
+5,13.88,17.48,3.6,216,14,3.89,cut,NOBODY KNOWS,"Three generations at a table with onions, all with question marks above",audio/beat05.mp3
+6,17.48,21.59,4.11,247,16,3.89,cut,MOST MISUNDERSTOOD,"A globe with onions scattered over every continent, a question mark",audio/beat06.mp3
+7,21.59,25.45,3.86,232,15,3.89,switching,YOUR LAST MEAL,"A burger with onion rings peeking out, a thought bubble above",audio/beat07.mp3
+8,25.45,28.79,3.34,200,13,3.89,cut,RAW ON A SALAD,"Raw onion rings scattered on a salad bowl, half hidden under leaves",audio/beat08.mp3
+9,28.79,31.88,3.09,185,12,3.88,cut,INTO THE SAUCE,"Onion pieces falling into a simmering sauce pan, unnoticed",audio/beat09.mp3
+10,31.88,34.97,3.09,185,12,3.88,cut,JUST THERE,A plate with an onion shrugging quietly in the corner,audio/beat10.mp3
+11,34.97,38.83,3.86,232,15,3.89,cut,BACKGROUND NOISE,A hand pushing an onion slice to the edge of a plate,audio/beat11.mp3
+12,38.83,42.17,3.34,200,13,3.89,cut,THE PROBLEM,An onion wearing a Superman cape nobody is looking at,audio/beat12.mp3
+13,42.17,45.51,3.34,200,13,3.89,cut,WE EXPECT DRAMA,A shelf of exotic glowing fruit with dramatic spotlights,audio/beat13.mp3
+14,45.51,49.62,4.11,247,16,3.89,cut,EXPENSIVE PROMISES,A supplement bottle covered in promise words and a large price sticker,audio/beat14.mp3
+15,49.62,53.48,3.86,232,15,3.89,switching,SITTING IGNORED,A glowing compound molecule sitting alone on a kitchen counter,audio/beat15.mp3
+16,53.48,57.34,3.86,232,15,3.89,cut,LESS THAN A DOLLAR,An onion on a shop shelf with a price tag reading under one dollar,audio/beat16.mp3
+17,57.34,60.68,3.34,200,13,3.89,cut,BILLIONS SPENT,A mountain of money with a heart shape and pill bottles on top,audio/beat17.mp3
+18,60.68,63.77,3.09,185,12,3.88,cut,PILLS AND POWDERS,Pills and powder tubs with arrows pointing at a healthy heart diagram,audio/beat18.mp3
+19,63.77,67.63,3.86,232,15,3.89,cut,FREE ALREADY,"A factory processing plant beside a free vegetable, price tags compared",audio/beat19.mp3
+20,67.63,70.97,3.34,200,13,3.89,cut,YOU OWN IT,A person walking past an onion bowl in their own kitchen,audio/beat20.mp3
+21,70.97,74.57,3.6,216,14,3.89,revealing,QUERCETIN,An onion cut open revealing a glowing molecule labelled quercetin,audio/beat21.mp3
+22,74.57,77.91,3.34,200,13,3.89,cut,THE INNER LINING,A quercetin molecule travelling toward the wall of a blood vessel,audio/beat22.mp3
+23,77.91,82.02,4.11,247,16,3.89,cut,THE ENDOTHELIUM,A blood vessel wall highlighted with a name tag reading endothelium,audio/beat23.mp3
+24,82.02,85.88,3.86,232,15,3.89,cut,ACTIVE TISSUE,A vessel cross-section widening and narrowing like a camera aperture,audio/beat24.mp3
+25,85.88,89.22,3.34,200,13,3.89,cut,CONSTANT DECISIONS,Endothelial cells as little workers pulling levers to control flow,audio/beat25.mp3
+26,89.22,92.56,3.34,200,13,3.89,cut,NITRIC OXIDE,Quercetin docking into a cell and tiny nitric oxide bubbles bursting out,audio/beat26.mp3
+27,92.56,96.16,3.6,216,14,3.89,cut,RELAX AND WIDEN,"A nitric oxide molecule holding a megaphone, vessel walls relaxing outward",audio/beat27.mp3
+28,96.16,99.5,3.34,200,13,3.89,cut,FASTER FLOW,Red blood cells racing smoothly through a wide open vessel tunnel,audio/beat28.mp3
+29,99.5,103.1,3.6,216,14,3.89,revealing,THE STUDY,A journal cover reading Journal of Nutrition with a vascular function graph improving,audio/beat29.mp3
+30,103.1,106.19,3.09,185,12,3.88,cut,MEASURED IN HUMANS,A body outline with nitric oxide levels rising on a gauge,audio/beat30.mp3
+31,106.19,110.05,3.86,232,15,3.89,cut,NOT A GUESS,A stack of peer reviewed papers with multiple stamp approvals,audio/beat31.mp3
+32,110.05,113.14,3.09,185,12,3.88,cut,REPEATED,Three separate lab teams in different rooms all getting matching results,audio/beat32.mp3
+33,113.14,116.74,3.6,216,14,3.89,switching,YOU NEVER FEEL IT,A person sleeping peacefully while their vessels tighten unseen,audio/beat33.mp3
+34,116.74,120.08,3.34,200,13,3.89,cut,SILENT FOR YEARS,"Someone waking up with a speech bubble about tight endothelium, confused",audio/beat34.mp3
+35,120.08,123.68,3.6,216,14,3.89,cut,UNTIL IT DOESN'T,A silent ticking clock with a vessel slowly narrowing over a decade,audio/beat35.mp3
+36,123.68,127.54,3.86,232,15,3.89,cut,DECADES IN THE MAKING,An iceberg with most of the damage hidden below the waterline,audio/beat36.mp3
+37,127.54,130.88,3.34,200,13,3.89,revealing,THE GARDEN HOSE,"A garden hose pinched by a giant thumb, water trickling weakly",audio/beat37.mp3
+38,130.88,134.22,3.34,200,13,3.89,cut,STRAINING THE HOSE,"The pinched hose bulging with pressure, strain marks along the rubber",audio/beat38.mp3
+39,134.22,137.31,3.09,185,12,3.88,switching,RELEASE THE PINCH,"The thumb lifting off the hose, water gushing out smoothly",audio/beat39.mp3
+40,137.31,140.65,3.34,200,13,3.89,cut,IN YOUR ARTERIES,An artery relaxing open with quercetin molecules cheering it on,audio/beat40.mp3
+41,140.65,144.76,4.11,247,16,3.89,cut,LESS WORK FOR YOUR HEART,A relaxed heart lifting a light feather instead of a heavy weight,audio/beat41.mp3
+42,144.76,148.36,3.6,216,14,3.89,cut,AFTER A MEAL,"A person slumped at a table after eating, fog clouds over their head",audio/beat42.mp3
+43,148.36,151.7,3.34,200,13,3.89,cut,TOO TIGHT,A narrowed vessel with a red warning band squeezing it shut,audio/beat43.mp3
+44,151.7,155.04,3.34,200,13,3.89,cut,STARVED OF OXYGEN,"A brain with a thin oxygen supply line, a dimming light bulb above",audio/beat44.mp3
+45,155.04,158.38,3.34,200,13,3.89,revealing,NOT JUST QUERCETIN,"An onion with two glowing compartments, quercetin and something unknown",audio/beat45.mp3
+46,158.38,161.98,3.6,216,14,3.89,cut,SULFUR COMPOUNDS,"A knife breaking onion cell walls, little sulfur molecules flying out",audio/beat46.mp3
+47,161.98,165.32,3.34,200,13,3.89,cut,WHY YOU CRY,A person chopping onions with tears streaming down their face,audio/beat47.mp3
+48,165.32,169.18,3.86,232,15,3.89,switching,FROM IRRITANT TO ALLY,"Sulfur molecules arriving at the blood stream, an alarm turning into a green light",audio/beat48.mp3
+49,169.18,172.78,3.6,216,14,3.89,cut,PLATELETS,Platelets floating apart instead of sticking together in clumps,audio/beat49.mp3
+50,172.78,176.38,3.6,216,14,3.89,cut,UP TO 30%,A big bold number thirty percent with a downward red arrow,audio/beat50.mp3
+51,176.38,179.72,3.34,200,13,3.89,cut,THINNER BLOOD,"Two blood samples side by side, one thick and one flowing freely",audio/beat51.mp3
+52,179.72,183.06,3.34,200,13,3.89,cut,ALLIUM VEGETABLES,"A review paper with garlic, onion and leek drawings on the cover",audio/beat52.mp3
+53,183.06,186.15,3.09,185,12,3.88,cut,PEER REVIEWED,A cardiology journal beside a crumpled supplement brochure in a bin,audio/beat53.mp3
+54,186.15,189.75,3.6,216,14,3.89,cut,THEIR REAL JOB,A cut on a finger with platelets rushing in to form a plug,audio/beat54.mp3
+55,189.75,193.09,3.34,200,13,3.89,cut,FORM A BARRIER,Platelets linking arms to build a wall across a wound,audio/beat55.mp3
+56,193.09,196.69,3.6,216,14,3.89,switching,WHEN THERE'S NO CUT,"Platelets clumping inside an intact vessel, forming a dangerous clog",audio/beat56.mp3
+57,196.69,200.29,3.6,216,14,3.89,cut,NO WARNING,An ambulance and emergency room doors with a sudden alarm light,audio/beat57.mp3
+58,200.29,204.15,3.86,232,15,3.89,cut,RIGHT NOW,A clock face showing blood cells crawling slowly through a vessel,audio/beat58.mp3
+59,204.15,207.75,3.6,216,14,3.89,cut,JUST YEARS,A long timeline of ordinary meals with vessels quietly narrowing,audio/beat59.mp3
+60,207.75,211.61,3.86,232,15,3.89,cut,IN YOUR DRAWER,A kitchen drawer opening to reveal a single glowing raw onion,audio/beat60.mp3
+61,211.61,214.7,3.09,185,12,3.88,switching,WHAT BLOOD DOES,A body map with red delivery routes running to every organ,audio/beat61.mp3
+62,214.7,218.56,3.86,232,15,3.89,cut,EVERY SINGLE CELL,Delivery trucks of oxygen travelling from brain down to fingertips,audio/beat62.mp3
+63,218.56,221.9,3.34,200,13,3.89,cut,OXYGEN AND NUTRIENTS,Oxygen parcels being dropped off at tiny doorways all over the body,audio/beat63.mp3
+64,221.9,224.99,3.09,185,12,3.88,cut,EVERYTHING DOWNSTREAM,"A delivery route with a roadblock, everything behind it backing up",audio/beat64.mp3
+65,224.99,228.08,3.09,185,12,3.88,cut,THE 3PM SLUMP,A clock at three in the afternoon with a brain battery draining,audio/beat65.mp3
+66,228.08,231.68,3.6,216,14,3.89,cut,COLD HANDS,Blue tinted hands and feet with a thermometer reading low,audio/beat66.mp3
+67,231.68,234.77,3.09,185,12,3.88,revealing,FOUR STEPS,A bold title card with four numbered boxes in hand drawn capitals,audio/beat67.mp3
+68,234.77,238.63,3.86,232,15,3.89,cut,STEP ONE: RAW,A raw onion with a tick beside a cooked onion with a cross,audio/beat68.mp3
+69,238.63,242.49,3.86,232,15,3.89,cut,BENEFIT GONE,Soft sweet onions in a pan with the active compounds evaporating as steam,audio/beat69.mp3
+70,242.49,246.35,3.86,232,15,3.89,cut,ADD IT AFTER,Raw onion slices being sprinkled onto a finished hot dish,audio/beat70.mp3
+71,246.35,249.44,3.09,185,12,3.88,cut,"AFTER, NEVER DURING",A thermometer with a red never zone and a green after zone,audio/beat71.mp3
+72,249.44,252.78,3.34,200,13,3.89,cut,STEP TWO: RED OR YELLOW,"Red and yellow onions with a tick, white onion crossed out",audio/beat72.mp3
+73,252.78,256.12,3.34,200,13,3.89,cut,DEEPER IS BETTER,A colour gradient from white to deep red with quercetin bars rising,audio/beat73.mp3
+74,256.12,259.72,3.6,216,14,3.89,cut,IT'S CHEMISTRY,"A chef's hat and a storybook crossed out, a chemistry flask highlighted",audio/beat74.mp3
+75,259.72,262.81,3.09,185,12,3.88,cut,PACKED INSIDE,A dark red onion cross-section glowing with protective compound dots,audio/beat75.mp3
+76,262.81,266.41,3.6,216,14,3.89,cut,READ THE COLOUR,A shopper in a produce aisle reading onion colours as a nutrition label,audio/beat76.mp3
+77,266.41,270.01,3.6,216,14,3.89,cut,STEP THREE: ADD FAT,An olive oil bottle pouring gently over a bowl of raw onion,audio/beat77.mp3
+78,270.01,273.35,3.34,200,13,3.89,cut,FAT SOLUBLE,Quercetin molecules hitching a ride on fat droplets into the bloodstream,audio/beat78.mp3
+79,273.35,276.95,3.6,216,14,3.89,cut,NOT JUST A RECIPE,"A bowl of onion, tomato, olive oil and lemon arranged neatly",audio/beat79.mp3
+80,276.95,280.29,3.34,200,13,3.89,cut,A DELIVERY SYSTEM,The salad bowl turning into a rocket delivering compounds into a vessel,audio/beat80.mp3
+81,280.29,283.63,3.34,200,13,3.89,cut,STEP FOUR: WAIT 10 MIN,Chopped onion on a board beside a timer counting down ten minutes,audio/beat81.mp3
+82,283.63,287.23,3.6,216,14,3.89,cut,LET THE ENZYME WORK,A tiny enzyme worker inside the onion completing a chemical assembly line,audio/beat82.mp3
+83,287.23,291.09,3.86,232,15,3.89,cut,"CUT, REST, EAT","Three step icons: chop, rest, eat, with a green completion tick",audio/beat83.mp3
+84,291.09,294.69,3.6,216,14,3.89,switching,NOBODY SAYS IT,A tall stack of research papers with a tiny megaphone beside them,audio/beat84.mp3
+85,294.69,298.8,4.11,247,16,3.89,cut,THE MISSION,A bridge being built between a laboratory and an ordinary home kitchen,audio/beat85.mp3
+86,298.8,302.14,3.34,200,13,3.89,cut,YOU CHANGED,"A person transformed, glowing brain, looking thoughtfully at an onion",audio/beat86.mp3
+87,302.14,306.0,3.86,232,15,3.89,cut,CELLULAR LEVEL,"A brain connecting quercetin, nitric oxide and wider vessels in a chain",audio/beat87.mp3
+88,306.0,309.86,3.86,232,15,3.89,cut,EVERY DECISION,"Three scenes: shopping, cooking and eating, all with glowing arrows",audio/beat88.mp3
+89,309.86,313.46,3.6,216,14,3.89,cut,ALREADY IN YOUR KITCHEN,An ordinary kitchen shelf where every item now glows with potential,audio/beat89.mp3
+90,313.46,317.06,3.6,216,14,3.89,revealing,NEXT TIME,A shopper standing in front of a large pile of onions,audio/beat90.mp3
+91,317.06,320.66,3.6,216,14,3.89,cut,THEY'RE NOT THE SAME,A pile of identical onions with one subtly deeper red glowing among them,audio/beat91.mp3
+92,320.66,324.52,3.86,232,15,3.89,cut,HABIT OR BLOOD,"Two hands reaching, one for the usual white onion, one for the red",audio/beat92.mp3
+93,324.52,328.38,3.86,232,15,3.89,cut,TELL ME,A comment box with three onion options and a reply badge,audio/beat93.mp3
+94,328.38,332.24,3.86,232,15,3.89,cut,NEXT VIDEO,A mystery jar on a kitchen counter with a spotlight and question mark,audio/beat94.mp3
+95,332.24,336.1,3.86,232,15,3.89,cut,NOBODY TOLD YOU,The mystery jar glowing with a silhouette of a body noticing it,audio/beat95.mp3
