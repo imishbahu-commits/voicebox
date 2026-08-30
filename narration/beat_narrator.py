@@ -371,9 +371,19 @@ def _find_ffmpeg() -> str | None:
         return imageio_ffmpeg.get_ffmpeg_exe()
     except Exception:
         pass
+    # The repo-local tool venv (.tools/venv, gitignored) is the canonical home
+    # for ffmpeg: it survives the sandbox wiping everything outside the repo.
+    here = os.path.dirname(os.path.abspath(__file__))
+    repo = os.path.dirname(here)
+    for candidate in (
+        os.path.join(repo, ".tools", "venv", "bin", "ffmpeg"),
+        os.path.join(repo, ".tools", "venv", "bin", "ffprobe"),
+    ):
+        if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
+            return candidate
+
     # os.walk, not glob: the binary usually lives in a hidden .venv, and glob
     # refuses to descend into dot-directories.
-    here = os.path.dirname(os.path.abspath(__file__))
     skip = {".git", "node_modules", "__pycache__", "target", "dist", "build"}
     for root in (os.path.dirname(here), os.path.dirname(os.path.dirname(here)),
                  os.getcwd()):

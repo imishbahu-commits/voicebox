@@ -47,6 +47,12 @@ python3 narration/beat_narrator.py fit projects/myvid/beats.json --target-wps 2.
 
 # 4. measure the real audio and emit the cut list
 python3 narration/beat_narrator.py marks projects/myvid/beats.json
+
+# 4b. optimise the generated PNGs before they pile up (~55% smaller)
+.tools/venv/bin/python narration/optimize_images.py projects/myvid/images
+
+# 5. cut the beats into a real video
+python3 narration/render_video.py projects/myvid --part 1
 ```
 
 `beats.txt` in the `NN|narration` form (used by the foodcode projects) is read
@@ -63,6 +69,7 @@ without touching pitch — the same move an editor makes when a read runs long.
 |---|---|---|---|---|
 | **2.7** (default-friendly) | 4.4 s | 5.2 s | 5.9 s | ~1.2× |
 | 3.89 (reference median) | 3.1 s | 3.6 s | 4.1 s | ~1.7× |
+| **3.6** (tomato/8-min) | 3.3 s | 3.9 s | 4.4 s | ~1.55× |
 
 2.7 is the slowest rate that still keeps a 16-word beat under 6 s, so it is the
 gentlest option. Use 3.89 when you want the measured 3.6 s median cadence and
@@ -80,8 +87,40 @@ audio is touched, and the untouched read is always kept in `audio/original/`.
 | `beat_marks.csv` | same rows, spreadsheet friendly |
 | `beat_marks.edl` | CMX3600 EDL for Premiere / Resolve / Final Cut |
 
+| `video/partNN.mp4` | rendered cut (gitignored — regenerate, don't commit) |
+| `video/partNN_contact.jpg` | 10-up contact sheet of that part |
+
 `beat_marks.json` is the source of truth for the edit — every mark carries its
 `visual`, so the picture is cut to the narration rather than guessed.
+
+## Render
+
+`render_video.py` turns finished beats into an MP4. One beat = one image +
+one voice clip = one cut, and the cut points are read from `beat_marks.json`,
+so picture and voice cannot drift.
+
+```bash
+python3 narration/render_video.py projects/myvid --part 1     # one part
+python3 narration/render_video.py projects/myvid --beats 1-20 # explicit range
+python3 narration/render_video.py projects/myvid --motion hold # no camera move
+```
+
+What it does per beat:
+
+1. Pillow fits the generated image onto a 1920x1080 canvas — never squashed,
+   matted in a pale cream that matches the doodle white (`--pad` to change).
+2. ffmpeg holds it, pushes in, or pulls out, following the measured FoodCode
+   mix (60% still / 40% slow move, `--motion` to override). Pitch and tempo of
+   the voice are untouched.
+3. The beat's own audio is muxed into that segment, so sync is structural.
+4. Segments are joined with `-c copy` — no re-encode, no accumulated drift.
+
+Needs Pillow and ffmpeg. Use the repo's own tool venv, which survives
+environment resets: `.tools/venv/bin/python narration/render_video.py ...`
+(the script re-execs into it automatically if Pillow is missing).
+
+Beats without audio or an image are skipped and reported, so you can render a
+part the moment those 10 beats are done instead of waiting for all 145.
 
 ## TTS backends
 

@@ -72,6 +72,16 @@
   .beat .meta .w{color:#9fb0c6}
   .beat .meta .bad{color:var(--warn)}
   .empty{padding:30px;text-align:center;color:var(--dim)}
+  /* ---- rendered reel ---- */
+  .reel{margin:0 20px 22px;background:var(--panel);border:1px solid var(--line);
+        border-radius:14px;overflow:hidden}
+  .reel h2{margin:0;padding:12px 14px;font-size:13px;text-transform:uppercase;
+           letter-spacing:.8px;color:var(--dim);border-bottom:1px solid var(--line)}
+  .reel .reelbar{display:flex;align-items:center;gap:10px;padding:10px 14px;flex-wrap:wrap}
+  .reel video{display:block;width:100%;max-height:70vh;background:#000}
+  .reel a.dl{color:var(--accent);font-weight:600;font-size:12px;text-decoration:none}
+  .reel .contact{display:block;width:100%;border-top:1px solid var(--line)}
+  .reel .none{padding:16px 14px;color:var(--dim);font-size:13px}
   .pill{font:600 10px ui-monospace,monospace;padding:2px 6px;border-radius:5px;
         background:#2a3140;color:var(--dim);margin-left:6px}
   .pill.a{background:#1e3a2a;color:var(--accent2)}
@@ -87,6 +97,7 @@
   <label style="color:var(--dim);font-size:12px">
     <input type="checkbox" id="auto" checked> auto-advance
   </label>
+  <button id="watch" style="margin-left:auto">▶ Watch render</button>
 </header>
 
 <div class="stats" id="stats"></div>
@@ -117,6 +128,11 @@
   </section>
 </main>
 
+<section class="reel" id="reel">
+  <h2>Rendered video <span id="reelcount" style="color:#5d6779"></span></h2>
+  <div id="reelbody"></div>
+</section>
+
 <script>
 let DATA = null, PROJ = null, idx = 0, playing = false, audio = null, timer = null, t0 = 0;
 
@@ -140,8 +156,52 @@ function select(name){ PROJ = name; $('proj').value = name; load(); }
 async function load(){
   const r = await fetch('api/beats/' + encodeURIComponent(PROJ));
   DATA = await r.json();
-  idx = 0; stop(); renderStats(); renderList(); show(0);
+  idx = 0; stop(); renderStats(); renderList(); show(0); renderReel();
 }
+
+function renderReel(){
+  const vids = DATA.renders || [];
+  const mb = b => (b/1048576).toFixed(1) + ' MB';
+  $('reelcount').textContent = vids.length ? '\u00b7 ' + vids.length + ' file(s)' : '\u00b7 none yet';
+  if (!vids.length){
+    $('reelbody').innerHTML = '<div class="none">No render yet. Run ' +
+      '<code>python3 narration/render_video.py projects/' + esc(PROJ) +
+      ' --part 1</code> and reload.</div>';
+    return;
+  }
+  $('reelbody').innerHTML =
+    '<div class="reelbar">' +
+      '<select id="rendersel">' + vids.map((v,i) =>
+        '<option value="' + i + '">' + esc(v.file) + '  \u00b7  ' + mb(v.bytes) + '</option>'
+      ).join('') + '</select>' +
+      '<a class="dl" id="reeldl" download href="' + vids[0].url + '">\u2b07 Download MP4</a>' +
+      '<span id="reelhint" style="color:var(--dim);font-size:12px">' +
+        'Ranges supported \u2014 scrub anywhere.</span>' +
+    '</div>' +
+    '<video id="reelvideo" controls preload="metadata" playsinline src="' +
+      vids[0].url + '"></video>' +
+    (vids[0].contact ? '<img class="contact" src="' + vids[0].contact +
+      '" alt="contact sheet">' : '');
+  $('rendersel').onchange = e => {
+    const v = vids[+e.target.value];
+    $('reelvideo').src = v.url;
+    $('reeldl').href = v.url;
+    const c = $('reelbody').querySelector('.contact');
+    if (v.contact){
+      if (c) c.src = v.contact;
+      else $('reelbody').insertAdjacentHTML('beforeend',
+        '<img class="contact" src="' + v.contact + '" alt="contact sheet">');
+    } else if (c) c.remove();
+    $('reelvideo').load();
+  };
+}
+
+$('watch').onclick = () => {
+  stop();
+  $('reel').scrollIntoView({behavior:'smooth', block:'start'});
+  const v = $('reelvideo');
+  if (v) { v.currentTime = 0; v.play().catch(()=>{}); }
+};
 
 function renderStats(){
   const b = DATA.beats, n = b.length;

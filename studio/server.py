@@ -39,6 +39,9 @@ MIME = {
     ".css": "text/css; charset=utf-8",
     ".json": "application/json; charset=utf-8",
     ".mp3": "audio/mpeg",
+    ".mp4": "video/mp4",
+    ".m4a": "audio/mp4",
+    ".webm": "video/webm",
     ".wav": "audio/wav",
     ".png": "image/png",
     ".jpg": "image/jpeg",
@@ -106,6 +109,29 @@ def list_projects() -> list[dict]:
             "median_duration": round(_median(durs), 2) if durs else 0,
             "outside_window": sum(1 for d in durs
                                   if d and not (SEC_MIN <= d <= SEC_MAX)),
+            "renders": list_renders(pdir, name),
+        })
+    return out
+
+
+def list_renders(pdir: str, name: str) -> list[dict]:
+    """Rendered MP4s in <project>/video/, newest first."""
+    vdir = os.path.join(pdir, "video")
+    if not os.path.isdir(vdir):
+        return []
+    out = []
+    for fn in sorted(os.listdir(vdir), reverse=True):
+        if not fn.lower().endswith((".mp4", ".webm", ".m4v")):
+            continue
+        full = os.path.join(vdir, fn)
+        stem = os.path.splitext(fn)[0]
+        out.append({
+            "file": fn,
+            "url": f"media/{name}/video/{fn}",
+            "bytes": os.path.getsize(full),
+            "contact": (f"media/{name}/video/{stem}_contact.jpg"
+                        if os.path.isfile(os.path.join(vdir, stem + "_contact.jpg"))
+                        else None),
         })
     return out
 
@@ -158,6 +184,7 @@ def project_beats(name: str) -> dict:
     return {
         "project": name,
         "topic": data.get("topic", name),
+        "renders": list_renders(pdir, name),
         "fps": data.get("fps", 60),
         "total_duration": marks.get("total_duration"),
         "measured": marks.get("measured", False),
