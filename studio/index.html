@@ -28,9 +28,32 @@
   .stat b{display:block;font-size:17px;line-height:1.2}
   .stat small{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.5px}
   .stat.ok b{color:var(--accent2)} .stat.warn b{color:var(--warn)}
-  main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;padding:18px 20px}
+
+  /* ---- rendered preview (the point of the studio: watch the video) ---- */
+  .reel{margin:0;padding:0 20px 20px}
+  .reel-card{background:var(--panel);border:1px solid var(--line);
+             border-radius:14px;overflow:hidden}
+  .reel-head{display:flex;align-items:center;gap:12px;padding:12px 14px;
+             border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .reel-head h2{margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.9px;
+                color:var(--dim)}
+  .reel-head .grow{flex:1}
+  .reel video{display:block;width:100%;max-height:64vh;background:#000}
+  .reel .bar2{display:flex;align-items:center;gap:12px;padding:10px 14px;flex-wrap:wrap;
+              border-top:1px solid var(--line)}
+  .reel a.dl{color:var(--accent);font-weight:700;font-size:12px;text-decoration:none;
+             border:1px solid var(--accent);border-radius:8px;padding:7px 11px}
+  .reel a.dl:hover{background:var(--accent);color:#fff}
+  .reel .hint{color:var(--dim);font-size:12px}
+  .reel .none{padding:26px 16px;color:var(--dim);font-size:13px;text-align:center}
+  .reel .none code{background:#0f1218;border:1px solid var(--line);border-radius:6px;
+                   padding:2px 6px;color:var(--txt)}
+  .contact-btn{font-size:12px}
+  .reel img.sheet{display:block;width:100%;border-top:1px solid var(--line)}
+
+  main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:18px;padding:0 20px 24px}
   @media(max-width:1000px){main{grid-template-columns:1fr}}
-  /* ---- preview stage ---- */
+  /* ---- beat preview stage ---- */
   .stage-wrap{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
   .stage{position:relative;aspect-ratio:16/9;background:#f4f1ea;display:flex;
          align-items:center;justify-content:center;overflow:hidden}
@@ -72,35 +95,40 @@
   .beat .meta .w{color:#9fb0c6}
   .beat .meta .bad{color:var(--warn)}
   .empty{padding:30px;text-align:center;color:var(--dim)}
-  /* ---- rendered reel ---- */
-  .reel{margin:0 20px 22px;background:var(--panel);border:1px solid var(--line);
-        border-radius:14px;overflow:hidden}
-  .reel h2{margin:0;padding:12px 14px;font-size:13px;text-transform:uppercase;
-           letter-spacing:.8px;color:var(--dim);border-bottom:1px solid var(--line)}
-  .reel .reelbar{display:flex;align-items:center;gap:10px;padding:10px 14px;flex-wrap:wrap}
-  .reel video{display:block;width:100%;max-height:70vh;background:#000}
-  .reel a.dl{color:var(--accent);font-weight:600;font-size:12px;text-decoration:none}
-  .reel .contact{display:block;width:100%;border-top:1px solid var(--line)}
-  .reel .none{padding:16px 14px;color:var(--dim);font-size:13px}
   .pill{font:600 10px ui-monospace,monospace;padding:2px 6px;border-radius:5px;
         background:#2a3140;color:var(--dim);margin-left:6px}
   .pill.a{background:#1e3a2a;color:var(--accent2)}
+  .sectionnote{padding:0 20px 10px;color:var(--dim);font-size:12px}
 </style>
 </head>
 <body>
 <header>
   <h1>Voicebox <span>Studio</span></h1>
   <select id="proj"></select>
-  <button class="primary" id="play">▶ Preview</button>
+  <button id="play">▶ Preview beats</button>
   <button id="prev">⏮</button>
   <button id="next">⏭</button>
   <label style="color:var(--dim);font-size:12px">
     <input type="checkbox" id="auto" checked> auto-advance
   </label>
-  <button id="watch" style="margin-left:auto">▶ Watch render</button>
 </header>
 
+<!-- The rendered cut sits at the top of the page: this is what you watch. -->
+<section class="reel">
+  <div class="reel-card">
+    <div class="reel-head">
+      <h2>Rendered preview</h2>
+      <span id="reelcount" style="color:#5d6779;font-size:12px"></span>
+      <span class="grow"></span>
+      <select id="rendersel" style="display:none"></select>
+      <button class="primary" id="watch">▶ Play video</button>
+    </div>
+    <div id="reelbody"></div>
+  </div>
+</section>
+
 <div class="stats" id="stats"></div>
+<div class="sectionnote">Beat inspector — the cut before it is rendered.</div>
 
 <main>
   <section class="stage-wrap">
@@ -115,7 +143,7 @@
     <div class="bar"><i id="progress"></i></div>
     <div class="controls">
       <span id="clock" style="font:600 12px ui-monospace,monospace;color:var(--dim)">0:00 / 0:00</span>
-      <span id="speedWrap" style="margin-left:auto;color:var(--dim);font-size:12px">
+      <span style="margin-left:auto;color:var(--dim);font-size:12px">
         hold <b id="beatsec" style="color:var(--txt)">3.6</b>s per beat
       </span>
     </div>
@@ -128,24 +156,23 @@
   </section>
 </main>
 
-<section class="reel" id="reel">
-  <h2>Rendered video <span id="reelcount" style="color:#5d6779"></span></h2>
-  <div id="reelbody"></div>
-</section>
-
 <script>
-let DATA = null, PROJ = null, idx = 0, playing = false, audio = null, timer = null, t0 = 0;
+let DATA = null, PROJ = null, idx = 0, playing = false, audio = null, timer = null;
 
 const $ = id => document.getElementById(id);
 const fmt = s => { s = Math.max(0, Math.round(s || 0));
   return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); };
+const mb = b => (b/1048576).toFixed(1) + ' MB';
+const esc = s => (s||'').replace(/[&<>"']/g, c =>
+  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 async function loadProjects(){
   const r = await fetch('api/projects'); const j = await r.json();
   const sel = $('proj'); sel.innerHTML = '';
   j.projects.forEach(p => {
     const o = document.createElement('option');
-    o.value = p.name; o.textContent = p.name + '  (' + p.beats + ' beats)';
+    o.value = p.name;
+    o.textContent = p.name + '  (' + p.beats + ' beats)';
     sel.appendChild(o);
   });
   if (j.projects.length) select(sel.value);
@@ -158,50 +185,6 @@ async function load(){
   DATA = await r.json();
   idx = 0; stop(); renderStats(); renderList(); show(0); renderReel();
 }
-
-function renderReel(){
-  const vids = DATA.renders || [];
-  const mb = b => (b/1048576).toFixed(1) + ' MB';
-  $('reelcount').textContent = vids.length ? '\u00b7 ' + vids.length + ' file(s)' : '\u00b7 none yet';
-  if (!vids.length){
-    $('reelbody').innerHTML = '<div class="none">No render yet. Run ' +
-      '<code>python3 narration/render_video.py projects/' + esc(PROJ) +
-      ' --part 1</code> and reload.</div>';
-    return;
-  }
-  $('reelbody').innerHTML =
-    '<div class="reelbar">' +
-      '<select id="rendersel">' + vids.map((v,i) =>
-        '<option value="' + i + '">' + esc(v.file) + '  \u00b7  ' + mb(v.bytes) + '</option>'
-      ).join('') + '</select>' +
-      '<a class="dl" id="reeldl" download href="' + vids[0].url + '">\u2b07 Download MP4</a>' +
-      '<span id="reelhint" style="color:var(--dim);font-size:12px">' +
-        'Ranges supported \u2014 scrub anywhere.</span>' +
-    '</div>' +
-    '<video id="reelvideo" controls preload="metadata" playsinline src="' +
-      vids[0].url + '"></video>' +
-    (vids[0].contact ? '<img class="contact" src="' + vids[0].contact +
-      '" alt="contact sheet">' : '');
-  $('rendersel').onchange = e => {
-    const v = vids[+e.target.value];
-    $('reelvideo').src = v.url;
-    $('reeldl').href = v.url;
-    const c = $('reelbody').querySelector('.contact');
-    if (v.contact){
-      if (c) c.src = v.contact;
-      else $('reelbody').insertAdjacentHTML('beforeend',
-        '<img class="contact" src="' + v.contact + '" alt="contact sheet">');
-    } else if (c) c.remove();
-    $('reelvideo').load();
-  };
-}
-
-$('watch').onclick = () => {
-  stop();
-  $('reel').scrollIntoView({behavior:'smooth', block:'start'});
-  const v = $('reelvideo');
-  if (v) { v.currentTime = 0; v.play().catch(()=>{}); }
-};
 
 function renderStats(){
   const b = DATA.beats, n = b.length;
@@ -222,6 +205,78 @@ function renderStats(){
     box('measured', DATA.measured ? 'yes':'est', DATA.measured?'ok':'');
 }
 
+/* ---------------- the rendered video ---------------- */
+
+function renderReel(){
+  const vids = DATA.renders || [];
+  $('reelcount').textContent = vids.length
+    ? '· ' + vids.length + ' video' + (vids.length>1?'s':'') : '· none yet';
+
+  if (!vids.length){
+    $('rendersel').style.display = 'none';
+    $('watch').disabled = true;
+    $('reelbody').innerHTML =
+      '<div class="none">No rendered video for <b>' + esc(PROJ) + '</b> yet.<br>' +
+      'Render one with <code>python3 narration/render_video.py projects/' +
+      esc(PROJ) + ' --part 1</code> and reload.</div>';
+    return;
+  }
+
+  $('rendersel').style.display = '';
+  $('rendersel').innerHTML = vids.map((v,i) =>
+    '<option value="' + i + '">' + esc(v.file) + '  ·  ' + mb(v.bytes) + '</option>').join('');
+  $('watch').disabled = false;
+
+  $('reelbody').innerHTML =
+    '<video id="reelvideo" controls preload="metadata" playsinline ' +
+      'src="' + vids[0].url + '"></video>' +
+    '<div class="bar2">' +
+      '<a class="dl" id="reeldl" download href="' + vids[0].url + '">↓ Download MP4</a>' +
+      (vids[0].contact
+        ? '<button class="contact-btn" id="sheetbtn">Show contact sheet</button>' : '') +
+      '<span class="hint">Ranges supported — scrub anywhere in the timeline.</span>' +
+    '</div>' +
+    '<div id="sheetholder"></div>';
+
+  const vidsNow = vids;
+  $('rendersel').onchange = e => {
+    const v = vidsNow[+e.target.value];
+    const vid = $('reelvideo');
+    vid.src = v.url;
+    $('reeldl').href = v.url;
+    if ($('sheetholder').innerHTML && v.contact){
+      $('sheetholder').innerHTML = sheetHtml(v);
+    }
+    vid.load();
+  };
+
+  const sheet = $('sheetbtn');
+  if (sheet) sheet.onclick = () => {
+    const holder = $('sheetholder');
+    if (holder.innerHTML){
+      holder.innerHTML = ''; sheet.textContent = 'Show contact sheet';
+    } else {
+      const v = vidsNow[+$('rendersel').value];
+      holder.innerHTML = sheetHtml(v);
+      sheet.textContent = 'Hide contact sheet';
+    }
+  };
+}
+
+const sheetHtml = v => '<img class="sheet" src="' + v.contact +
+  '" alt="contact sheet — one frame per beat">';
+
+$('watch').onclick = () => {
+  stop();                       // never play the beat preview over the video
+  const v = $('reelvideo');
+  if (!v) return;
+  v.scrollIntoView({behavior:'smooth', block:'center'});
+  v.currentTime = 0;
+  v.play().catch(()=>{});
+};
+
+/* ---------------- beat inspector ---------------- */
+
 function renderList(){
   $('tlcount').textContent = '· ' + DATA.beats.length + ' beats';
   $('list').innerHTML = DATA.beats.map((b,i) => `
@@ -241,9 +296,6 @@ function renderList(){
   $('list').querySelectorAll('.beat').forEach(el =>
     el.onclick = () => { stop(); show(+el.dataset.i); });
 }
-
-const esc = s => (s||'').replace(/[&<>"]/g, c =>
-  ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 function show(i){
   if (!DATA || !DATA.beats.length) return;
@@ -276,7 +328,6 @@ function playBeat(){
   if (b.audio){
     audio = new Audio(b.audio);
     audio.play().catch(()=>{});
-    // advance on audio end, or on the measured mark if audio runs short
     audio.onended = () => next();
     timer = setTimeout(next, hold);
   } else {
@@ -291,11 +342,13 @@ function next(){
 }
 
 function start(){
+  const v = $('reelvideo');
+  if (v && !v.paused) v.pause();       // video and beat preview are exclusive
   if (!DATA || !DATA.beats.length) return;
   playing = true; $('play').textContent = '⏸ Pause'; playBeat();
 }
 function stop(){
-  playing = false; $('play').textContent = '▶ Preview';
+  playing = false; $('play').textContent = '▶ Preview beats';
   clearTimeout(timer);
   if (audio) { audio.pause(); audio = null; }
 }
