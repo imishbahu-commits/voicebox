@@ -128,6 +128,26 @@ def normalise_image(src: str, dst: str, w: int, h: int, pad) -> None:
     canvas.save(dst, "JPEG", quality=94, optimize=True, progressive=False)
 
 
+def write_contact_sheet(frames: list[str], out: str, cols: int = 5,
+                       thumb_w: int = 480) -> None:
+    """Grid of the beats that went into a render, so a part can be eyeballed
+    without scrubbing the MP4."""
+    from PIL import Image
+
+    cols = max(1, min(cols, len(frames)))
+    rows = (len(frames) + cols - 1) // cols
+    tw = thumb_w
+    th = int(round(tw * HEIGHT / WIDTH))
+    sheet = Image.new("RGB", (cols * tw, rows * th), (255, 255, 255))
+    for i, f in enumerate(frames):
+        im = Image.open(f)
+        im.thumbnail((tw, th), Image.LANCZOS)
+        x = (i % cols) * tw + (tw - im.width) // 2
+        y = (i // cols) * th + (th - im.height) // 2
+        sheet.paste(im, (x, y))
+    sheet.save(out, "JPEG", quality=82, optimize=True)
+
+
 def build_filter(motion: str, frames: int, cw: int, ch: int,
                  out_w: int, out_h: int) -> str:
     """zoompan keeps one output frame per input frame (d=1), so `on` is the
@@ -283,6 +303,13 @@ def main() -> None:
 
     size = os.path.getsize(out)
     print(f"\nwrote {out}  ({size / 1e6:.1f} MB, {total:.2f}s)")
+
+    norm_frames = [os.path.join(tmp, "norm", f"beat{b['id']:02d}.jpg")
+                   for b, _, _, _ in selected]
+    contact = os.path.splitext(out)[0] + "_contact.jpg"
+    write_contact_sheet(norm_frames, contact)
+    print(f"wrote {contact}  ({os.path.getsize(contact) / 1e3:.0f} KB, "
+          f"{len(norm_frames)} frames)")
 
     if not args.keep:
         shutil.rmtree(tmp, ignore_errors=True)
