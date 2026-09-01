@@ -3,7 +3,9 @@
 
 Zero dependencies (stdlib only). Serves:
 
-  /                       the studio UI
+  /                       videos-only studio: every rendered MP4, playable
+  /beats                  beat inspector (storyboard + per-beat voiceover)
+  /api/videos             every rendered video across all projects
   /api/projects           project list + progress stats
   /api/beats/<project>    beats merged with their measured beat marks
   /media/<project>/...    audio clips and generated images
@@ -115,24 +117,51 @@ def list_projects() -> list[dict]:
 
 
 def list_renders(pdir: str, name: str) -> list[dict]:
-    """Rendered MP4s in <project>/video/, newest first."""
+    """Rendered MP4s in <project>/video/, richest cut first.
+
+    Each render writes a <name>.json sidecar next to the MP4, so the studio
+    can report a real duration and beat range even though video/ is
+    gitignored and the MP4 itself is never committed.
+    """
     vdir = os.path.join(pdir, "video")
     if not os.path.isdir(vdir):
         return []
     out = []
-    for fn in sorted(os.listdir(vdir), reverse=True):
+    for fn in sorted(os.listdir(vdir)):
         if not fn.lower().endswith((".mp4", ".webm", ".m4v")):
             continue
-        full = os.path.join(vdir, fn)
         stem = os.path.splitext(fn)[0]
+        meta = read_json(os.path.join(vdir, stem + ".json")) or {}
+        contact = stem + "_contact.jpg"
         out.append({
             "file": fn,
-            "url": f"media/{name}/video/{fn}",
-            "bytes": os.path.getsize(full),
-            "contact": (f"media/{name}/video/{stem}_contact.jpg"
-                        if os.path.isfile(os.path.join(vdir, stem + "_contact.jpg"))
-                        else None),
+            "url": meta.get("url") or f"media/{name}/video/{fn}",
+            "bytes": meta.get("bytes") or os.path.getsize(os.path.join(vdir, fn)),
+            "duration": meta.get("duration"),
+            "beats": meta.get("beats") or [],
+            "beat_count": meta.get("beat_count"),
+            "part": meta.get("part"),
+            "width": meta.get("width"),
+            "height": meta.get("height"),
+            "fps": meta.get("fps"),
+            "rendered_at": meta.get("rendered_at"),
+            "project": name,
+            "contact": (f"media/{name}/video/{contact}"
+                        if os.path.isfile(os.path.join(vdir, contact)) else None),
         })
+    # longest cut first, then newest
+    out.sort(key=lambda e: (-len(e["beats"]), -(e["duration"] or 0), e["file"]))
+    return out
+
+
+def list_all_videos() -> list[dict]:
+    """Every rendered video across every project, for the videos-only studio."""
+    out = []
+    for p in list_projects():
+        for v in p.get("renders", []):
+            row = dict(v)
+            row["topic"] = p.get("topic", p["name"])
+            out.append(row)
     return out
 
 
@@ -222,9 +251,14 @@ class Handler(SimpleHTTPRequestHandler):
     def _route(self, head_only: bool):
         path = self.path.split("?", 1)[0]
 
-        if path == "/" or path == "/index.html":
+        if path == "/" or path == "/index.html" or path in ("/videos", "/videos.html"):
+            return self._serve_file(os.path.join(HERE, "videos.html"), ".html",
+                                    head_only)
+        if path == "/beats" or path == "/beats.html":
             return self._serve_file(os.path.join(HERE, "index.html"), ".html",
                                     head_only)
+        if path == "/api/videos":
+            return self._json({"videos": list_all_videos()}, 200, head_only)
         if path == "/api/projects":
             return self._json({"projects": list_projects()}, 200, head_only)
         if path.startswith("/api/beats/"):

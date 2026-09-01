@@ -311,6 +311,43 @@ def main() -> None:
     print(f"wrote {contact}  ({os.path.getsize(contact) / 1e3:.0f} KB, "
           f"{len(norm_frames)} frames)")
 
+    write_sidecar(out, proj, selected, total, contact, args)
+
+
+def write_sidecar(out: str, proj: str, selected, total: float, contact: str,
+                  args) -> str:
+    """A <video>.json next to every MP4.
+
+    The studio reads these instead of guessing, so a render can report its
+    real duration, beat range and resolution even though video/ is gitignored
+    and the MP4 is not in the repo.
+    """
+    import datetime
+
+    data = {
+        "project": os.path.basename(proj.rstrip("/")),
+        "file": os.path.basename(out),
+        "url": "media/%s/video/%s" % (os.path.basename(proj.rstrip("/")),
+                                      os.path.basename(out)),
+        "part": args.part,
+        "beats": [b["id"] for b, _, _, _ in selected],
+        "beat_count": len(selected),
+        "duration": round(total, 2),
+        "bytes": os.path.getsize(out),
+        "width": args.width,
+        "height": args.height,
+        "fps": FPS,
+        "contact": os.path.basename(contact),
+        "rendered_at": datetime.datetime.now(datetime.timezone.utc)
+                       .replace(microsecond=0).isoformat(),
+    }
+    path = os.path.splitext(out)[0] + ".json"
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=1)
+        f.write("\n")
+    print(f"wrote {path}")
+    return path
+
     if not args.keep:
         shutil.rmtree(tmp, ignore_errors=True)
 

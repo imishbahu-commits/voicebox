@@ -38,6 +38,26 @@ def human(n: int) -> str:
     return f"{n:.1f}GB"
 
 
+def already_optimized(path: str, colors: int) -> bool:
+    """True if this PNG looks like our own output.
+
+    Generated art arrives as RGB/RGBA; optimise_images.py writes a small
+    palettised PNG. Re-quantising our own output on every batch would
+    re-encode part 1 twelve more times over the life of a project for no
+    gain, so those files are skipped unless --force is given.
+    """
+    try:
+        with Image.open(path) as im:
+            if im.format != "PNG" or im.mode != "P":
+                return False
+            pal = im.getpalette()
+            if not pal:
+                return False
+            return len(pal) // 3 <= max(colors, 16) * 2
+    except Exception:
+        return False
+
+
 def optimize_one(path: str, colors: int, max_size: int | None,
                  dry: bool) -> tuple[int, int]:
     before = os.path.getsize(path)
@@ -82,6 +102,8 @@ def main() -> int:
     ap.add_argument("--max-size", type=int, default=1400,
                     help="downscale so the longest edge is at most this (0 = off)")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--force", action="store_true",
+                    help="re-optimise even PNGs this tool already wrote")
     args = ap.parse_args()
 
     d = args.directory
@@ -96,6 +118,12 @@ def main() -> int:
     total_before = total_after = 0
     for f in files:
         p = os.path.join(d, f)
+        if not args.force and already_optimized(p, args.colors):
+            b = a = os.path.getsize(p)
+            print(f"  {f:<24} {human(b):>9}  skip (already optimised)")
+            total_before += b
+            total_after += a
+            continue
         b, a = optimize_one(p, args.colors, args.max_size or None, args.dry_run)
         total_before += b
         total_after += a

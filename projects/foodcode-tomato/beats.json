@@ -149,8 +149,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.34,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat11.mp3",
       "source_hint": "ai"
     },
     {
@@ -161,8 +161,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat12.mp3",
       "source_hint": "ai"
     },
     {
@@ -173,8 +173,8 @@
       "transition": "switching",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat13.mp3",
       "source_hint": "ai"
     },
     {
@@ -185,8 +185,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat14.mp3",
       "source_hint": "ai"
     },
     {
@@ -197,8 +197,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat15.mp3",
       "source_hint": "ai"
     },
     {
@@ -209,8 +209,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat16.mp3",
       "source_hint": "ai"
     },
     {
@@ -221,8 +221,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.91,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat17.mp3",
       "source_hint": "ai"
     },
     {
@@ -233,8 +233,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.34,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat18.mp3",
       "source_hint": "ai"
     },
     {
@@ -245,8 +245,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat19.mp3",
       "source_hint": "ai"
     },
     {
@@ -257,8 +257,8 @@
       "transition": "cut",
       "part": 2,
       "duration": null,
-      "actual": null,
-      "audio": null,
+      "actual": 3.36,
+      "audio": "/home/user/voicebox/projects/foodcode-tomato/audio/beat20.mp3",
       "source_hint": "ai"
     },
     {
