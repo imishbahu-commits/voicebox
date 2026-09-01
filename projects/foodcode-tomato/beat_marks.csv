@@ -1,146 +1,146 @@
 beat,start,end,duration,frames,words,wps,transition,label,visual,audio
 1,0.0,4.18,4.18,251,15,3.59,revealing,COOKED WRONG,A tomato sitting on a kitchen counter with a red stamp reading COOKED WRONG,audio/beat01.mp3
 2,4.18,8.09,3.91,235,14,3.58,cut,MOST OF IT WASTED,A tomato with its goodness spilling out through a hole in the bottom,audio/beat02.mp3
-3,8.09,12.0,3.91,235,14,3.58,cut,THE OPPOSITE,A health tips board with the rule crossed out and a reversing arrow,audio/beat03.mp3
-4,12.0,15.34,3.34,200,12,3.59,cut,THE RULE YOU KNOW,A cookbook page reading cooking destroys nutrients with a big red X,audio/beat04.mp3
-5,15.34,18.96,3.62,217,13,3.59,cut,BACKWARDS,The same rule page flipped upside down with a backwards arrow,audio/beat05.mp3
-6,18.96,22.32,3.36,202,12,3.57,cut,MEASURED IN BLOOD,A scientist with a pan of tomatoes beside a rack of blood sample tubes,audio/beat06.mp3
-7,22.32,25.68,3.36,202,12,3.57,cut,82%,A blood tube with lycopene molecules rising and a gauge climbing,audio/beat07.mp3
-8,25.68,29.57,3.89,233,14,3.6,cut,ONLY WITH FAT,"Two pans side by side, one with oil rising, one flat lining",audio/beat08.mp3
-9,29.57,32.93,3.36,202,12,3.57,cut,FLAT LINE,A completely flat graph line stamped NO SIGNIFICANT INCREASE,audio/beat09.mp3
-10,32.93,36.55,3.62,217,13,3.59,cut,NOT A DIET BOOK,A document with an official randomised controlled trial stamp on it,audio/beat10.mp3
-11,36.55,39.89,3.34,200,12,3.59,cut,STAY FOR THE NUMBER,A finger pointing at a big bold number with a question mark beside it,audio/beat11.mp3
-12,39.89,43.25,3.36,202,12,3.57,cut,TWO MISTAKES,Two warning triangles labelled mistake one and mistake two,audio/beat12.mp3
-13,43.25,46.61,3.36,202,12,3.57,switching,NOT ABOUT EATING MORE,A pile of vegetables with a person shrugging beside it,audio/beat13.mp3
-14,46.61,49.97,3.36,202,12,3.57,cut,DOES IT REACH YOU,"Vegetables travelling down a tube toward a bloodstream, some bouncing off",audio/beat14.mp3
-15,49.97,53.33,3.36,202,12,3.57,cut,SWALLOWED VS ABSORBED,"Two doors, one reading swallowed and one absorbed, only one open",audio/beat15.mp3
-16,53.33,56.69,3.36,202,12,3.57,cut,WHERE ADVICE STOPS,A finish line labelled the swallow with the science starting just behind,audio/beat16.mp3
-17,56.69,60.6,3.91,235,14,3.58,cut,WHAT'S COMING,Three numbered boxes on a hand drawn title card,audio/beat17.mp3
-18,60.6,63.94,3.34,200,12,3.59,cut,THE HIDDEN COMPOUND,A tomato cut open revealing a hidden glowing molecule inside,audio/beat18.mp3
-19,63.94,67.3,3.36,202,12,3.57,cut,THE MISTAKES,Two big red X marks over everyday cooking habits,audio/beat19.mp3
-20,67.3,70.66,3.36,202,12,3.57,cut,WHAT IT DOES,A body outline with the compound glowing as it travels inside,audio/beat20.mp3
-21,70.66,74.26,3.6,216,14,3.89,cut,THE EXACT WAY,A hand holding a tomato beside a checklist of numbered steps,audio/beat21.mp3
-22,74.26,77.35,3.09,185,12,3.88,cut,NOT A SUPPLEMENT,"Supplement bottles and powder tubs crossed out, one tomato highlighted",audio/beat22.mp3
-23,77.35,80.95,3.6,216,14,3.89,cut,ALREADY YOURS,A tomato with a tick and the word free stamped across it,audio/beat23.mp3
-24,80.95,84.29,3.34,200,13,3.89,switching,LAST TIME,A person at a table looking thoughtfully at a single tomato,audio/beat24.mp3
-25,84.29,87.89,3.6,216,14,3.89,cut,RAW ON A SALAD,"A sliced raw tomato on a salad plate, cold and firm",audio/beat25.mp3
-26,87.89,91.49,3.6,216,14,3.89,cut,STRAIGHT FROM THE PUNNET,A hand eating cherry tomatoes straight from a punnet,audio/beat26.mp3
-27,91.49,94.83,3.34,200,13,3.89,cut,FROM A JAR,A jar of pasta sauce with a spoon resting in it,audio/beat27.mp3
-28,94.83,98.17,3.34,200,13,3.89,cut,TOMATOES ARE HEALTHY,A person giving a thumbs up beside a tomato with a halo,audio/beat28.mp3
-29,98.17,101.51,3.34,200,13,3.89,cut,WHY IT'S MISSED,A magnifying glass over a small hidden detail on a healthy tomato,audio/beat29.mp3
-30,101.51,104.85,3.34,200,13,3.89,cut,ONE UNQUESTIONED RULE,A rule book with one rule highlighted and no source cited,audio/beat30.mp3
-31,104.85,107.94,3.09,185,12,3.88,cut,THE THREE RULES,"Three rule cards, fresh, raw and cooking destroys, stacked up",audio/beat31.mp3
-32,107.94,111.03,3.09,185,12,3.88,cut,TRUE FOR VITAMIN C,A vitamin C molecule shrinking away in a hot pan,audio/beat32.mp3
-33,111.03,114.89,3.86,232,15,3.89,cut,MINUS 29%,A timer at thirty minutes with vitamin C dropping twenty nine percent,audio/beat33.mp3
-34,114.89,118.23,3.34,200,13,3.89,cut,RULE CONFIRMED,A tick mark beside a measured loss on a chart,audio/beat34.mp3
-35,118.23,121.32,3.09,185,12,3.88,switching,NOT THE REAL REASON,"A vitamin C badge crossed out, a lycopene molecule glowing larger beside it",audio/beat35.mp3
-36,121.32,124.41,3.09,185,12,3.88,cut,SOMETHING WAS RISING,A pan on heat with a rising arrow inside the tomato itself,audio/beat36.mp3
-37,124.41,128.01,3.6,216,14,3.89,cut,PLUS 164%,A big number one hundred sixty four percent with a red pigment molecule rising,audio/beat37.mp3
-38,128.01,131.1,3.09,185,12,3.88,cut,PLUS 62%,An antioxidant meter climbing sixty two percent above a pan,audio/beat38.mp3
-39,131.1,134.19,3.09,185,12,3.88,cut,DOWN AND UP,A see-saw with vitamin C going down and lycopene going up,audio/beat39.mp3
-40,134.19,137.79,3.6,216,14,3.89,cut,SOUNDS LIKE A TRICK,"A person stopping with a hand to ear, a speech bubble reading sounds like a trick",audio/beat40.mp3
-41,137.79,141.65,3.86,232,15,3.89,cut,JUST CHEMISTRY,"A chemistry flask with a tick, a magician's hat crossed out",audio/beat41.mp3
-42,141.65,144.99,3.34,200,13,3.89,revealing,LYCOPENE,A tomato wearing a name tag reading lycopene,audio/beat42.mp3
-43,144.99,148.08,3.09,185,12,3.88,cut,A CAROTENOID,A molecule labelled carotenoid beside an empty vitamin bottle crossed out,audio/beat43.mp3
-44,148.08,151.42,3.34,200,13,3.89,cut,HIGHLY EFFICIENT,A lycopene molecule on a podium among antioxidant contestants,audio/beat44.mp3
-45,151.42,154.76,3.34,200,13,3.89,cut,TEN TIMES,Lycopene defeating ten free radical monsters while vitamin E handles one,audio/beat45.mp3
-46,154.76,157.85,3.09,185,12,3.88,switching,LOCKED INSIDE,A lycopene crystal locked inside a cage of plant cell walls,audio/beat46.mp3
-47,157.85,161.19,3.34,200,13,3.89,cut,YOUR GUT CAN'T OPEN IT,A padlocked crystal behind thick brick cell walls,audio/beat47.mp3
-48,161.19,164.53,3.34,200,13,3.89,revealing,A WELDED SAFE,A safe with a welded door and banknotes visible through the gap,audio/beat48.mp3
-49,164.53,168.39,3.86,232,15,3.89,cut,TRAPPED,The safe with everything valuable trapped behind the welded door,audio/beat49.mp3
-50,168.39,171.73,3.34,200,13,3.89,cut,SWALLOWING THE SAFE,A person swallowing a whole safe instead of opening the door,audio/beat50.mp3
-51,171.73,175.33,3.6,216,14,3.89,cut,STRAIGHT THROUGH,"Fibre, water and vitamin C passing through, lycopene bouncing away",audio/beat51.mp3
-52,175.33,178.93,3.6,216,14,3.89,cut,HEAT OPENS IT,A flame cracking rigid plant cell walls open like a nutcracker,audio/beat52.mp3
-53,178.93,182.27,3.34,200,13,3.89,cut,SOMETHING ELSE,A surprised scientist with a shaking clipboard and an unexpected result,audio/beat53.mp3
-54,182.27,185.87,3.6,216,14,3.89,cut,TRANS AND CIS,"Two lycopene molecules, one straight one bent, labelled trans and cis",audio/beat54.mp3
-55,185.87,189.47,3.6,216,14,3.89,cut,BENT ABSORBS BETTER,"A bent cis molecule slipping through the intestinal wall, the straight one stuck",audio/beat55.mp3
-56,189.47,192.81,3.34,200,13,3.89,cut,HEAT FLIPS THEM,Heat flipping straight molecules into bent ones like pancakes,audio/beat56.mp3
-57,192.81,196.41,3.6,216,14,3.89,cut,TWO JOBS,"One worker doing two jobs at once, freeing and reshaping",audio/beat57.mp3
-58,196.41,200.27,3.86,232,15,3.89,cut,STEP ONE ONLY,A staircase with step one marked and a warning sign further up,audio/beat58.mp3
-59,200.27,203.61,3.34,200,13,3.89,switching,FAT SOLUBLE,"Lycopene refusing to mix with water, dissolving happily in oil",audio/beat59.mp3
-60,203.61,206.95,3.34,200,13,3.89,cut,THE TRANSPORT,Lycopene molecules boarding transport particles made of fat,audio/beat60.mp3
-61,206.95,210.55,3.6,216,14,3.89,cut,NO TRANSPORT,A lycopene molecule with no vehicle watching the transport drive past,audio/beat61.mp3
-62,210.55,213.64,3.09,185,12,3.88,cut,23 PEOPLE,Twenty three people lined up in a trial room,audio/beat62.mp3
-63,213.64,216.98,3.34,200,13,3.89,cut,TWO GROUPS,"Two tables, one with an olive oil bottle and one without",audio/beat63.mp3
-64,216.98,220.84,3.86,232,15,3.89,cut,PLUS 82%,A blood chart with the olive oil group climbing eighty two percent,audio/beat64.mp3
-65,220.84,223.93,3.09,185,12,3.88,cut,NOT EVEN SMALL,A flat line graph stamped no significant increase,audio/beat65.mp3
-66,223.93,227.53,3.6,216,14,3.89,cut,P = 0.684,A statistics board reading P equals zero point six eight four,audio/beat66.mp3
-67,227.53,231.13,3.6,216,14,3.89,cut,IN PLAIN TERMS,A plain language translation bubble reading as close to nothing as possible,audio/beat67.mp3
-68,231.13,234.47,3.34,200,13,3.89,cut,THEY STACK,Two mistake boxes stacked on top of each other,audio/beat68.mp3
-69,234.47,237.81,3.34,200,13,3.89,cut,MISTAKE ONE,A hand eating a raw tomato with lycopene still locked in cells,audio/beat69.mp3
-70,237.81,241.15,3.34,200,13,3.89,cut,MISTAKE TWO,"A pan with no oil, freed molecules escaping upward unabsorbed",audio/beat70.mp3
-71,241.15,244.49,3.34,200,13,3.89,cut,EITHER ONE IS ENOUGH,A single mistake knocking most of the benefit off a scale,audio/beat71.mp3
-72,244.49,247.58,3.09,185,12,3.88,revealing,THE NUMBER,A big glowing number beside a video play button,audio/beat72.mp3
-73,247.58,250.67,3.09,185,12,3.88,cut,SAME DOSE,Two plates holding the exact same measured dose of lycopene,audio/beat73.mp3
-74,250.67,254.01,3.34,200,13,3.89,cut,FRESH VS PASTE,"Raw tomatoes on one side, tomato paste on the other, both with oil",audio/beat74.mp3
-75,254.01,257.1,3.09,185,12,3.88,cut,MEASURED FOR HOURS,A clock with blood samples being taken hour after hour,audio/beat75.mp3
-76,257.1,260.7,3.6,216,14,3.89,cut,2.5 TIMES,A bar chart with the paste peak towering two and a half times higher,audio/beat76.mp3
-77,260.7,263.79,3.09,185,12,3.88,cut,NEARLY 4X,An area chart showing nearly four times the shaded absorption,audio/beat77.mp3
-78,263.79,266.88,3.09,185,12,3.88,cut,SAME EVERYTHING,"Three identical labels, same food, same dose, same fat",audio/beat78.mp3
-79,266.88,270.22,3.34,200,13,3.89,cut,AJCN 1997,"A journal cover reading American Journal of Clinical Nutrition, 1997",audio/beat79.mp3
-80,270.22,273.56,3.34,200,13,3.89,cut,CROSSOVER TRIAL,The same person swapping between two groups with a crossover arrow,audio/beat80.mp3
-81,273.56,276.9,3.34,200,13,3.89,cut,THE TELL,A magnifying glass over one small detail in the data table,audio/beat81.mp3
-82,276.9,279.99,3.09,185,12,3.88,cut,THEY CHECKED OTHERS,Other carotenoid molecules being measured alongside the lycopene,audio/beat82.mp3
-83,279.99,283.08,3.09,185,12,3.88,cut,THE OTHERS FLAT,Alpha and beta carotene each with a flat line graph,audio/beat83.mp3
-84,283.08,286.42,3.34,200,13,3.89,cut,SPECIFIC TO LYCOPENE,"A crystal structure with a target on it, everything else greyed out",audio/beat84.mp3
-85,286.42,289.51,3.09,185,12,3.88,cut,REAL VS HEADLINE,A real finding badge beside a crumpled nutrition headline,audio/beat85.mp3
-86,289.51,292.85,3.34,200,13,3.89,revealing,SURPRISED THEM TOO,A researcher with wide eyes and a clipboard slipping from their hands,audio/beat86.mp3
-87,292.85,295.94,3.09,185,12,3.88,cut,IT PICKS SPOTS,A body map with lycopene gathering unevenly in specific organs,audio/beat87.mp3
-88,295.94,299.03,3.09,185,12,3.88,cut,YOUR SKIN,A cross-section of skin with lycopene molecules settling into it,audio/beat88.mp3
-89,299.03,302.12,3.09,185,12,3.88,cut,SOUNDS IMPOSSIBLE,A research team pointing at an impossible looking question mark,audio/beat89.mp3
-90,302.12,305.21,3.09,185,12,3.88,cut,FOOD AS SUNBLOCK,Sun rays hitting an arm with a question mark and a tomato beside it,audio/beat90.mp3
-91,305.21,308.55,3.34,200,13,3.89,cut,40G A DAY,Nine volunteers each eating forty grams of tomato paste daily,audio/beat91.mp3
-92,308.55,311.64,3.09,185,12,3.88,cut,16 MG,A spoon of tomato paste labelled sixteen milligrams beside olive oil,audio/beat92.mp3
-93,311.64,315.24,3.6,216,14,3.89,cut,THE CONTROL GROUP,Ten other people with olive oil only and an empty tomato paste bowl,audio/beat93.mp3
-94,315.24,318.33,3.09,185,12,3.88,cut,CONTROLLED UV,A solar simulator lamp shining UV onto a patch of back skin,audio/beat94.mp3
-95,318.33,321.67,3.34,200,13,3.89,cut,40% LESS RED,"Two skin patches side by side, one clearly forty percent less red",audio/beat95.mp3
-96,321.67,324.76,3.09,185,12,3.88,cut,FORTY PERCENT,A big forty percent badge with a sun and a tomato together,audio/beat96.mp3
-97,324.76,328.1,3.34,200,13,3.89,cut,J NUTR 2001,"A journal cover reading Journal of Nutrition, 2001",audio/beat97.mp3
-98,328.1,331.19,3.09,185,12,3.88,cut,REPEATED,Twenty women in a twelve week randomised trial calendar,audio/beat98.mp3
-99,331.19,334.28,3.09,185,12,3.88,cut,DEEPER DAMAGE TOO,Skin layers with protection shields at two different depths,audio/beat99.mp3
-100,334.28,337.37,3.09,185,12,3.88,cut,MATRIX AND DNA,A skin matrix grid and a mitochondrial DNA strand both shielded,audio/beat100.mp3
-101,337.37,340.71,3.34,200,13,3.89,switching,BEING HONEST,An honest weighing scale with a hand holding one side down,audio/beat101.mp3
-102,340.71,343.8,3.09,185,12,3.88,cut,SPF 1.3,A tiny SPF one point three badge beside a huge SPF thirty bottle,audio/beat102.mp3
-103,343.8,346.89,3.09,185,12,3.88,cut,NOT SUNSCREEN,"A dermatologist pointing at SPF thirty, tomato paste crossed out as sunscreen",audio/beat103.mp3
-104,346.89,350.23,3.34,200,13,3.89,cut,SLOW AND SMALL,A small shield growing slowly across a calendar of months,audio/beat104.mp3
-105,350.23,353.83,3.6,216,14,3.89,cut,TEN WEEKS,A calendar showing week four no difference and week ten protection,audio/beat105.mp3
-106,353.83,357.17,3.34,200,13,3.89,switching,THE HEART ANGLE,A cardiologist with a heart and a blood pressure cuff,audio/beat106.mp3
-107,357.17,360.26,3.09,185,12,3.88,cut,SIX TRIALS,Six trial documents being pooled into one analysis,audio/beat107.mp3
-108,360.26,363.35,3.09,185,12,3.88,cut,MINUS 5 MMHG,A blood pressure gauge with the systolic number dropping about five points,audio/beat108.mp3
-109,363.35,366.44,3.09,185,12,3.88,cut,THE TOP NUMBER,A blood pressure reading with the top number highlighted beside stiff arteries,audio/beat109.mp3
-110,366.44,369.53,3.09,185,12,3.88,cut,ONLY IF ELEVATED,A high gauge improving while a normal gauge stays flat,audio/beat110.mp3
-111,369.53,372.62,3.09,185,12,3.88,cut,NOT IF YOU'RE NORMAL,A normal blood pressure gauge stamped no change,audio/beat111.mp3
-112,372.62,376.22,3.6,216,14,3.89,cut,WHO IT'S FOR,A signpost pointing to exactly who this helps,audio/beat112.mp3
-113,376.22,379.31,3.09,185,12,3.88,cut,ABOVE 12 MG,A dose scale with twelve milligrams marked as the threshold,audio/beat113.mp3
-114,379.31,382.4,3.09,185,12,3.88,revealing,FOUR STEPS,A title card with four numbered boxes in hand drawn capitals,audio/beat114.mp3
-115,382.4,385.49,3.09,185,12,3.88,cut,STEP ONE: COOK THEM,Step one card beside a pan of tomatoes cooking properly,audio/beat115.mp3
-116,385.49,388.83,3.34,200,13,3.89,cut,IN A PAN,"A pan with tomatoes breaking down gently, a boiling pot crossed out",audio/beat116.mp3
-117,388.83,391.92,3.09,185,12,3.88,cut,20 TO 30 MINUTES,A timer at twenty to thirty minutes beside a rising graph,audio/beat117.mp3
-118,391.92,395.01,3.09,185,12,3.88,cut,STEP TWO: ADD FAT,Step two card with olive oil pouring into the pan,audio/beat118.mp3
-119,395.01,398.35,3.34,200,13,3.89,cut,FREED THEN LOST,A fat free pan with freed molecules escaping upward and away,audio/beat119.mp3
-120,398.35,401.44,3.09,185,12,3.88,cut,"CHEMISTRY, NOT OPINION","A chemistry flask with a tick, a chef's hat crossed out",audio/beat120.mp3
-121,401.44,404.53,3.09,185,12,3.88,cut,STEP THREE: PROCESSED,"Step three card with tomato paste, passata and tinned tomatoes on a shelf",audio/beat121.mp3
-122,404.53,407.87,3.34,200,13,3.89,cut,PASTE WINS,"Tomato paste on a podium ahead of fresh tomatoes, four to one",audio/beat122.mp3
-123,407.87,410.96,3.09,185,12,3.88,cut,"MEASURED, NOT MARKETED",A marketing megaphone crossed out beside a blood sample with a tick,audio/beat123.mp3
-124,410.96,414.05,3.09,185,12,3.88,cut,TINNED COUNTS,A tin of tomatoes and a jar of passata both with ticks,audio/beat124.mp3
-125,414.05,417.39,3.34,200,13,3.89,cut,STEP FOUR: EAT BOTH,Step four card with a tomato half raw and half cooked,audio/beat125.mp3
-126,417.39,420.48,3.09,185,12,3.88,cut,KEEP THE VITAMIN C,A raw tomato wearing a vitamin C badge,audio/beat126.mp3
-127,420.48,423.82,3.34,200,13,3.89,cut,BOTH,"Two plates side by side, cooked with fat and raw, both ticked",audio/beat127.mp3
-128,423.82,427.42,3.6,216,14,3.89,cut,"ONE DAY, BOTH WAYS",A salad with raw tomato and olive oil beside a bowl of cooked sauce,audio/beat128.mp3
-129,427.42,430.51,3.09,185,12,3.88,cut,TWO COMPOUNDS COVERED,One plate covering both compounds with two satisfied ticks,audio/beat129.mp3
-130,430.51,433.85,3.34,200,13,3.89,cut,A LONG GAME,A calendar with ten weeks marked and a slow moving turtle,audio/beat130.mp3
-131,433.85,436.94,3.09,185,12,3.88,cut,NOT A QUICK FIX,"A beach holiday one week away crossed out, ten weeks ticked",audio/beat131.mp3
-132,436.94,440.03,3.09,185,12,3.88,switching,IT'S ALL PUBLISHED,A tall stack of published nutrition papers on a desk,audio/beat132.mp3
-133,440.03,443.37,3.34,200,13,3.89,cut,THE GAP,"A research paper on one side, a home kitchen on the other, a wide gap",audio/beat133.mp3
-134,443.37,446.97,3.6,216,14,3.89,cut,THE MISSION,A bridge labelled Food Code spanning from the paper to the pan,audio/beat134.mp3
-135,446.97,450.57,3.6,216,14,3.89,cut,YOU CHANGED,"A person transformed, glowing brain, looking thoughtfully at a tomato",audio/beat135.mp3
-136,450.57,454.17,3.6,216,14,3.89,cut,YOU KNOW ITS NAME,A name tag on a red pigment molecule and a locked crystal,audio/beat136.mp3
-137,454.17,457.77,3.6,216,14,3.89,cut,YOU KNOW THE MECHANISM,Heat cracking cell walls and flipping molecules into bent shapes,audio/beat137.mp3
-138,457.77,461.37,3.6,216,14,3.89,cut,YOU KNOW THE TRANSPORT,"A fat transport truck carrying lycopene, an empty road without it",audio/beat138.mp3
-139,461.37,464.71,3.34,200,13,3.89,cut,RAW ISN'T AUTOMATICALLY BETTER,"A raw tomato stamped not automatically better, an arrow pointing down",audio/beat139.mp3
-140,464.71,467.8,3.09,185,12,3.88,cut,EVERY TOMATO AFTER THIS,A pan with every future tomato being cooked the new way,audio/beat140.mp3
-141,467.8,471.14,3.34,200,13,3.89,revealing,TELL ME,A comment box with three tomato options and a reply badge,audio/beat141.mp3
-142,471.14,474.23,3.09,185,12,3.88,cut,I READ THEM,A stack of comment cards with reply badges and a ready pen,audio/beat142.mp3
-143,474.23,477.83,3.6,216,14,3.89,cut,NEXT VIDEO,A mystery vegetable under a spotlight with a question mark,audio/beat143.mp3
-144,477.83,480.92,3.09,185,12,3.88,cut,OVERCOOKED,"A kitchen counter with the mystery vegetable, shrivelled and overcooked",audio/beat144.mp3
-145,480.92,484.01,3.09,185,12,3.88,cut,YOU KNOW THIS ONE,The mystery vegetable with a famous compound name fading in behind it,audio/beat145.mp3
+3,8.09,11.98,3.89,233,14,3.6,cut,THE OPPOSITE,A health tips board with the rule crossed out and a reversing arrow,audio/beat03.mp3
+4,11.98,15.32,3.34,200,12,3.59,cut,THE RULE YOU KNOW,A cookbook page reading cooking destroys nutrients with a big red X,audio/beat04.mp3
+5,15.32,18.97,3.65,219,13,3.56,cut,BACKWARDS,The same rule page flipped upside down with a backwards arrow,audio/beat05.mp3
+6,18.97,22.33,3.36,202,12,3.57,cut,MEASURED IN BLOOD,A scientist with a pan of tomatoes beside a rack of blood sample tubes,audio/beat06.mp3
+7,22.33,25.69,3.36,202,12,3.57,cut,82%,A blood tube with lycopene molecules rising and a gauge climbing,audio/beat07.mp3
+8,25.69,29.6,3.91,235,14,3.58,cut,ONLY WITH FAT,"Two pans side by side, one with oil rising, one flat lining",audio/beat08.mp3
+9,29.6,32.96,3.36,202,12,3.57,cut,FLAT LINE,A completely flat graph line stamped NO SIGNIFICANT INCREASE,audio/beat09.mp3
+10,32.96,36.58,3.62,217,13,3.59,cut,NOT A DIET BOOK,A document with an official randomised controlled trial stamp on it,audio/beat10.mp3
+11,36.58,39.67,3.09,185,12,3.88,cut,STAY FOR THE NUMBER,A finger pointing at a big bold number with a question mark beside it,audio/beat11.mp3
+12,39.67,42.76,3.09,185,12,3.88,cut,TWO MISTAKES,Two warning triangles labelled mistake one and mistake two,audio/beat12.mp3
+13,42.76,45.85,3.09,185,12,3.88,switching,NOT ABOUT EATING MORE,A pile of vegetables with a person shrugging beside it,audio/beat13.mp3
+14,45.85,48.94,3.09,185,12,3.88,cut,DOES IT REACH YOU,"Vegetables travelling down a tube toward a bloodstream, some bouncing off",audio/beat14.mp3
+15,48.94,52.03,3.09,185,12,3.88,cut,SWALLOWED VS ABSORBED,"Two doors, one reading swallowed and one absorbed, only one open",audio/beat15.mp3
+16,52.03,55.12,3.09,185,12,3.88,cut,WHERE ADVICE STOPS,A finish line labelled the swallow with the science starting just behind,audio/beat16.mp3
+17,55.12,58.72,3.6,216,14,3.89,cut,WHAT'S COMING,Three numbered boxes on a hand drawn title card,audio/beat17.mp3
+18,58.72,61.81,3.09,185,12,3.88,cut,THE HIDDEN COMPOUND,A tomato cut open revealing a hidden glowing molecule inside,audio/beat18.mp3
+19,61.81,64.9,3.09,185,12,3.88,cut,THE MISTAKES,Two big red X marks over everyday cooking habits,audio/beat19.mp3
+20,64.9,67.99,3.09,185,12,3.88,cut,WHAT IT DOES,A body outline with the compound glowing as it travels inside,audio/beat20.mp3
+21,67.99,71.59,3.6,216,14,3.89,cut,THE EXACT WAY,A hand holding a tomato beside a checklist of numbered steps,audio/beat21.mp3
+22,71.59,74.68,3.09,185,12,3.88,cut,NOT A SUPPLEMENT,"Supplement bottles and powder tubs crossed out, one tomato highlighted",audio/beat22.mp3
+23,74.68,78.28,3.6,216,14,3.89,cut,ALREADY YOURS,A tomato with a tick and the word free stamped across it,audio/beat23.mp3
+24,78.28,81.62,3.34,200,13,3.89,switching,LAST TIME,A person at a table looking thoughtfully at a single tomato,audio/beat24.mp3
+25,81.62,85.22,3.6,216,14,3.89,cut,RAW ON A SALAD,"A sliced raw tomato on a salad plate, cold and firm",audio/beat25.mp3
+26,85.22,88.82,3.6,216,14,3.89,cut,STRAIGHT FROM THE PUNNET,A hand eating cherry tomatoes straight from a punnet,audio/beat26.mp3
+27,88.82,92.16,3.34,200,13,3.89,cut,FROM A JAR,A jar of pasta sauce with a spoon resting in it,audio/beat27.mp3
+28,92.16,95.5,3.34,200,13,3.89,cut,TOMATOES ARE HEALTHY,A person giving a thumbs up beside a tomato with a halo,audio/beat28.mp3
+29,95.5,98.84,3.34,200,13,3.89,cut,WHY IT'S MISSED,A magnifying glass over a small hidden detail on a healthy tomato,audio/beat29.mp3
+30,98.84,102.18,3.34,200,13,3.89,cut,ONE UNQUESTIONED RULE,A rule book with one rule highlighted and no source cited,audio/beat30.mp3
+31,102.18,105.27,3.09,185,12,3.88,cut,THE THREE RULES,"Three rule cards, fresh, raw and cooking destroys, stacked up",audio/beat31.mp3
+32,105.27,108.36,3.09,185,12,3.88,cut,TRUE FOR VITAMIN C,A vitamin C molecule shrinking away in a hot pan,audio/beat32.mp3
+33,108.36,112.22,3.86,232,15,3.89,cut,MINUS 29%,A timer at thirty minutes with vitamin C dropping twenty nine percent,audio/beat33.mp3
+34,112.22,115.56,3.34,200,13,3.89,cut,RULE CONFIRMED,A tick mark beside a measured loss on a chart,audio/beat34.mp3
+35,115.56,118.65,3.09,185,12,3.88,switching,NOT THE REAL REASON,"A vitamin C badge crossed out, a lycopene molecule glowing larger beside it",audio/beat35.mp3
+36,118.65,121.74,3.09,185,12,3.88,cut,SOMETHING WAS RISING,A pan on heat with a rising arrow inside the tomato itself,audio/beat36.mp3
+37,121.74,125.34,3.6,216,14,3.89,cut,PLUS 164%,A big number one hundred sixty four percent with a red pigment molecule rising,audio/beat37.mp3
+38,125.34,128.43,3.09,185,12,3.88,cut,PLUS 62%,An antioxidant meter climbing sixty two percent above a pan,audio/beat38.mp3
+39,128.43,131.52,3.09,185,12,3.88,cut,DOWN AND UP,A see-saw with vitamin C going down and lycopene going up,audio/beat39.mp3
+40,131.52,135.12,3.6,216,14,3.89,cut,SOUNDS LIKE A TRICK,"A person stopping with a hand to ear, a speech bubble reading sounds like a trick",audio/beat40.mp3
+41,135.12,138.98,3.86,232,15,3.89,cut,JUST CHEMISTRY,"A chemistry flask with a tick, a magician's hat crossed out",audio/beat41.mp3
+42,138.98,142.32,3.34,200,13,3.89,revealing,LYCOPENE,A tomato wearing a name tag reading lycopene,audio/beat42.mp3
+43,142.32,145.41,3.09,185,12,3.88,cut,A CAROTENOID,A molecule labelled carotenoid beside an empty vitamin bottle crossed out,audio/beat43.mp3
+44,145.41,148.75,3.34,200,13,3.89,cut,HIGHLY EFFICIENT,A lycopene molecule on a podium among antioxidant contestants,audio/beat44.mp3
+45,148.75,152.09,3.34,200,13,3.89,cut,TEN TIMES,Lycopene defeating ten free radical monsters while vitamin E handles one,audio/beat45.mp3
+46,152.09,155.18,3.09,185,12,3.88,switching,LOCKED INSIDE,A lycopene crystal locked inside a cage of plant cell walls,audio/beat46.mp3
+47,155.18,158.52,3.34,200,13,3.89,cut,YOUR GUT CAN'T OPEN IT,A padlocked crystal behind thick brick cell walls,audio/beat47.mp3
+48,158.52,161.86,3.34,200,13,3.89,revealing,A WELDED SAFE,A safe with a welded door and banknotes visible through the gap,audio/beat48.mp3
+49,161.86,165.72,3.86,232,15,3.89,cut,TRAPPED,The safe with everything valuable trapped behind the welded door,audio/beat49.mp3
+50,165.72,169.06,3.34,200,13,3.89,cut,SWALLOWING THE SAFE,A person swallowing a whole safe instead of opening the door,audio/beat50.mp3
+51,169.06,172.66,3.6,216,14,3.89,cut,STRAIGHT THROUGH,"Fibre, water and vitamin C passing through, lycopene bouncing away",audio/beat51.mp3
+52,172.66,176.26,3.6,216,14,3.89,cut,HEAT OPENS IT,A flame cracking rigid plant cell walls open like a nutcracker,audio/beat52.mp3
+53,176.26,179.6,3.34,200,13,3.89,cut,SOMETHING ELSE,A surprised scientist with a shaking clipboard and an unexpected result,audio/beat53.mp3
+54,179.6,183.2,3.6,216,14,3.89,cut,TRANS AND CIS,"Two lycopene molecules, one straight one bent, labelled trans and cis",audio/beat54.mp3
+55,183.2,186.8,3.6,216,14,3.89,cut,BENT ABSORBS BETTER,"A bent cis molecule slipping through the intestinal wall, the straight one stuck",audio/beat55.mp3
+56,186.8,190.14,3.34,200,13,3.89,cut,HEAT FLIPS THEM,Heat flipping straight molecules into bent ones like pancakes,audio/beat56.mp3
+57,190.14,193.74,3.6,216,14,3.89,cut,TWO JOBS,"One worker doing two jobs at once, freeing and reshaping",audio/beat57.mp3
+58,193.74,197.6,3.86,232,15,3.89,cut,STEP ONE ONLY,A staircase with step one marked and a warning sign further up,audio/beat58.mp3
+59,197.6,200.94,3.34,200,13,3.89,switching,FAT SOLUBLE,"Lycopene refusing to mix with water, dissolving happily in oil",audio/beat59.mp3
+60,200.94,204.28,3.34,200,13,3.89,cut,THE TRANSPORT,Lycopene molecules boarding transport particles made of fat,audio/beat60.mp3
+61,204.28,207.88,3.6,216,14,3.89,cut,NO TRANSPORT,A lycopene molecule with no vehicle watching the transport drive past,audio/beat61.mp3
+62,207.88,210.97,3.09,185,12,3.88,cut,23 PEOPLE,Twenty three people lined up in a trial room,audio/beat62.mp3
+63,210.97,214.31,3.34,200,13,3.89,cut,TWO GROUPS,"Two tables, one with an olive oil bottle and one without",audio/beat63.mp3
+64,214.31,218.17,3.86,232,15,3.89,cut,PLUS 82%,A blood chart with the olive oil group climbing eighty two percent,audio/beat64.mp3
+65,218.17,221.26,3.09,185,12,3.88,cut,NOT EVEN SMALL,A flat line graph stamped no significant increase,audio/beat65.mp3
+66,221.26,224.86,3.6,216,14,3.89,cut,P = 0.684,A statistics board reading P equals zero point six eight four,audio/beat66.mp3
+67,224.86,228.46,3.6,216,14,3.89,cut,IN PLAIN TERMS,A plain language translation bubble reading as close to nothing as possible,audio/beat67.mp3
+68,228.46,231.8,3.34,200,13,3.89,cut,THEY STACK,Two mistake boxes stacked on top of each other,audio/beat68.mp3
+69,231.8,235.14,3.34,200,13,3.89,cut,MISTAKE ONE,A hand eating a raw tomato with lycopene still locked in cells,audio/beat69.mp3
+70,235.14,238.48,3.34,200,13,3.89,cut,MISTAKE TWO,"A pan with no oil, freed molecules escaping upward unabsorbed",audio/beat70.mp3
+71,238.48,241.82,3.34,200,13,3.89,cut,EITHER ONE IS ENOUGH,A single mistake knocking most of the benefit off a scale,audio/beat71.mp3
+72,241.82,244.91,3.09,185,12,3.88,revealing,THE NUMBER,A big glowing number beside a video play button,audio/beat72.mp3
+73,244.91,248.0,3.09,185,12,3.88,cut,SAME DOSE,Two plates holding the exact same measured dose of lycopene,audio/beat73.mp3
+74,248.0,251.34,3.34,200,13,3.89,cut,FRESH VS PASTE,"Raw tomatoes on one side, tomato paste on the other, both with oil",audio/beat74.mp3
+75,251.34,254.43,3.09,185,12,3.88,cut,MEASURED FOR HOURS,A clock with blood samples being taken hour after hour,audio/beat75.mp3
+76,254.43,258.03,3.6,216,14,3.89,cut,2.5 TIMES,A bar chart with the paste peak towering two and a half times higher,audio/beat76.mp3
+77,258.03,261.12,3.09,185,12,3.88,cut,NEARLY 4X,An area chart showing nearly four times the shaded absorption,audio/beat77.mp3
+78,261.12,264.21,3.09,185,12,3.88,cut,SAME EVERYTHING,"Three identical labels, same food, same dose, same fat",audio/beat78.mp3
+79,264.21,267.55,3.34,200,13,3.89,cut,AJCN 1997,"A journal cover reading American Journal of Clinical Nutrition, 1997",audio/beat79.mp3
+80,267.55,270.89,3.34,200,13,3.89,cut,CROSSOVER TRIAL,The same person swapping between two groups with a crossover arrow,audio/beat80.mp3
+81,270.89,274.23,3.34,200,13,3.89,cut,THE TELL,A magnifying glass over one small detail in the data table,audio/beat81.mp3
+82,274.23,277.32,3.09,185,12,3.88,cut,THEY CHECKED OTHERS,Other carotenoid molecules being measured alongside the lycopene,audio/beat82.mp3
+83,277.32,280.41,3.09,185,12,3.88,cut,THE OTHERS FLAT,Alpha and beta carotene each with a flat line graph,audio/beat83.mp3
+84,280.41,283.75,3.34,200,13,3.89,cut,SPECIFIC TO LYCOPENE,"A crystal structure with a target on it, everything else greyed out",audio/beat84.mp3
+85,283.75,286.84,3.09,185,12,3.88,cut,REAL VS HEADLINE,A real finding badge beside a crumpled nutrition headline,audio/beat85.mp3
+86,286.84,290.18,3.34,200,13,3.89,revealing,SURPRISED THEM TOO,A researcher with wide eyes and a clipboard slipping from their hands,audio/beat86.mp3
+87,290.18,293.27,3.09,185,12,3.88,cut,IT PICKS SPOTS,A body map with lycopene gathering unevenly in specific organs,audio/beat87.mp3
+88,293.27,296.36,3.09,185,12,3.88,cut,YOUR SKIN,A cross-section of skin with lycopene molecules settling into it,audio/beat88.mp3
+89,296.36,299.45,3.09,185,12,3.88,cut,SOUNDS IMPOSSIBLE,A research team pointing at an impossible looking question mark,audio/beat89.mp3
+90,299.45,302.54,3.09,185,12,3.88,cut,FOOD AS SUNBLOCK,Sun rays hitting an arm with a question mark and a tomato beside it,audio/beat90.mp3
+91,302.54,305.88,3.34,200,13,3.89,cut,40G A DAY,Nine volunteers each eating forty grams of tomato paste daily,audio/beat91.mp3
+92,305.88,308.97,3.09,185,12,3.88,cut,16 MG,A spoon of tomato paste labelled sixteen milligrams beside olive oil,audio/beat92.mp3
+93,308.97,312.57,3.6,216,14,3.89,cut,THE CONTROL GROUP,Ten other people with olive oil only and an empty tomato paste bowl,audio/beat93.mp3
+94,312.57,315.66,3.09,185,12,3.88,cut,CONTROLLED UV,A solar simulator lamp shining UV onto a patch of back skin,audio/beat94.mp3
+95,315.66,319.0,3.34,200,13,3.89,cut,40% LESS RED,"Two skin patches side by side, one clearly forty percent less red",audio/beat95.mp3
+96,319.0,322.09,3.09,185,12,3.88,cut,FORTY PERCENT,A big forty percent badge with a sun and a tomato together,audio/beat96.mp3
+97,322.09,325.43,3.34,200,13,3.89,cut,J NUTR 2001,"A journal cover reading Journal of Nutrition, 2001",audio/beat97.mp3
+98,325.43,328.52,3.09,185,12,3.88,cut,REPEATED,Twenty women in a twelve week randomised trial calendar,audio/beat98.mp3
+99,328.52,331.61,3.09,185,12,3.88,cut,DEEPER DAMAGE TOO,Skin layers with protection shields at two different depths,audio/beat99.mp3
+100,331.61,334.7,3.09,185,12,3.88,cut,MATRIX AND DNA,A skin matrix grid and a mitochondrial DNA strand both shielded,audio/beat100.mp3
+101,334.7,338.04,3.34,200,13,3.89,switching,BEING HONEST,An honest weighing scale with a hand holding one side down,audio/beat101.mp3
+102,338.04,341.13,3.09,185,12,3.88,cut,SPF 1.3,A tiny SPF one point three badge beside a huge SPF thirty bottle,audio/beat102.mp3
+103,341.13,344.22,3.09,185,12,3.88,cut,NOT SUNSCREEN,"A dermatologist pointing at SPF thirty, tomato paste crossed out as sunscreen",audio/beat103.mp3
+104,344.22,347.56,3.34,200,13,3.89,cut,SLOW AND SMALL,A small shield growing slowly across a calendar of months,audio/beat104.mp3
+105,347.56,351.16,3.6,216,14,3.89,cut,TEN WEEKS,A calendar showing week four no difference and week ten protection,audio/beat105.mp3
+106,351.16,354.5,3.34,200,13,3.89,switching,THE HEART ANGLE,A cardiologist with a heart and a blood pressure cuff,audio/beat106.mp3
+107,354.5,357.59,3.09,185,12,3.88,cut,SIX TRIALS,Six trial documents being pooled into one analysis,audio/beat107.mp3
+108,357.59,360.68,3.09,185,12,3.88,cut,MINUS 5 MMHG,A blood pressure gauge with the systolic number dropping about five points,audio/beat108.mp3
+109,360.68,363.77,3.09,185,12,3.88,cut,THE TOP NUMBER,A blood pressure reading with the top number highlighted beside stiff arteries,audio/beat109.mp3
+110,363.77,366.86,3.09,185,12,3.88,cut,ONLY IF ELEVATED,A high gauge improving while a normal gauge stays flat,audio/beat110.mp3
+111,366.86,369.95,3.09,185,12,3.88,cut,NOT IF YOU'RE NORMAL,A normal blood pressure gauge stamped no change,audio/beat111.mp3
+112,369.95,373.55,3.6,216,14,3.89,cut,WHO IT'S FOR,A signpost pointing to exactly who this helps,audio/beat112.mp3
+113,373.55,376.64,3.09,185,12,3.88,cut,ABOVE 12 MG,A dose scale with twelve milligrams marked as the threshold,audio/beat113.mp3
+114,376.64,379.73,3.09,185,12,3.88,revealing,FOUR STEPS,A title card with four numbered boxes in hand drawn capitals,audio/beat114.mp3
+115,379.73,382.82,3.09,185,12,3.88,cut,STEP ONE: COOK THEM,Step one card beside a pan of tomatoes cooking properly,audio/beat115.mp3
+116,382.82,386.16,3.34,200,13,3.89,cut,IN A PAN,"A pan with tomatoes breaking down gently, a boiling pot crossed out",audio/beat116.mp3
+117,386.16,389.25,3.09,185,12,3.88,cut,20 TO 30 MINUTES,A timer at twenty to thirty minutes beside a rising graph,audio/beat117.mp3
+118,389.25,392.34,3.09,185,12,3.88,cut,STEP TWO: ADD FAT,Step two card with olive oil pouring into the pan,audio/beat118.mp3
+119,392.34,395.68,3.34,200,13,3.89,cut,FREED THEN LOST,A fat free pan with freed molecules escaping upward and away,audio/beat119.mp3
+120,395.68,398.77,3.09,185,12,3.88,cut,"CHEMISTRY, NOT OPINION","A chemistry flask with a tick, a chef's hat crossed out",audio/beat120.mp3
+121,398.77,401.86,3.09,185,12,3.88,cut,STEP THREE: PROCESSED,"Step three card with tomato paste, passata and tinned tomatoes on a shelf",audio/beat121.mp3
+122,401.86,405.2,3.34,200,13,3.89,cut,PASTE WINS,"Tomato paste on a podium ahead of fresh tomatoes, four to one",audio/beat122.mp3
+123,405.2,408.29,3.09,185,12,3.88,cut,"MEASURED, NOT MARKETED",A marketing megaphone crossed out beside a blood sample with a tick,audio/beat123.mp3
+124,408.29,411.38,3.09,185,12,3.88,cut,TINNED COUNTS,A tin of tomatoes and a jar of passata both with ticks,audio/beat124.mp3
+125,411.38,414.72,3.34,200,13,3.89,cut,STEP FOUR: EAT BOTH,Step four card with a tomato half raw and half cooked,audio/beat125.mp3
+126,414.72,417.81,3.09,185,12,3.88,cut,KEEP THE VITAMIN C,A raw tomato wearing a vitamin C badge,audio/beat126.mp3
+127,417.81,421.15,3.34,200,13,3.89,cut,BOTH,"Two plates side by side, cooked with fat and raw, both ticked",audio/beat127.mp3
+128,421.15,424.75,3.6,216,14,3.89,cut,"ONE DAY, BOTH WAYS",A salad with raw tomato and olive oil beside a bowl of cooked sauce,audio/beat128.mp3
+129,424.75,427.84,3.09,185,12,3.88,cut,TWO COMPOUNDS COVERED,One plate covering both compounds with two satisfied ticks,audio/beat129.mp3
+130,427.84,431.18,3.34,200,13,3.89,cut,A LONG GAME,A calendar with ten weeks marked and a slow moving turtle,audio/beat130.mp3
+131,431.18,434.27,3.09,185,12,3.88,cut,NOT A QUICK FIX,"A beach holiday one week away crossed out, ten weeks ticked",audio/beat131.mp3
+132,434.27,437.36,3.09,185,12,3.88,switching,IT'S ALL PUBLISHED,A tall stack of published nutrition papers on a desk,audio/beat132.mp3
+133,437.36,440.7,3.34,200,13,3.89,cut,THE GAP,"A research paper on one side, a home kitchen on the other, a wide gap",audio/beat133.mp3
+134,440.7,444.3,3.6,216,14,3.89,cut,THE MISSION,A bridge labelled Food Code spanning from the paper to the pan,audio/beat134.mp3
+135,444.3,447.9,3.6,216,14,3.89,cut,YOU CHANGED,"A person transformed, glowing brain, looking thoughtfully at a tomato",audio/beat135.mp3
+136,447.9,451.5,3.6,216,14,3.89,cut,YOU KNOW ITS NAME,A name tag on a red pigment molecule and a locked crystal,audio/beat136.mp3
+137,451.5,455.1,3.6,216,14,3.89,cut,YOU KNOW THE MECHANISM,Heat cracking cell walls and flipping molecules into bent shapes,audio/beat137.mp3
+138,455.1,458.7,3.6,216,14,3.89,cut,YOU KNOW THE TRANSPORT,"A fat transport truck carrying lycopene, an empty road without it",audio/beat138.mp3
+139,458.7,462.04,3.34,200,13,3.89,cut,RAW ISN'T AUTOMATICALLY BETTER,"A raw tomato stamped not automatically better, an arrow pointing down",audio/beat139.mp3
+140,462.04,465.13,3.09,185,12,3.88,cut,EVERY TOMATO AFTER THIS,A pan with every future tomato being cooked the new way,audio/beat140.mp3
+141,465.13,468.47,3.34,200,13,3.89,revealing,TELL ME,A comment box with three tomato options and a reply badge,audio/beat141.mp3
+142,468.47,471.56,3.09,185,12,3.88,cut,I READ THEM,A stack of comment cards with reply badges and a ready pen,audio/beat142.mp3
+143,471.56,475.16,3.6,216,14,3.89,cut,NEXT VIDEO,A mystery vegetable under a spotlight with a question mark,audio/beat143.mp3
+144,475.16,478.25,3.09,185,12,3.88,cut,OVERCOOKED,"A kitchen counter with the mystery vegetable, shrivelled and overcooked",audio/beat144.mp3
+145,478.25,481.34,3.09,185,12,3.88,cut,YOU KNOW THIS ONE,The mystery vegetable with a famous compound name fading in behind it,audio/beat145.mp3

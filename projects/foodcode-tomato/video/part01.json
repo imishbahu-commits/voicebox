@@ -1,0 +1,26 @@
+{
+ "project": "foodcode-tomato",
+ "file": "part01.mp4",
+ "url": "media/foodcode-tomato/video/part01.mp4",
+ "part": 1,
+ "beats": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "beat_count": 10,
+ "duration": 36.58,
+ "bytes": 4568700,
+ "width": 1920,
+ "height": 1080,
+ "fps": 30,
+ "contact": "part01_contact.jpg",
+ "rendered_at": "2026-09-01T15:25:22+00:00"
+}
