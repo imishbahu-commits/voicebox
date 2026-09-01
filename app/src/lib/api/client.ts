@@ -149,25 +149,64 @@ class ApiClient {
     profileId: string,
     file: File,
     referenceText: string,
+    onProgress?: (progress: number) => void,
   ): Promise<ProfileSampleResponse> {
     const url = `${this.getBaseUrl()}/profiles/${profileId}/samples`;
     const formData = new FormData();
     formData.append('file', file);
     formData.append('reference_text', referenceText);
 
-    const response = await fetch(url, {
-      method: 'POST',
-      body: formData,
-    });
+    // XHR exposes upload progress, unlike fetch. Keep the old fetch path when
+    // no progress callback is requested so existing callers remain simple.
+    if (!onProgress) {
+      const response = await fetch(url, {
+        method: 'POST',
+        body: formData,
+      });
 
-    if (!response.ok) {
-      const error = await response.json().catch(() => ({
-        detail: response.statusText,
-      }));
-      throw new Error(formatErrorDetail(error.detail, `HTTP error! status: ${response.status}`));
+      if (!response.ok) {
+        const error = await response.json().catch(() => ({
+          detail: response.statusText,
+        }));
+        throw new Error(formatErrorDetail(error.detail, `HTTP error! status: ${response.status}`));
+      }
+
+      return response.json();
     }
 
-    return response.json();
+    return new Promise<ProfileSampleResponse>((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.upload.onprogress = (event) => {
+        if (event.lengthComputable) {
+          onProgress(Math.round((event.loaded / event.total) * 100));
+        }
+      };
+      xhr.onerror = () =>
+        reject(new Error('Upload failed. Check the server connection and try again.'));
+      xhr.onabort = () => reject(new Error('Upload cancelled.'));
+      xhr.onload = () => {
+        let payload: unknown;
+        try {
+          payload = xhr.responseText ? JSON.parse(xhr.responseText) : null;
+        } catch {
+          payload = null;
+        }
+
+        if (xhr.status < 200 || xhr.status >= 300) {
+          const detail =
+            payload && typeof payload === 'object' && 'detail' in payload
+              ? (payload as { detail: unknown }).detail
+              : undefined;
+          reject(new Error(formatErrorDetail(detail, `HTTP error! status: ${xhr.status}`)));
+          return;
+        }
+
+        onProgress(100);
+        resolve(payload as ProfileSampleResponse);
+      };
+      xhr.send(formData);
+    });
   }
 
   async listProfileSamples(profileId: string): Promise<ProfileSampleResponse[]> {

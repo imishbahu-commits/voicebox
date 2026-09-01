@@ -55,6 +55,7 @@ export function SampleUpload({ profileId, open, onOpenChange }: SampleUploadProp
   const { data: profile } = useProfile(profileId);
   const { toast } = useToast();
   const [mode, setMode] = useState<'upload' | 'record' | 'system'>('upload');
+  const [uploadProgress, setUploadProgress] = useState(0);
   const { isPlaying, playPause, cleanup: cleanupAudio } = useAudioPlayer();
 
   const form = useForm<SampleFormValues>({
@@ -168,10 +169,12 @@ export function SampleUpload({ profileId, open, onOpenChange }: SampleUploadProp
 
   async function onSubmit(data: SampleFormValues) {
     try {
+      setUploadProgress(0);
       await addSample.mutateAsync({
         profileId,
         file: data.file,
         referenceText: data.referenceText,
+        onProgress: setUploadProgress,
       });
 
       toast({
@@ -192,6 +195,7 @@ export function SampleUpload({ profileId, open, onOpenChange }: SampleUploadProp
   function handleOpenChange(newOpen: boolean) {
     if (!newOpen) {
       form.reset();
+      setUploadProgress(0);
       setMode('upload');
       if (isRecording) {
         cancelRecording();
@@ -225,7 +229,8 @@ export function SampleUpload({ profileId, open, onOpenChange }: SampleUploadProp
         <DialogHeader>
           <DialogTitle>Add Audio Sample</DialogTitle>
           <DialogDescription>
-            Upload an audio file and provide the reference text that matches the audio.
+            Upload an audio or video file and provide the reference text that matches its audio
+            track.
           </DialogDescription>
         </DialogHeader>
 
@@ -264,6 +269,7 @@ export function SampleUpload({ profileId, open, onOpenChange }: SampleUploadProp
                       isPlaying={isPlaying}
                       isTranscribing={transcribe.isPending}
                       fieldName={name}
+                      uploadProgress={addSample.isPending ? uploadProgress : undefined}
                     />
                   )}
                 />

@@ -1,8 +1,9 @@
-import { Mic, Pause, Play, Upload } from 'lucide-react';
+import { FileVideo, Mic, Pause, Play, Upload } from 'lucide-react';
 import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { FormControl, FormItem, FormMessage } from '@/components/ui/form';
+import { isVideoFile } from '@/lib/utils/audio';
 
 interface AudioSampleUploadProps {
   file: File | null | undefined;
@@ -14,6 +15,7 @@ interface AudioSampleUploadProps {
   isTranscribing?: boolean;
   isDisabled?: boolean;
   fieldName: string;
+  uploadProgress?: number;
 }
 
 export function AudioSampleUpload({
@@ -26,6 +28,7 @@ export function AudioSampleUpload({
   isTranscribing = false,
   isDisabled = false,
   fieldName,
+  uploadProgress,
 }: AudioSampleUploadProps) {
   const { t } = useTranslation();
   const [isDragging, setIsDragging] = useState(false);
@@ -37,7 +40,7 @@ export function AudioSampleUpload({
         <div className="flex flex-col gap-2">
           <input
             type="file"
-            accept="audio/*"
+            accept="audio/*,video/*"
             name={fieldName}
             ref={fileInputRef}
             onChange={(e) => {
@@ -65,7 +68,11 @@ export function AudioSampleUpload({
               e.preventDefault();
               setIsDragging(false);
               const droppedFile = e.dataTransfer.files?.[0];
-              if (droppedFile?.type.startsWith('audio/')) {
+              if (
+                droppedFile &&
+                (droppedFile.type.startsWith('audio/') ||
+                  isVideoFile(droppedFile.name, droppedFile.type))
+              ) {
                 onFileChange(droppedFile);
               }
             }}
@@ -97,16 +104,41 @@ export function AudioSampleUpload({
                 <p className="text-sm text-muted-foreground text-center">
                   {t('audioSample.uploadHint')}
                 </p>
+                <p className="text-xs text-muted-foreground/80 text-center">
+                  {t('audioSample.videoHint')}
+                </p>
               </>
             ) : (
               <>
                 <div className="flex items-center gap-2">
-                  <Upload className="h-5 w-5 text-primary" />
+                  {isVideoFile(file.name, file.type) ? (
+                    <FileVideo className="h-5 w-5 text-primary" />
+                  ) : (
+                    <Upload className="h-5 w-5 text-primary" />
+                  )}
                   <span className="font-medium">{t('audioSample.fileUploaded')}</span>
                 </div>
                 <p className="text-sm text-muted-foreground text-center">
                   {t('audioSample.fileLabel', { name: file.name })}
                 </p>
+                {uploadProgress !== undefined && uploadProgress > 0 && (
+                  <div className="w-full max-w-sm space-y-1" aria-live="polite">
+                    <div className="flex justify-between text-xs text-muted-foreground">
+                      <span>
+                        {uploadProgress < 100
+                          ? t('audioSample.uploading')
+                          : t('audioSample.uploadComplete')}
+                      </span>
+                      <span>{uploadProgress}%</span>
+                    </div>
+                    <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
+                      <div
+                        className="h-full rounded-full bg-primary transition-[width] duration-150"
+                        style={{ width: `${uploadProgress}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
                 <div className="flex gap-2">
                   <Button
                     type="button"

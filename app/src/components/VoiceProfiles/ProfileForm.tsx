@@ -51,7 +51,12 @@ import {
 } from '@/lib/hooks/useProfiles';
 import { useSystemAudioCapture } from '@/lib/hooks/useSystemAudioCapture';
 import { useTranscription } from '@/lib/hooks/useTranscription';
-import { convertToWav, formatAudioDuration, getAudioDuration } from '@/lib/utils/audio';
+import {
+  convertToWav,
+  formatAudioDuration,
+  getAudioDuration,
+  isVideoFile,
+} from '@/lib/utils/audio';
 import { usePlatform } from '@/platform/PlatformContext';
 import { useServerStore } from '@/stores/serverStore';
 import { type ProfileFormDraft, useUIStore } from '@/stores/uiStore';
@@ -151,6 +156,7 @@ export function ProfileForm() {
   const [sampleMode, setSampleMode] = useState<'upload' | 'record' | 'system'>('record');
   const [audioDuration, setAudioDuration] = useState<number | null>(null);
   const [isValidatingAudio, setIsValidatingAudio] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
   const [avatarPreview, setAvatarPreview] = useState<string | null>(null);
   const [selectedPresetEngine, setSelectedPresetEngine] = useState<string>('kokoro');
   const [selectedPresetVoiceId, setSelectedPresetVoiceId] = useState<string>('');
@@ -182,10 +188,11 @@ export function ProfileForm() {
   useEffect(() => {
     if (selectedFile && selectedFile instanceof File) {
       setIsValidatingAudio(true);
+      const isVideo = isVideoFile(selectedFile.name, selectedFile.type);
       getAudioDuration(selectedFile as File & { recordedDuration?: number })
         .then((duration) => {
           setAudioDuration(duration);
-          if (duration > MAX_AUDIO_DURATION_SECONDS) {
+          if (duration > MAX_AUDIO_DURATION_SECONDS && !isVideo) {
             form.setError('sampleFile', {
               type: 'manual',
               message: t('profileForm.validation.audioTooLong', {
@@ -203,7 +210,7 @@ export function ProfileForm() {
           const isRecordedFile =
             selectedFile.name.startsWith('recording-') ||
             selectedFile.name.startsWith('system-audio-');
-          if (!isRecordedFile) {
+          if (!isRecordedFile && !isVideoFile(selectedFile.name, selectedFile.type)) {
             form.setError('sampleFile', {
               type: 'manual',
               message: t('profileForm.validation.audioFailed'),
@@ -624,7 +631,10 @@ export function ProfileForm() {
 
         try {
           const duration = await getAudioDuration(sampleFile);
-          if (duration > MAX_AUDIO_DURATION_SECONDS) {
+          if (
+            duration > MAX_AUDIO_DURATION_SECONDS &&
+            !isVideoFile(sampleFile.name, sampleFile.type)
+          ) {
             form.setError('sampleFile', {
               type: 'manual',
               message: t('profileForm.validation.audioTooLong', {
@@ -643,17 +653,22 @@ export function ProfileForm() {
             return;
           }
         } catch (error) {
-          form.setError('sampleFile', {
-            type: 'manual',
-            message: t('profileForm.validation.audioFailed'),
-          });
-          toast({
-            title: t('profileForm.toast.validationError'),
-            description:
-              error instanceof Error ? error.message : t('profileForm.validation.audioFailed'),
-            variant: 'destructive',
-          });
-          return;
+          // Some video containers do not expose metadata in the browser. Let
+          // the server's FFmpeg extraction and audio validator handle those;
+          // rejecting them here would make otherwise valid videos unusable.
+          if (!isVideoFile(sampleFile.name, sampleFile.type)) {
+            form.setError('sampleFile', {
+              type: 'manual',
+              message: t('profileForm.validation.audioFailed'),
+            });
+            toast({
+              title: t('profileForm.toast.validationError'),
+              description:
+                error instanceof Error ? error.message : t('profileForm.validation.audioFailed'),
+              variant: 'destructive',
+            });
+            return;
+          }
         }
 
         // Creating: create profile, then add sample
@@ -668,7 +683,11 @@ export function ProfileForm() {
         // Convert non-WAV uploads to WAV so the backend can always use soundfile.
         // Recorded audio is already WAV (from useAudioRecording's convertToWav call).
         let fileToUpload: File = sampleFile;
-        if (!sampleFile.type.includes('wav') && !sampleFile.name.toLowerCase().endsWith('.wav')) {
+        if (
+          !isVideoFile(sampleFile.name, sampleFile.type) &&
+          !sampleFile.type.includes('wav') &&
+          !sampleFile.name.toLowerCase().endsWith('.wav')
+        ) {
           try {
             const wavBlob = await convertToWav(sampleFile);
             const wavName = sampleFile.name.replace(/\.[^.]+$/, '.wav');
@@ -679,10 +698,12 @@ export function ProfileForm() {
         }
 
         try {
+          setUploadProgress(0);
           await addSample.mutateAsync({
             profileId: profile.id,
             file: fileToUpload,
             referenceText: referenceText,
+            onProgress: setUploadProgress,
           });
 
           // Handle avatar upload if provided
@@ -988,9 +1009,13 @@ export function ProfileForm() {
                                     isTranscribing={transcribe.isPending}
                                     isDisabled={
                                       audioDuration !== null &&
-                                      audioDuration > MAX_AUDIO_DURATION_SECONDS
+                                      audioDuration > MAX_AUDIO_DURATION_SECONDS &&
+                                      !isVideoFile(selectedFile?.name ?? '', selectedFile?.type)
                                     }
                                     fieldName={name}
+                                    uploadProgress={
+                                      addSample.isPending ? uploadProgress : undefined
+                                    }
                                   />
                                 )}
                               />

@@ -1,5 +1,6 @@
 """Voice profile endpoints."""
 
+import asyncio
 import io
 import json as _json
 import logging
@@ -16,6 +17,7 @@ from ..app import safe_content_disposition
 from ..database import VoiceProfile as DBVoiceProfile, get_db
 from ..services import channels, export_import, personality, profiles
 from ..services.profiles import _profile_to_response
+from ..utils.media import extract_audio_from_video, is_video_file
 
 logger = logging.getLogger(__name__)
 
@@ -146,8 +148,18 @@ async def delete_profile(
     return {"message": "Profile deleted successfully"}
 
 
-SAMPLE_MAX_FILE_SIZE = 50 * 1024 * 1024  # 50 MB
-SAMPLE_UPLOAD_CHUNK_SIZE = 1024 * 1024  # 1 MB
+SAMPLE_MAX_FILE_SIZE = 250 * 1024 * 1024  # 250 MB, enough for short reference videos
+SAMPLE_UPLOAD_CHUNK_SIZE = 8 * 1024 * 1024  # 8 MB, fewer round trips for large uploads
+ALLOWED_AUDIO_EXTENSIONS = frozenset({
+    ".aac",
+    ".flac",
+    ".m4a",
+    ".mp3",
+    ".ogg",
+    ".opus",
+    ".wav",
+    ".webm",
+})
 
 
 @router.post("/profiles/{profile_id}/samples", response_model=models.ProfileSampleResponse)
@@ -157,10 +169,15 @@ async def add_profile_sample(
     reference_text: str = Form(...),
     db: Session = Depends(get_db),
 ):
-    """Add a sample to a voice profile."""
-    _allowed_audio_exts = {".wav", ".mp3", ".m4a", ".ogg", ".flac", ".aac", ".webm", ".opus"}
-    _uploaded_ext = Path(file.filename or "").suffix.lower()
-    file_suffix = _uploaded_ext if _uploaded_ext in _allowed_audio_exts else ".wav"
+    """Add an audio sample or extract one from an uploaded reference video.
+
+    The upload is streamed to disk in large chunks, so the server never keeps
+    a full video in memory. Video inputs are reduced to a short mono WAV before
+    the normal reference-audio validation and profile storage run.
+    """
+    uploaded_ext = Path(file.filename or "").suffix.lower()
+    is_video = is_video_file(file.filename, file.content_type)
+    file_suffix = uploaded_ext if uploaded_ext in ALLOWED_AUDIO_EXTENSIONS or is_video else ".wav"
 
     with tempfile.NamedTemporaryFile(suffix=file_suffix, delete=False) as tmp:
         total_size = 0
@@ -173,22 +190,38 @@ async def add_profile_sample(
                     detail=f"File too large (max {SAMPLE_MAX_FILE_SIZE // (1024 * 1024)} MB)",
                 )
             tmp.write(chunk)
-        tmp_path = tmp.name
+        source_path = tmp.name
 
+    extracted_path: str | None = None
+    sample_path = source_path
     try:
+        if is_video:
+            with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as audio_tmp:
+                extracted_path = audio_tmp.name
+            try:
+                await asyncio.to_thread(extract_audio_from_video, source_path, extracted_path)
+            except RuntimeError as e:
+                raise HTTPException(status_code=503, detail=str(e)) from e
+            sample_path = extracted_path
+
         sample = await profiles.add_profile_sample(
             profile_id,
-            tmp_path,
+            sample_path,
             reference_text,
             db,
         )
         return sample
+    except HTTPException:
+        raise
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Failed to process audio file: {str(e)}")
+        media_kind = "video" if is_video else "audio"
+        raise HTTPException(status_code=500, detail=f"Failed to process {media_kind} file: {str(e)}")
     finally:
-        Path(tmp_path).unlink(missing_ok=True)
+        Path(source_path).unlink(missing_ok=True)
+        if extracted_path:
+            Path(extracted_path).unlink(missing_ok=True)
 
 
 @router.get("/profiles/{profile_id}/samples", response_model=list[models.ProfileSampleResponse])

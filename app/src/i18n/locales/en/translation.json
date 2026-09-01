@@ -337,7 +337,10 @@
   },
   "audioSample": {
     "chooseFile": "Choose File",
-    "uploadHint": "Click to choose a file or drag and drop. Maximum duration: 30 seconds.",
+    "uploadHint": "Click to choose a file or drag and drop. Audio samples: maximum 30 seconds.",
+    "videoHint": "Audio or video accepted, up to 250 MB. Videos use their first 30 seconds of audio automatically.",
+    "uploading": "Uploading reference…",
+    "uploadComplete": "Upload complete",
     "fileUploaded": "File uploaded",
     "fileLabel": "File: {{name}}",
     "play": "Play",

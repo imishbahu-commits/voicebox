@@ -71,11 +71,13 @@ export function useAddSample() {
       profileId,
       file,
       referenceText,
+      onProgress,
     }: {
       profileId: string;
       file: File;
       referenceText: string;
-    }) => apiClient.addProfileSample(profileId, file, referenceText),
+      onProgress?: (progress: number) => void;
+    }) => apiClient.addProfileSample(profileId, file, referenceText, onProgress),
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({
         queryKey: ['profiles', variables.profileId, 'samples'],

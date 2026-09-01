@@ -52,7 +52,10 @@ en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_
 # for the same reason en_core_web_sm does.
 unidic-lite>=1.0.8
 
-# Audio processing
+# Media + audio processing
+# FFmpeg is preferred when installed; this package provides a portable fallback
+# for video reference uploads in development environments.
+imageio-ffmpeg>=0.5.1
 audioop-lts>=0.2.1; python_version >= "3.13"
 librosa>=0.10.0
 soundfile>=0.12.0

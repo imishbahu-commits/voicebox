@@ -1,3 +1,13 @@
+const VIDEO_EXTENSIONS = new Set(['avi', 'm4v', 'mkv', 'mov', 'mp4', 'mpeg', 'mpg', 'webm', 'wmv']);
+
+export function isVideoFile(filename: string, contentType?: string): boolean {
+  const normalizedContentType = contentType?.toLowerCase() ?? '';
+  if (normalizedContentType.startsWith('audio/')) return false;
+  if (normalizedContentType.startsWith('video/')) return true;
+  const extension = filename.toLowerCase().split('.').pop();
+  return extension ? VIDEO_EXTENSIONS.has(extension) : false;
+}
+
 export function createAudioUrl(audioId: string, serverUrl: string): string {
   return `${serverUrl}/audio/${audioId}`;
 }
@@ -17,6 +27,45 @@ export function formatAudioDuration(seconds: number): string {
   return `${mins}:${secs.toString().padStart(2, '0')}`;
 }
 
+function getMediaDuration(file: File, tagName: 'audio' | 'video'): Promise<number> {
+  return new Promise((resolve, reject) => {
+    const media = document.createElement(tagName);
+    const url = URL.createObjectURL(file);
+    media.preload = 'metadata';
+
+    const cleanup = () => {
+      URL.revokeObjectURL(url);
+      media.removeAttribute('src');
+      media.load();
+    };
+
+    media.addEventListener(
+      'loadedmetadata',
+      () => {
+        const duration = media.duration;
+        cleanup();
+        if (Number.isFinite(duration) && duration > 0) {
+          resolve(duration);
+        } else {
+          reject(new Error('Media file has invalid duration metadata'));
+        }
+      },
+      { once: true },
+    );
+
+    media.addEventListener(
+      'error',
+      () => {
+        cleanup();
+        reject(new Error('Failed to load media file'));
+      },
+      { once: true },
+    );
+
+    media.src = url;
+  });
+}
+
 /**
  * Get audio duration from a File.
  * If the file has a recordedDuration property (from recording hooks),
@@ -33,6 +82,13 @@ export async function getAudioDuration(
 ): Promise<number> {
   if (file.recordedDuration !== undefined && Number.isFinite(file.recordedDuration)) {
     return file.recordedDuration;
+  }
+
+  // Do not decode a whole video in Web Audio just to read its duration. The
+  // metadata path is much faster and avoids loading a potentially huge file
+  // into browser memory; FFmpeg performs the actual audio extraction server-side.
+  if (isVideoFile(file.name, file.type)) {
+    return getMediaDuration(file, 'video');
   }
 
   // Use Web Audio API for accurate duration — avoids VBR MP3 metadata issues.

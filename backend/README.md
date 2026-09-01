@@ -103,6 +103,12 @@ curl -X POST http://localhost:17493/generate \
 # List profiles
 curl http://localhost:17493/profiles
 
+# Add a reference sample; MP4/MOV/WebM/etc. are streamed to disk and
+# automatically converted to a short mono WAV before validation
+curl -X POST http://localhost:17493/profiles/{profile_id}/samples \
+  -F "file=@reference-video.mp4" \
+  -F "reference_text=The words spoken in the reference clip."
+
 # Stream generation status (SSE)
 curl http://localhost:17493/generate/{id}/status
 ```
@@ -133,3 +139,5 @@ just test               # run pytest
 ## Dependencies
 
 Runtime dependencies are in `requirements.txt`. macOS-only MLX dependencies are in `requirements-mlx.txt`. Dev tools (ruff, pytest) are installed automatically by `just setup-python`.
+
+Video reference uploads use FFmpeg to extract a mono 24 kHz WAV sample. The Docker image already includes the `ffmpeg` executable; local development can use the portable `imageio-ffmpeg` fallback installed from `requirements.txt`.
