@@ -23,7 +23,9 @@ import os
 import sys
 
 TARGET = 16 / 9
-TOL = 0.01
+# Tight: 1.79:1 is "close enough" for a human but still leaves a few pixels of
+# mat on the frame. Anything past 0.4% gets extended to a true 1.7778.
+TOL = 0.004
 
 try:
     from PIL import Image, ImageFilter
