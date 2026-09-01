@@ -30,19 +30,22 @@ function invalidateAllServerData() {
 export function getDefaultServerUrl(): string {
   const fallback = 'http://127.0.0.1:17493';
 
-  if (!import.meta.env.PROD || typeof window === 'undefined') {
-    return fallback;
+  // The web build is served through the same origin as the API (the Vite
+  // development server proxies API paths to port 17493). Using localhost here
+  // would make a browser preview try to connect to the user's own computer
+  // instead of the server backing the preview.
+  if (typeof window !== 'undefined') {
+    const { protocol, origin, hostname } = window.location;
+    if (
+      (protocol === 'http:' || protocol === 'https:') &&
+      origin &&
+      hostname !== 'tauri.localhost'
+    ) {
+      return origin;
+    }
   }
 
-  const { protocol, origin, hostname } = window.location;
-  if (
-    (protocol === 'http:' || protocol === 'https:') &&
-    origin &&
-    hostname !== 'tauri.localhost'
-  ) {
-    return origin;
-  }
-
+  // Tauri's webview must continue to use the locally managed sidecar.
   return fallback;
 }
 
